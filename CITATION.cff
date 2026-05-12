@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "TUDT-F: Trust-Gated Smart-Energy Digital Twin"
+message: "If you use this software, please cite the repository."
+type: software
+authors:
+  - name: "Devchandrasen"
+repository-code: "https://github.com/Devchandrasen/tudt-f-smart-energy"
+license: MIT
+version: "1.0.0"
+date-released: "2026-05-12"
+
