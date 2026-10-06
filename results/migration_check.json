@@ -1,0 +1,113 @@
+{
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0",
+    "scikit-learn": "1.7.2",
+    "pandapower": "3.3.1",
+    "simbench": "1.6.3"
+  },
+  "relative_tolerance": 1e-08,
+  "absolute_tolerance": 1e-08,
+  "files": {
+    "hourly_profiles.csv": {
+      "rows": 8784,
+      "maximum_absolute_difference_by_column": {
+        "load_factor": 0.0,
+        "generation_factor": 0.0
+      }
+    },
+    "decisions.csv": {
+      "rows": 62208,
+      "maximum_absolute_difference_by_column": {
+        "seed": 0.0,
+        "hour": 0.0,
+        "trust": 4.440892098500626e-16,
+        "freshness": 0.0,
+        "completeness": 0.0,
+        "maturity": 4.440892098500626e-16,
+        "agreement": 0.0,
+        "proposal_mw": 0.0,
+        "observed_load_factor": 0.0,
+        "observed_generation_factor": 0.0,
+        "reference_load_factor": 0.0,
+        "reference_generation_factor": 0.0,
+        "forecast_load_factor": 2.220446049250313e-16,
+        "forecast_generation_factor": 3.3306690738754696e-16,
+        "plant_load_factor": 0.0,
+        "plant_generation_factor": 0.0,
+        "command_mw": 0.0,
+        "soc": 0.0,
+        "next_soc": 0.0,
+        "model_feasible": 0.0,
+        "plant_feasible": 0.0,
+        "severity": 1.5700114819328093e-14,
+        "grid_mw": 2.0188739568993697e-11,
+        "loss_mw": 1.0750400569747853e-11,
+        "vmin": 1.3944401189291966e-13,
+        "vmax": 5.284661597215745e-14,
+        "max_thermal_utilisation": 1.0580009091043507e-12,
+        "cost_eur": 4.845333023695275e-09,
+        "regret_eur": 6.25760776529205e-09,
+        "violation": 0.0,
+        "nonzero": 0.0,
+        "authorised": 0.0
+      }
+    },
+    "block_results.csv": {
+      "rows": 864,
+      "maximum_absolute_difference_by_column": {
+        "seed": 0.0,
+        "violation_rate": 0.0,
+        "nonzero_rate": 0.0,
+        "authorised_rate": 0.0,
+        "severity": 2.5596658039667153e-16,
+        "cost_eur": 1.1132215149700642e-08,
+        "regret_eur": 2.7694824211721425e-10,
+        "loss_mwh": 6.104361460756991e-11,
+        "model_feasible_rate": 0.0
+      }
+    },
+    "summary.csv": {
+      "rows": 48,
+      "maximum_absolute_difference_by_column": {
+        "seed": 0.0,
+        "violation_rate": 0.0,
+        "nonzero_rate": 0.0,
+        "authorised_rate": 0.0,
+        "severity": 3.4608072158916203e-17,
+        "cost_eur": 3.901732270605862e-09,
+        "regret_eur": 4.529843167233594e-11,
+        "loss_mwh": 1.9233947767816062e-11,
+        "model_feasible_rate": 0.0
+      }
+    },
+    "proposal_replay.csv": {
+      "rows": 15552,
+      "maximum_absolute_difference_by_column": {
+        "seed": 0.0,
+        "hour": 0.0,
+        "trust": 4.440892098500626e-16,
+        "agreement": 0.0,
+        "freshness": 0.0,
+        "completeness": 0.0,
+        "maturity": 4.440892098500626e-16,
+        "proposal_mw": 0.0,
+        "model_feasible": 0.0,
+        "plant_feasible": 0.0,
+        "severity": 1.7800106007215266e-14
+      }
+    },
+    "risk_coverage.csv": {
+      "rows": 400,
+      "maximum_absolute_difference_by_column": {
+        "threshold": 0.0,
+        "coverage_pct": 0.0,
+        "risk_pct": 0.0
+      }
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,32 @@
+{
+  "validation_date": "2026-10-06",
+  "clean_virtual_environment_install": "passed",
+  "dependency_check": "no broken requirements",
+  "unit_and_archive_tests_passed": 20,
+  "quick_controller_records": 384,
+  "full_controller_records": 62208,
+  "reference_data_hashes_verified": 13,
+  "local_documentation_links_checked": 35,
+  "full_reproduction_comparison": "passed for six saved data tables at rtol=1e-8 and atol=1e-8",
+  "fresh_ac_audit": {
+    "decision_records": 62208,
+    "maximum_soc_equation_error": 1.1102230246251565e-16,
+    "soc_out_of_bounds": 0,
+    "maximum_score_error": 3.3306690738754696e-16,
+    "trust_regime_disagreements": 0,
+    "physical_label_disagreements": 0,
+    "nonzero_model_infeasible_commands": 0,
+    "nonfinite_powerflows": 0,
+    "fresh_ac_solutions_checked": 40,
+    "maximum_fresh_ac_difference": 2.7372948276094267e-08
+  },
+  "tested_environment": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "matplotlib": "3.11.0",
+    "scikit-learn": "1.7.2",
+    "pandapower": "3.4.0",
+    "simbench": "1.6.3"
+  }
+}

@@ -1,0 +1,23 @@
+TUDT-F research project
+Maintainer: Chandrasen Pandey
+
+Original project source code and project documentation are covered by the MIT
+licence in LICENSE, retaining the existing Devchandrasen copyright notice.
+
+SimBench attribution:
+Copyright (c) 2019-2026 University of Kassel, TU Dortmund, RWTH Aachen University,
+Fraunhofer Institute for Energy Economics and Energy System Technology (IEE)
+Kassel, and individual contributors.
+The SimBench database is made available under ODbL 1.0; database contents under
+the Database Contents Licence 1.0. SimBench code uses BSD-3-Clause. The upstream
+version-specific licence notice is retained in licenses/SimBench-LICENSE.txt.
+The benchmark-derived reference tabular database is provided under ODbL 1.0
+with source attribution retained. See docs/data-provenance.md.
+
+pandapower and all other dependencies retain their original licences and source
+attribution. Cite the pandapower paper and Baran-Wu feeder paper where applicable.
+
+Manuscript text, graphical abstract and publication artwork are research material
+by Chandrasen Pandey. They are supplied for reading and reproducibility review;
+their publication rights are reserved and are not relicensed by the code's MIT
+licence. No publisher endorsement or journal acceptance is implied.
