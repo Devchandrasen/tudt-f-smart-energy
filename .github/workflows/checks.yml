@@ -22,10 +22,10 @@ jobs:
           cache: pip
       - name: Install study
         run: python -m pip install -e .
-          - name: Unit and reference tests
-            run: python -m unittest discover -s tests -v
-          - name: Compile project source
-            run: python -m compileall -q src tests run_segan_study.py analyse_segan.py
+      - name: Unit and reference tests
+        run: python -m unittest discover -s tests -v
+      - name: Compile project source
+        run: python -m compileall -q src tests run_segan_study.py analyse_segan.py
       - name: Verify archived study
         run: python -m tudtf verify
       - name: Quick benchmark
