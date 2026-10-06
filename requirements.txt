@@ -1,6 +1,7 @@
-pandas
-numpy
-scikit-learn
-scipy
-matplotlib
-pandapower
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.18.0
+matplotlib==3.11.0
+scikit-learn==1.7.2
+pandapower==3.3.1
+simbench==1.6.3

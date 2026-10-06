@@ -1,11 +1,18 @@
 cff-version: 1.2.0
-title: "TUDT-F: Trust-Gated Smart-Energy Digital Twin"
-message: "If you use this software, please cite the repository."
+message: "Please cite this software and acknowledge the benchmark sources listed in docs/data-provenance.md."
+title: "Trust-Gated Digital Twin Dispatch for Distribution Networks under Degraded Measurements"
 type: software
 authors:
-  - name: "Devchandrasen"
+  - family-names: Pandey
+    given-names: Chandrasen
 repository-code: "https://github.com/Devchandrasen/tudt-f-smart-energy"
+url: "https://github.com/Devchandrasen/tudt-f-smart-energy"
+version: "2.0.0"
 license: MIT
-version: "1.0.0"
-date-released: "2026-05-12"
-
+keywords:
+  - digital twin
+  - distribution networks
+  - battery dispatch
+  - measurement quality
+  - pandapower
+  - SimBench

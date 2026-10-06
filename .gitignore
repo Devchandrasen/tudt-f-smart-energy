@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
+*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -9,6 +10,14 @@ env/
 .env
 .DS_Store
 Thumbs.db
-data/raw/*
-!data/raw/.gitkeep
-
+build/
+dist/
+results/full/
+results/quick/
+results/audit/
+results/ci-quick/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz

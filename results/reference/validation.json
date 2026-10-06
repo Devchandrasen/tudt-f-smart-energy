@@ -1,0 +1,12 @@
+{
+  "decision_records": 62208,
+  "maximum_soc_equation_error": 1.1102230246251565e-16,
+  "soc_out_of_bounds": 0,
+  "maximum_score_error": 3.3306690738754696e-16,
+  "trust_regime_disagreements": 0,
+  "physical_label_disagreements": 0,
+  "nonzero_model_infeasible_commands": 0,
+  "nonfinite_powerflows": 0,
+  "fresh_ac_solutions_checked": 40,
+  "maximum_fresh_ac_difference": 2.7372948276094267e-08
+}

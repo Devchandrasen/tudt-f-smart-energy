@@ -1,0 +1,5 @@
+Figure 1. Dispatch and evaluation sequence. Current reference observations support evidence scoring. The next-hour plant state is used only for outcome evaluation.
+
+Figure 2. Realised plant constraint violations by scenario. Each bar averages six 72-hour blocks and three seeds. The two panels use different vertical scales. A zero bar indicates no observed violation within the evaluated sample.
+
+Figure 3. Selective constraint risk on common proposals at a fixed state of charge of 0.55, excluding the clean scenario. Thresholds vary from 0 to 0.99. These curves assess score selection rather than complete battery trajectories. Panels use different vertical scales.

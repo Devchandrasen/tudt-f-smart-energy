@@ -1,0 +1,22 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,pgfplots}
+\usetikzlibrary{arrows.meta,positioning}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[ybar,bar width=3pt,width=7.0cm,height=5.1cm,at={(0.0cm,0)},anchor=south west,ymin=0,ylabel={Constraint violations (\%)},title={IEEE 33},symbolic x coords={Clean,Missing,Delayed,Noisy,Bias,Disturbance},xtick=data,x tick label style={rotate=40,anchor=east,font=\scriptsize},tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},enlarge x limits=0.12,legend style={font=\scriptsize,at={(0.5,1.35)},anchor=south,legend columns=2}]
+\addplot[fill=blue!35!black,draw=blue!35!black] coordinates {(Clean,0.4629630) (Missing,0.3858025) (Delayed,0.0000000) (Noisy,2.3148148) (Bias,0.2314815) (Disturbance,1.3888889)};
+\addplot[fill=orange!65!black,draw=orange!65!black] coordinates {(Clean,0.4629630) (Missing,0.3858025) (Delayed,0.0000000) (Noisy,2.3148148) (Bias,0.2314815) (Disturbance,1.3888889)};
+\addplot[fill=green!45!black,draw=green!45!black] coordinates {(Clean,0.4629630) (Missing,0.3858025) (Delayed,0.1543210) (Noisy,0.8487654) (Bias,0.2314815) (Disturbance,1.3888889)};
+\addplot[fill=blue!70,draw=blue!70] coordinates {(Clean,0.4629630) (Missing,0.4629630) (Delayed,0.0000000) (Noisy,0.0000000) (Bias,0.2314815) (Disturbance,1.1574074)};
+\legend{Ungated,Metadata gate,Agreement gate,Trust gate}
+\end{axis}
+\begin{axis}[ybar,bar width=3pt,width=7.0cm,height=5.1cm,at={(8.1cm,0)},anchor=south west,ymin=0,ylabel={Constraint violations (\%)},title={SimBench MV},symbolic x coords={Clean,Missing,Delayed,Noisy,Bias,Disturbance},xtick=data,x tick label style={rotate=40,anchor=east,font=\scriptsize},tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},enlarge x limits=0.12,legend style={font=\scriptsize,at={(0.5,1.35)},anchor=south,legend columns=2}]
+\addplot[fill=blue!35!black,draw=blue!35!black] coordinates {(Clean,0.0000000) (Missing,0.0000000) (Delayed,0.0000000) (Noisy,0.4629630) (Bias,0.0000000) (Disturbance,0.0000000)};
+\addplot[fill=orange!65!black,draw=orange!65!black] coordinates {(Clean,0.0000000) (Missing,0.0000000) (Delayed,0.0000000) (Noisy,0.4629630) (Bias,0.0000000) (Disturbance,0.0000000)};
+\addplot[fill=green!45!black,draw=green!45!black] coordinates {(Clean,0.0000000) (Missing,0.0000000) (Delayed,0.0000000) (Noisy,0.0771605) (Bias,0.0000000) (Disturbance,0.0000000)};
+\addplot[fill=blue!70,draw=blue!70] coordinates {(Clean,0.0000000) (Missing,0.0000000) (Delayed,0.0000000) (Noisy,0.0000000) (Bias,0.0000000) (Disturbance,0.0000000)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-06T08:33:19.253605+00:00",
+  "runtime_seconds": 179.99187430000165,
+  "python": "3.12.14",
+  "pandapower": "3.3.1",
+  "simbench": "1.6.3",
+  "networks": [
+    {
+      "network": "IEEE 33",
+      "buses": 33,
+      "lines": 37,
+      "transformers": 0,
+      "battery_bus_index": 17,
+      "pmax_mw": 0.8,
+      "capacity_mwh": 3.2,
+      "load_mw": 3.715,
+      "generation_mw": 1.7999999999999998,
+      "slack_voltage_pu": [
+        1.0
+      ]
+    },
+    {
+      "network": "SimBench MV",
+      "buses": 97,
+      "lines": 99,
+      "transformers": 2,
+      "battery_bus_index": 15,
+      "pmax_mw": 2.0,
+      "capacity_mwh": 8.0,
+      "load_mw": 17.256,
+      "generation_mw": 25.565,
+      "slack_voltage_pu": [
+        1.025
+      ]
+    }
+  ],
+  "forecast": {
+    "calibration_mae_factor": 0.016408066216999324,
+    "interval_halfwidth_factor": [
+      0.03919934473855324,
+      0.05199692264590465
+    ],
+    "training_residual_scales": [
+      0.024982877993796837,
+      0.03313914513570698
+    ],
+    "calibration_joint_coverage": 0.9008885850991114,
+    "test_mae_factor": 0.017910652672671643
+  },
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "block_hours": 72,
+  "blocks": [
+    "2016-11-01 00:00:00",
+    "2016-11-11 00:00:00",
+    "2016-11-21 00:00:00",
+    "2016-12-01 00:00:00",
+    "2016-12-11 00:00:00",
+    "2016-12-21 00:00:00"
+  ],
+  "scenarios": [
+    "Clean",
+    "Missing",
+    "Delayed",
+    "Noisy",
+    "Bias",
+    "Disturbance"
+  ],
+  "decision_count": 62208,
+  "weights": [
+    0.3,
+    0.25,
+    0.25,
+    0.2
+  ],
+  "thresholds": [
+    0.65,
+    0.85
+  ],
+  "quick": false
+}

@@ -1,2 +1,0 @@
-scenario,rows,trust_score_vectorized_ms_per_step,full_decision_mean_ms_per_step,full_decision_p95_ms_per_step,hardware_note
-delayed,168,0.00979345237456506,4.601916071286333,5.4688599999281,local desktop Python run; includes battery update and pandapower load flow
