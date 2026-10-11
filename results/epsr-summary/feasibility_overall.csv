@@ -1,0 +1,43 @@
+network,controller,hours,violations,no_feasible_power_level,energy_limited,avoidable_violations,forecast_hold_infeasible,forecast_hold_and_plant_infeasible
+IEEE 33,Agreement binary,46656,154,0,0,154,0,0
+IEEE 33,Agreement ternary,46656,76,0,0,76,0,0
+IEEE 33,Always half,46656,0,0,0,0,0,0
+IEEE 33,Composite binary,46656,202,0,0,202,0,0
+IEEE 33,Composite ternary,46656,85,0,0,85,0,0
+IEEE 33,Fixed composite,46656,111,0,0,111,0,0
+IEEE 33,Metadata,46656,203,0,0,203,0,0
+IEEE 33,Reference forecast,46656,217,0,0,217,0,0
+IEEE 33,Stress screen,46656,29,0,0,29,0,0
+IEEE 33,Ungated,46656,206,0,0,206,0,0
+IEEE 33,Without agreement,46656,90,0,0,90,0,0
+IEEE 33,Without completeness,46656,80,0,0,80,0,0
+IEEE 33,Without freshness,46656,85,0,0,85,0,0
+IEEE 33,Without maturity,46656,85,0,0,85,0,0
+SimBench MV,Agreement binary,46656,88,0,0,88,0,0
+SimBench MV,Agreement ternary,46656,73,0,14,59,0,0
+SimBench MV,Always half,46656,54,0,0,54,0,0
+SimBench MV,Composite binary,46656,116,0,0,116,0,0
+SimBench MV,Composite ternary,46656,63,0,0,63,0,0
+SimBench MV,Fixed composite,46656,73,0,0,73,0,0
+SimBench MV,Metadata,46656,130,0,0,130,0,0
+SimBench MV,Reference forecast,46656,109,0,0,109,0,0
+SimBench MV,Stress screen,46656,121,0,0,121,0,0
+SimBench MV,Ungated,46656,136,0,0,136,0,0
+SimBench MV,Without agreement,46656,62,0,0,62,0,0
+SimBench MV,Without completeness,46656,60,0,2,58,0,0
+SimBench MV,Without freshness,46656,62,0,4,58,0,0
+SimBench MV,Without maturity,46656,74,0,10,64,0,0
+SimBench assets,Agreement binary,46656,10356,0,8031,2325,8301,7423
+SimBench assets,Agreement ternary,46656,10146,0,7763,2383,8193,7355
+SimBench assets,Always half,46656,9779,0,6943,2836,7901,7118
+SimBench assets,Composite binary,46656,10382,0,7132,3250,8343,7452
+SimBench assets,Composite ternary,46656,10136,0,6610,3526,8209,7364
+SimBench assets,Fixed composite,46656,10264,0,7898,2366,8246,7375
+SimBench assets,Metadata,46656,10407,0,7245,3162,8348,7455
+SimBench assets,Reference forecast,46656,10472,0,8244,2228,8490,7758
+SimBench assets,Stress screen,46656,10235,0,7694,2541,8482,7565
+SimBench assets,Ungated,46656,10407,0,8186,2221,8313,7423
+SimBench assets,Without agreement,46656,10099,0,6517,3582,8196,7353
+SimBench assets,Without completeness,46656,10125,0,6555,3570,8215,7367
+SimBench assets,Without freshness,46656,10063,0,7287,2776,8150,7305
+SimBench assets,Without maturity,46656,10174,0,6955,3219,8244,7387

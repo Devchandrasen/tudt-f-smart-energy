@@ -1,87 +1,65 @@
-# Methodology
+# Causal dispatch method
 
-The experiment separates the information available to the controller from the
-realised next-hour network state. This timing connects forecast construction,
-measurement-quality evidence, command selection and physical assessment.
+At hour t the controller receives primary factors z(t), current reference r(t),
+availability and age metadata, and its own battery state of charge. The next-hour
+plant state is available only to the independent evaluator after command issue.
+A forecast made at t−1 can be assessed against a received reference at t. A forecast
+made at t cannot use r(t+1) when its command is selected.
 
-## Timing and forecasting
+## Prediction and physical proposal
 
-At epoch $t$, the primary stream supplies load and generation factors $z_t$.
-Features contain the current factors, lags of one and 24 hours, and sine/cosine
-calendar terms. A 60-tree random forest predicts the factors at $t+1$.
+The frozen random forest uses current, lag-1 and lag-24 factors and calendar sine
+and cosine features. Aggregate cases forecast two factors; original asset profiles
+forecast 32 factors, mapped to each load's active/reactive power and each generator.
+A jointly calibrated box assesses completed aggregate load/generation residuals.
+Coverage is empirical; temporal dependence and seasonal shifts remain in the data.
 
-Training uses January to August 2016. Calibration uses September and October.
-Selected 72-hour blocks start on 1, 11 and 21 November and December. Both an
-observation and its next-hour target remain inside their assigned partition.
-There is no random train/test shuffle. Joint interval widths use calibration
-residuals normalised by scales fitted on training residuals. Serial dependence
-limits any distribution-free coverage interpretation.
+Nine powers from −1 to +1 times rated power, in increments of 0.25, are screened
+against battery bounds. A local electrical approximation ranks them by the one-hour
+energy-adjusted objective plus a voltage/thermal severity penalty. Exact AC checks
+accept the first feasible candidate at the forecast state. The selected regime
+then uses the full proposal, half proposal or zero. A separate AC check tests that
+actual command, including its fallback flag. Realised feasibility is evaluated
+at the subsequently revealed plant factors, separately from forecast feasibility.
 
-The source profiles are weighted by installed active power and averaged from
-quarter-hourly to hourly resolution. Both networks use the resulting common
-factors. See [data provenance](data-provenance.md).
+## Evidence and policies
 
-## Evidence and regimes
+| Channel | Causal calculation |
+| :--- | :--- |
+| Freshness F | exp(−age/2), with age in hours |
+| Completeness C | Fraction of received primary vectors over the latest six hours |
+| Completed performance M | Recent joint coverage and residual error over at most 24 completed reference pairs |
+| Agreement A | exp(−mean absolute aggregate meter discrepancy / 0.10) |
 
-Four channels enter the score: freshness $F_t$, six-hour availability $C_t$,
-completed-residual forecast performance $M_t$ and current reference agreement $A_t$.
+Composite evidence is T = 0.30F + 0.25C + 0.25M + 0.20A. It is operating evidence,
+not a feasibility probability. Agreement and composite scores each receive binary
+and three-regime action policies. Lower and upper cutoffs are development quantiles
+at 0.15 and 0.50, targeting 85% authorisation and 50% full dispatch conditional on
+a current reference. Test coverage can differ. Reference-dependent gates hold when
+the current reference is unavailable. Channel removal renormalises retained weights
+and fits its own development cutoffs. A fixed 0.65/0.85 composite control is retained.
 
-$$T_t=0.30F_t+0.25C_t+0.25M_t+0.20A_t.$$
+The remaining controls are ungated, always half, metadata-only, reference-fed
+prediction and finite-scenario stress screening. The reference-fed control uses
+the same trained predictor with reference history and primary fallback on outage.
+The stress screen checks the point forecast and four jointly signed calibrated
+load/generation perturbations. It does not enumerate the 32-dimensional uncertainty
+box or certify nonlinear feasibility inside a continuous set.
 
-$$F_t=\exp(-a_t/2),\qquad
-A_t=\exp\left[-\frac{\operatorname{mean}|z_t-r_t|}{0.10}\right].$$
+## Trajectories and evaluation
 
-The maturity channel combines joint interval coverage and mean absolute error
-over up to 24 completed reference residuals. A forecast for $t$ can enter this
-history only once the reference observation at $t$ has arrived. Fault labels and
-future plant factors are excluded from the score.
+Each controller begins each 72-hour block at state of charge 0.55 and follows its
+own issued power. Charging/discharging efficiencies are 0.94 and energy limits
+are 0.15–0.90. The common voltage band is 0.95–1.05 p.u.; original SimBench bands
+are different. Authorisation, full regime and non-zero activity are recorded
+separately. Paired intervals resample 24 physical blocks within summer/winter
+strata and retain all their scenarios and measurement seeds.
 
-| Score | Regime | Requested command |
-| :--- | :--- | :--- |
-| $T_t \geq 0.85$ | Full | Candidate command |
-| $0.65 \leq T_t < 0.85$ | Cautious | Half the candidate command |
-| $T_t < 0.65$ | Hold | Zero battery power |
-
-A metadata gate and an agreement-only gate provide simpler comparisons. Each
-controller has its own battery state trajectory but shares model, input factors,
-candidate grid, tariffs and physical outcome definition.
-
-## Dispatch and AC checks
-
-Positive power discharges the battery. Candidate ratios are
-$-1,-0.75,\ldots,0.75,1$ times the network-specific rated power.
-Charge and discharge efficiency are both 0.94, and the one-hour SOC transition is
-
-$$x_{t+1}=x_t-\frac{u_t^+}{0.94E}+\frac{0.94u_t^-}{E},$$
-
-with $u_t^+=\max(u_t,0)$, $u_t^-=\max(-u_t,0)$ and capacity $E$ in MWh.
-Each block starts at SOC 0.55 and requires SOC between 0.15 and 0.90.
-
-Linear AC sensitivities rank candidates using a study cost and constraint penalty.
-Acceptance uses a full AC power-flow check. The gated command is checked again
-because scaling may remove useful voltage support. An infeasible nonzero command
-becomes a hold, with the hold's own feasibility flag retained.
-
-Physical outcomes use the realised factors at $t+1$. Voltages must lie between
-0.95 and 1.05 pu, and line/transformer loading must not exceed 100%, with the same
-numerical tolerance for every controller. A hold can violate these limits.
-Forecast-model feasibility therefore does not establish plant feasibility.
-
-## Conditions and assessment
-
-Missing measurements use causal forward carry with 12% random absence. Delayed
-measurements have two-hour age. Noise has factor standard deviation 0.08.
-Bias changes primary load/generation by factors 1.5/0.5 during two six-hour bursts.
-The operating disturbance raises actual load by 28% and lowers generation by 45%
-for 24 hours, visible to both meters. The reference stream is assumed available
-and independent, with factor noise standard deviation 0.01.
-
-Cost includes import/export energy, throughput and a terminal stored-energy
-correction. Conditional one-step regret compares feasible issued actions with
-feasible discrete alternatives at the same SOC. It excludes infeasible actions.
-The cost is a study objective, not an observed market bill.
-
-Selective-risk replay holds SOC at 0.55 and uses one common proposal for both scores.
-Whole-block bootstrap resampling uses 10,000 replicates and six temporal clusters,
-retaining conditions and seeds within each cluster. [Results](results.md) explain
-why full-policy gains do not establish superior selective ranking.
+Common-proposal ranking holds ungated proposals, battery state and realised outcome
+identical across scores. It tests information at matched 50%, 75% and 90% selection
+coverage, without changing deployed development thresholds. The retrospective
+feasibility diagnostic solves all 13 possible full/half issued power levels at
+realised states, then screens them at each controller's recorded energy state.
+It distinguishes missing physical alternatives from energy-limited hours and
+failed selection despite an available same-hour alternative. It does not build
+an implementable multi-hour oracle controller.

@@ -2,63 +2,69 @@
 
 # TUDT-F
 
-### Trust-Gated Digital Twin Dispatch
-**Distribution networks · Battery control · Degraded measurements**
+### Causal trust gating for battery dispatch
+**Distribution networks · Measurement quality · Storage capability**
 
 [![Checks](https://github.com/Devchandrasen/tudt-f-smart-energy/actions/workflows/checks.yml/badge.svg)](https://github.com/Devchandrasen/tudt-f-smart-energy/actions/workflows/checks.yml)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![Code: MIT](https://img.shields.io/badge/Code-MIT-2d7d46)](LICENSE)
-[![Benchmark data: ODbL](https://img.shields.io/badge/Benchmark_data-ODbL_1.0-56627a)](docs/data-provenance.md)
+[![Version 3.0.0](https://img.shields.io/badge/study-v3.0.0-0b7285)](https://github.com/Devchandrasen/tudt-f-smart-energy/releases/tag/v3.0.0)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-2d7d46)](LICENSE)
+[![Data: ODbL](https://img.shields.io/badge/data-ODbL_1.0-56627a)](docs/data-provenance.md)
 
-[Read the manuscript](manuscript/SEGAN_Manuscript.pdf) · [Reproduce the study](docs/reproduction.md) · [Inspect the results](docs/results.md) · [Understand the method](docs/methodology.md)
+[Read the paper](manuscript/EPSR_Manuscript.pdf) · [Explore the results](docs/results.md) · [Reproduce](docs/reproduction.md) · [Download the archive](https://github.com/Devchandrasen/tudt-f-smart-energy/releases/tag/v3.0.0)
 
 </div>
 
-A reproducible research project for battery dispatch when measurements are missing,
-delayed, noisy or biased. A digital twin forecasts the next operating state, checks
-candidate commands against AC network constraints, and uses current and past
-evidence to choose full dispatch, half-power dispatch or a hold command.
+A reproducible simulation study of battery dispatch when primary or reference
+measurements are missing, delayed, noisy or biased. The digital twin forecasts
+operating factors, checks candidate power against AC constraints, and combines
+current metadata with completed forecast evidence to select full power, half power
+or a hold. An independent realised-state evaluator records physical and economic
+outcomes after each command.
 
-**Maintainer:** Chandrasen Pandey. The accompanying research manuscript is a draft
-prepared for *Sustainable Energy, Grids and Networks*. No journal acceptance or
-deployment validation is implied.
+**Maintainer:** Chandrasen Pandey. The manuscript is prepared for *Electric Power
+Systems Research*. It has not been accepted or submitted by this project workflow.
 
-![Dispatch workflow from observations through forecasting, trust gating and AC command checks to independent plant assessment](docs/assets/dispatch-workflow.png)
+![Causal observations, checked proposal, evidence gating, command validation and independent realised-state assessment](docs/assets/dispatch-workflow.png)
 
-## What the project contains
+## Study at a glance
 
-| Component | Scope |
+| Component | Executed v3.0.0 design |
 | :--- | :--- |
-| Networks | IEEE 33-bus feeder and a 97-bus SimBench rural MV network |
-| Controllers | Ungated, metadata gate, agreement gate and composite trust gate |
-| Conditions | Clean, missing, delayed, noisy, biased and operating disturbance |
-| Evaluation | Six 72-hour blocks, three measurement seeds, 62,208 controller records |
-| Forecasting | Chronological random forest and jointly calibrated residual intervals |
-| Validation | Saved-record checks, independent AC solves and block-level uncertainty |
+| Electrical networks | IEEE 33-bus and 97-bus SimBench rural MV |
+| Operating representations | IEEE aggregate, SimBench aggregate, original SimBench asset profiles |
+| Forecast inputs | Two aggregate factors or 32 original profile-group factors |
+| Comparators | Fourteen controls, including score-policy factorial and four channel removals |
+| Conditions | Nine, including reference outage, reference noise and common bias |
+| Chronology | Two rolling forecast origins; 24 non-overlapping 72-hour blocks |
+| Replication | Three paired measurement seeds; 1,959,552 controller records |
+| Validation | Full arithmetic audit, 228 fresh AC checks, 29 tests and action-feasibility diagnosis |
 
-## Results at a glance
+## What the experiments show
 
-| Network | Ungated violations | Trust-gated violations | Ungated cost | Trust-gated cost |
+| Representation | Ungated violations | Composite, three regimes | Always half | Composite cost change vs ungated |
 | :--- | ---: | ---: | ---: | ---: |
-| IEEE 33 | 0.797% | 0.386% | EUR 5,572.26 | EUR 5,584.42 |
-| SimBench MV | 0.077% | 0.000% observed | EUR 3,463.77 | EUR 3,560.47 |
+| IEEE 33 | 0.442% | 0.182% | 0.000% observed | +EUR 26.22 |
+| SimBench aggregate | 0.291% | 0.135% | 0.116% | +EUR 138.83 |
+| SimBench original asset profiles | 22.306% | 21.725% | 20.960% | +EUR 25.08 |
 
-Violation rates cover all evaluated hours, including holds. Costs are mean
-energy-adjusted costs per 72-hour block, with equal weighting across conditions
-and seeds. The trust gate authorises 88.99% of evaluated epochs. Zero observed
-violations is a finite-sample result.
+Rates include every issued command, including holds. Cost changes are mean
+energy-adjusted values per 72-hour block under the fixed study tariffs. The
+always-half comparator has lower observed violations and lower cost than the
+composite gate in all three cases. Composite evidence improves common-proposal
+ranking over agreement at 50% and 75% coverage in the asset case, with no uniform
+advantage across representations or coverage levels.
 
-The reduction in average violations comes with higher cost. Agreement alone
-gives lower selective risk at matched coverage in the fixed-proposal comparison.
-Missing-data performance on the IEEE feeder also worsens slightly under the trust
-gate. These findings are retained in the paper and [result guide](docs/results.md).
+Every realised state has a feasible tested power before energy screening. Battery
+energy limits exclude every feasible tested power during **65.21% of composite
+failures with asset profiles**. This separates information and action choice from
+the energy headroom required for sustained voltage support.
 
-![Constraint violation rates across six conditions on both networks](docs/assets/constraint_outcomes.png)
+![Agreement and composite scores compared under identical binary and three-regime action policies](docs/assets/score-policy-outcomes.png)
 
-## Start in three commands
+## Get started
 
-Use **Python 3.12**, clone the repository, and activate an isolated environment.
-The pinned versions define the tested installation environment.
+Use Python 3.12 and an isolated environment:
 
 ```bash
 git clone https://github.com/Devchandrasen/tudt-f-smart-energy.git
@@ -66,71 +72,64 @@ cd tudt-f-smart-energy
 python -m venv .venv
 ```
 
-Activate with `.venv\Scripts\Activate.ps1` in PowerShell or
+Activate `.venv\Scripts\Activate.ps1` in PowerShell or
 `source .venv/bin/activate` on Linux/macOS, then run:
 
 ```bash
 python -m pip install -e .
-python -m tudtf verify
-python -m tudtf run --quick
+python -m tudtf verify-extended
+python -m unittest discover -s tests -v
 ```
 
-The short run produces **384 records** in `results/quick/`. It checks execution;
-it is smaller than the experiment reported in the manuscript. The archived study
-remains in `results/reference/` and is protected against accidental overwriting.
-
-To reproduce the full experiment and its analysis:
+To exercise the complete controller pipeline on a smaller asset-profile run:
 
 ```bash
-python -m tudtf run
-python -m tudtf analyse --results results/full
-python -m tudtf verify --results results/full --skip-hashes
-python -m tudtf compare --results results/full
+python -m tudtf extended --quick --network "SimBench assets" --output results/ci-extended
+python -m tudtf analyse-extended --results results/ci-extended
 ```
 
-The same commands are available through the installed `tudtf` entry point.
-See [reproduction](docs/reproduction.md) for output paths and platform notes.
+This check produces 672 controller records from one summer block and two conditions.
+It is an execution check. The published study uses the full design above.
+The [reproduction guide](docs/reproduction.md) covers the complete run, numerical
+archive download, independent diagnostic and figure generation.
 
 ## Project map
 
 ```text
-src/tudtf/            Forecasting, dispatch, evidence, analysis and verification
-tests/                Causality, numerical, feasibility and archive checks
-results/reference/    Executed study, metadata and SHA-256 manifest
-docs/                 Methodology, result interpretation and data provenance
-docs/assets/          Architecture and result figures
-manuscript/           PDF, editable LaTeX, figure sources and artwork
-.github/workflows/    Automated tests and quick benchmark
+src/tudtf/                 Prediction, dispatch, evidence, analysis and verification
+tests/                     Timing, profiles, action rules and archive integrity
+results/epsr-summary/       v3.0.0 summaries, input factors, audits and SHA-256 digests
+results/reference/          Historical v2.0.0 study retained for verification
+manuscript/EPSR_*           Paper, numerical supplement and editable source
+manuscript/epsr_figures/    Native PDF figures, draw.io architecture and trace data
+docs/                      Methods, results, reproduction and provenance
+.github/workflows/         Windows/Linux tests and small pipeline runs
 ```
 
-Generated runs go to `results/full/` or `results/quick/`, which are ignored by Git.
-The earlier OPSD implementation remains available at
-[commit 94a9e83](https://github.com/Devchandrasen/tudt-f-smart-energy/tree/94a9e83).
-Its metrics belong to a different experiment.
+The complete per-hour CSV is a versioned release asset. Generated full runs are
+ignored by Git. [v2.0.0](https://github.com/Devchandrasen/tudt-f-smart-energy/releases/tag/v2.0.0)
+and the [earlier OPSD implementation](https://github.com/Devchandrasen/tudt-f-smart-energy/tree/94a9e83)
+use different experimental designs. Their values should be interpreted within
+their own archive, rather than mixed with the EPSR study.
 
-## Research boundaries
+## Scope of the evidence
 
-This is a simulation benchmark. Both networks use common aggregate SimBench
-load and generation factors. An available independent reference meter, study
-tariffs, battery placement and a specified IEEE feeder current rating are
-assumptions. All observed failures concern voltage; thermal stress is not
-established by these runs. The search uses discrete candidate ranking followed
-by AC checks. It does not establish a global OPF optimum or a safety guarantee.
-
-The 62,208 records share time blocks and are correlated. Confidence intervals
-resample six complete blocks. The data split, gate timing and conditional regret
-are explained in the [method guide](docs/methodology.md).
+The models use balanced hourly AC operation, fixed topology and one active-power
+battery. Voltage limits 0.95–1.05 p.u. are imposed study settings and differ from
+the original SimBench bus bands. The IEEE line-current rating, storage placement
+and tariffs are also study assumptions. All observed failures are voltage events;
+the executed periods do not establish behaviour under binding thermal constraints.
+The finite action grid, residual coverage and stress screening do not establish a
+global OPF optimum or a safety guarantee. Uncertainty resamples complete physical
+blocks, retaining their dependent measurements and controller records.
 
 ## Citation and reuse
 
-Use GitHub's **Cite this repository** action or [CITATION.cff](CITATION.cff).
-A paper DOI has not been assigned. Please acknowledge the original SimBench,
-pandapower and IEEE feeder sources when using the benchmark.
+Use [CITATION.cff](CITATION.cff) or GitHub's **Cite this repository** action. A paper
+DOI has not been assigned. Cite SimBench, pandapower and the Baran–Wu feeder source
+when reusing the benchmark. Original code and documentation use [MIT](LICENSE);
+benchmark-derived tables retain [SimBench database terms](docs/data-provenance.md).
+Manuscript and artwork rights are recorded in [NOTICE](NOTICE).
 
-Original project code and documentation use [MIT](LICENSE). The benchmark-derived
-database retains [SimBench's ODbL and database-content terms](docs/data-provenance.md).
-Manuscript and artwork rights are described in [NOTICE](NOTICE).
-
-Contributions and reproducibility reports are welcome through
-[issues](https://github.com/Devchandrasen/tudt-f-smart-energy/issues).
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing the study or reference results.
+Reproducibility reports are welcome through [issues](https://github.com/Devchandrasen/tudt-f-smart-energy/issues).
+See [CONTRIBUTING.md](CONTRIBUTING.md) before changing source or archived results.

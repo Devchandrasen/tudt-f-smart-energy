@@ -28,9 +28,17 @@ jobs:
         run: python -m compileall -q src tests run_segan_study.py analyse_segan.py
       - name: Verify archived study
         run: python -m tudtf verify
+      - name: Verify EPSR summary and source hashes
+        run: python -m tudtf verify-extended
       - name: Quick benchmark
         if: runner.os == 'Linux'
         run: python -m tudtf run --quick --output results/ci-quick
       - name: Verify quick results
         if: runner.os == 'Linux'
         run: python -m tudtf verify --results results/ci-quick --skip-hashes
+      - name: Quick asset-profile dispatch study
+        if: runner.os == 'Linux'
+        run: python -m tudtf extended --quick --network "SimBench assets" --output results/ci-extended
+      - name: Audit quick asset-profile results
+        if: runner.os == 'Linux'
+        run: python -m tudtf analyse-extended --results results/ci-extended

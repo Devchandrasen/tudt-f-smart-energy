@@ -1,0 +1,24 @@
+{
+  "records": 1959552,
+  "unique_realised_states": 6912,
+  "action_fractions": [
+    -1.0,
+    -0.75,
+    -0.5,
+    -0.375,
+    -0.25,
+    -0.125,
+    0.0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "feasible_issued_commands_missed": 0,
+  "partition_disagreements": 0,
+  "diagnostic_only": true,
+  "runtime_seconds": 508.04470519999813,
+  "source_sha256": "2aaffd3d91e4c1d14d6deb22d1c6b21ab4e208e0077291f00d3c32d5463d0d7e"
+}

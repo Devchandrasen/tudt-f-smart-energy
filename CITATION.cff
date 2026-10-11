@@ -1,13 +1,14 @@
 cff-version: 1.2.0
 message: "Please cite this software and acknowledge the benchmark sources listed in docs/data-provenance.md."
-title: "Trust-Gated Digital Twin Dispatch for Distribution Networks under Degraded Measurements"
+title: "Causal Trust Gating for Battery Dispatch in Distribution Networks under Degraded Measurements"
 type: software
 authors:
   - family-names: Pandey
     given-names: Chandrasen
 repository-code: "https://github.com/Devchandrasen/tudt-f-smart-energy"
 url: "https://github.com/Devchandrasen/tudt-f-smart-energy"
-version: "2.0.0"
+version: "3.0.0"
+date-released: "2026-10-11"
 license: MIT
 keywords:
   - digital twin

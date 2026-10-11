@@ -1,5 +1,49 @@
 # Changelog
 
+## 3.0.0 — 11 October 2026
+
+- Adds two rolling forecast origins, 24 blocks, nine conditions and 14 controls.
+- Executes 1,959,552 records with original SimBench asset-specific P/Q profiles.
+- Separates score and action policy, includes reference failures and four channel removals.
+- Adds finite-scenario screening, paired block uncertainty and common-proposal ranking.
+- Diagnoses realised action feasibility and battery energy-headroom limits.
+- Aligns manuscript, native diagrams, numerical supplement and project guides for EPSR.
+- Adds streaming archive verification and versioned full numerical release assets.
+- Retains the original v2.0.0 archive and tests without changing its results.
+
+## 3.0.0 — 11 October 2026
+
+- Adds two rolling forecast origins, 24 blocks, nine conditions and 14 controls.
+- Executes 1,959,552 records with original SimBench asset-specific P/Q profiles.
+- Separates score and action policy, includes reference failures and four channel removals.
+- Adds finite-scenario screening, paired block uncertainty and common-proposal ranking.
+- Diagnoses realised action feasibility and battery energy-headroom limits.
+- Aligns manuscript, native diagrams, numerical supplement and project guides for EPSR.
+- Adds streaming archive verification and versioned full numerical release assets.
+- Retains the original v2.0.0 archive and tests without changing its results.
+
+## 3.0.0 — 11 October 2026
+
+- Adds two rolling forecast origins, 24 blocks, nine conditions and 14 controls.
+- Executes 1,959,552 records with original SimBench asset-specific P/Q profiles.
+- Separates score and action policy, includes reference failures and four channel removals.
+- Adds finite-scenario screening, paired block uncertainty and common-proposal ranking.
+- Diagnoses realised action feasibility and battery energy-headroom limits.
+- Aligns manuscript, native diagrams, numerical supplement and project guides for EPSR.
+- Adds streaming archive verification and versioned full numerical release assets.
+- Retains the original v2.0.0 archive and tests without changing its results.
+
+## 3.0.0 — 11 October 2026
+
+- Adds two rolling forecast origins, 24 blocks, nine conditions and 14 controls.
+- Executes 1,959,552 records with original SimBench asset-specific P/Q profiles.
+- Separates score and action policy, includes reference failures and four channel removals.
+- Adds finite-scenario screening, paired block uncertainty and common-proposal ranking.
+- Diagnoses realised action feasibility and battery energy-headroom limits.
+- Aligns manuscript, native diagrams, numerical supplement and project guides for EPSR.
+- Adds streaming archive verification and versioned full numerical release assets.
+- Retains the original v2.0.0 archive and tests without changing its results.
+
 ## 2.0.0
 
 - Adds causal forecasting and evidence-driven dispatch on IEEE 33 and SimBench MV.

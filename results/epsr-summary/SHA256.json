@@ -1,0 +1,19 @@
+{
+  "ARCHIVE_SHA256.json": "e64ee0f6dc8fc6e7a2087420f6e9be5108966ca418ae58d40d3eb2623dcba002",
+  "block_results.csv": "e61fc77d0ef62befa2e854fe645f04a4024382cbb22b62299d6d846c127186a3",
+  "feasibility_by_block.csv": "ce44418189c06c6461ba818c508de237478c62713cf4ddf6430d265b2f4794b0",
+  "feasibility_overall.csv": "332c57b283f16ba260eabf7486a9a950a5c086f843371a63cce9070a12439fc1",
+  "feasibility_scenarios.csv": "e776e42bf3363a2f48158cf51026ef7818b4a5989637a60ae392debf88e60128",
+  "feasibility_validation.json": "12c77563c7ae1911cd00ac7c29e9c86cac75dc95e8db883df7035836d179f469",
+  "forecast_validation.csv": "8a8cc68499a04daffc73ad7b035ef383d278f5b7af45c9edd0174526dffd2ef6",
+  "hourly_aggregate_profiles.csv": "48ca33f6c2b2b4c3eb72efbe2431bd65be9e9ce3162e833f03535099f4f80663",
+  "hourly_asset_profiles.csv": "00a87fa85bd6981b71dcdca3a4f25b19f176cae4d0a357729ea44b85b275a44f",
+  "matched_coverage.csv": "60aa7cb0bd623b202a64802c99377b54d1080cce5ea48e765613ca48524fd19a",
+  "metadata.json": "f2e8bbfef6f7e82c485f11fbe565dd94379a5bf462f784a694e7ddccd2cfbe99",
+  "overall.csv": "17f4d5a113c57704deb7bee4c0f9bf0c5936a9014c9f6f4884617b58e944f0b0",
+  "paired_uncertainty.csv": "6ad7c74807593bda1e0c4bf1c778caa45f21b544011a5d97c682d2a62be3b55d",
+  "realised_action_feasibility.csv": "eb56956fe1302dc9a9a7080f917ee78d16567798483b704e00308d448cf185ab",
+  "scenario_results.csv": "a3fbb1815c0197bafcb051f53dfb0523470f6ae09e7de2a06e17648b4da8664f",
+  "terminal_valuation.csv": "2bf665504e3aab959d4d1b9663ac2ba750409dbc65e888bd9d5a3322767b2ba9",
+  "validation.json": "96c86fbd71d9a7098ea276dd76b6fd8bdc84b16e35f68979a9dd61e880e05db1"
+}

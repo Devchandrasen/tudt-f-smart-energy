@@ -1,77 +1,66 @@
-# Results and interpretation
+# Interpret the executed results
 
-The result tables come from executed benchmark simulations. The archived record
-contains 62,208 controller decisions, not independent field trials. Rates include
-all hours; authorisation and nonzero dispatch are separate quantities.
+The v3.0.0 study has 1,959,552 controller records, but its physical time samples are
+24 non-overlapping blocks. Seeds and controllers share operating periods. Rates
+include all commands, including holds. The IEEE and two SimBench representations
+use a common imposed voltage band of 0.95–1.05 p.u., which differs from native
+SimBench bus limits. The original asset profiles are also forecast spatially.
 
-## Main comparison
+## Main controller comparison
 
-| Network | Controller | Physical violation rate | Authorisation | Nonzero dispatch | Mean cost per 72 h |
-| :--- | :--- | ---: | ---: | ---: | ---: |
-| IEEE 33 | Ungated | 0.797% | 100.00% | 38.59% | EUR 5,572.26 |
-| IEEE 33 | Metadata gate | 0.797% | 81.29% | 31.47% | EUR 5,618.35 |
-| IEEE 33 | Agreement gate | 0.579% | 81.07% | 33.38% | EUR 5,580.72 |
-| IEEE 33 | Trust gate | 0.386% | 88.99% | 41.01% | EUR 5,584.42 |
-| SimBench MV | Ungated | 0.077% | 100.00% | 18.36% | EUR 3,463.77 |
-| SimBench MV | Metadata gate | 0.077% | 81.29% | 15.14% | EUR 3,640.64 |
-| SimBench MV | Agreement gate | 0.013% | 81.07% | 16.04% | EUR 3,523.83 |
-| SimBench MV | Trust gate | 0.000% observed | 88.99% | 19.62% | EUR 3,560.47 |
+| Representation | Ungated failures | Agreement, three regimes | Composite, three regimes | Always half |
+| :--- | ---: | ---: | ---: | ---: |
+| IEEE 33 | 206 (0.442%) | 76 (0.163%) | 85 (0.182%) | 0 (0.000% observed) |
+| SimBench aggregate | 136 (0.291%) | 73 (0.156%) | 63 (0.135%) | 54 (0.116%) |
+| SimBench asset profiles | 10,407 (22.306%) | 10,146 (21.746%) | 10,136 (21.725%) | 9,779 (20.960%) |
 
-Source: [overall_results.csv](../results/reference/overall_results.csv).
-Cost increases by EUR 12.17 on IEEE 33 and EUR 96.70 on SimBench per block.
-These increases are about 0.22% and 2.79%. Only voltage violations occur in the
-evaluated states. The study cannot support a claim of thermal protection.
+Every cell has a denominator of 46,656 hours. Composite gating improves on ungated
+dispatch but has higher mean cost: +EUR 26.22, +EUR 138.83 and +EUR 25.08 per block.
+The paired asset-profile cost interval spans zero. Always-half has lower observed
+violations and lower cost than composite gating in each representation. The score's
+value consequently cannot be inferred from the ungated comparison alone.
 
-## Paired uncertainty
+Agreement-versus-composite comparisons use the same binary or three-regime policies.
+Their three-regime physical differences are small and do not establish consistent
+superiority. Removing any one evidence channel also produces no uniform ordering
+across networks, costs and failures. All fourteen configurations are retained in
+[overall.csv](../results/epsr-summary/overall.csv).
 
-| Network | Trust minus ungated violation rate | 95% block-bootstrap interval | Cost difference | 95% interval |
-| :--- | ---: | :--- | ---: | :--- |
-| IEEE 33 | -0.412 percentage points | [-0.630, -0.193] | EUR 12.17 | [-2.17, 25.50] |
-| SimBench MV | -0.077 percentage points | [-0.206, 0.000] | EUR 96.70 | [50.47, 137.51] |
+## Conditional selection information
 
-Six clusters give limited precision. The SimBench violation interval reaches
-zero. [paired_uncertainty.csv](../results/reference/paired_uncertainty.csv)
-contains all reported metric differences.
+Each representation has 40,608 degraded-condition ungated proposals with a current
+reference. At matched 50% coverage, agreement/composite risk is 0.364%/0.443% for
+IEEE, 0.207%/0.167% for aggregate MV and 21.218%/17.711% for asset profiles. The
+asset composite advantage persists at 75% coverage but disappears near 90%.
+This retrospective ranking fixes proposal and energy state; it does not replace
+the separately tested development cutoffs. See
+[matched_coverage.csv](../results/epsr-summary/matched_coverage.csv).
 
-## Where the gate helps and where it costs
+## Voltage exposure and energy capability
 
-Noise gives the clearest violation reduction. IEEE 33 noise-condition rates fall
-from 2.315% ungated to zero observed under the trust gate. SimBench noise-condition
-rates fall from 0.463% to zero observed. Under missing data on IEEE 33, the trust
-rate is 0.463% versus 0.386% ungated. Clean-condition IEEE violations are unchanged.
+All observed failures are voltage events: under-voltage on IEEE and over-voltage
+on SimBench. No thermal limit is crossed. The maximum within-block failure runs
+are four hours on IEEE, two on aggregate MV and 55 with original asset profiles.
+The asset comparison changes the full operating/forecast/measurement representation;
+it is not a single-factor causal experiment isolating spatial diversity alone.
 
-Two-hour delay produces no ungated physical violations in the evaluated blocks.
-Gating still raises cost in that condition. These outcomes depend on both command
-scaling and the resulting battery SOC trajectory.
+The thirteen-action realised-state diagnostic finds at least one feasible tested
+power in every one of 6,912 unique states before energy screening. For composite
+gating with asset profiles, 6,610 failures are energy-limited and 3,526 have an
+energy-admissible same-hour alternative. Energy-limited failures are 65.21% of its
+10,136 failures. Choosing a different action changes future state of charge, so
+these counts are not the number preventable by a deployable oracle trajectory.
+They identify energy-headroom management as a central extension to the one-hour
+dispatch kernel. See [feasibility_overall.csv](../results/epsr-summary/feasibility_overall.csv).
 
-## Selective ranking
+## Uncertainty and numerical consistency
 
-![Risk versus retained proposal coverage for trust and agreement scores](assets/risk_coverage.png)
-
-At matched 90%, 75% and 50% coverage, agreement alone has lower selective risk
-than composite trust on IEEE 33. It is lower at 90% and 75% on SimBench and ties
-at 50%. The comparison uses common fixed-SOC proposals, which differs from the
-controllers' evolving SOC trajectories. Full-policy violation reduction is not
-evidence that the composite score ranks proposals better.
-
-See [matched_coverage.csv](../results/reference/matched_coverage.csv) and
-[score_sensitivity.csv](../results/reference/score_sensitivity.csv) for the data.
-
-## Verification and limits
-
-The original audit found zero SOC-bound, score-regime, physical-label or nonzero
-model-feasibility failures. Forty fresh AC solves agreed with recorded results to
-within 2.74e-8 maximum absolute component difference. The archive also contains
-input factors and forecast-validation records.
-
-The complete study was also rerun in the compatible installation environment
-(pandapower 3.4.0 and SciPy 1.16.3). All six compared saved data tables match the
-original archive within relative and absolute tolerances of 1e-8. The original
-reference files retain their recorded versions. See
-[reproduction_check.json](../results/reproduction_check.json) and
-[project_validation.json](../results/project_validation.json).
-
-Aggregate spatial factors, available independent references, study tariffs,
-explicit battery placement and an assumed IEEE line rating limit generalisation.
-Field operation, coordinated attacks, missing references, asset-specific spatial
-profiles and severe thermal cases remain outside the evaluated experiment.
+Ten thousand stratified paired bootstrap draws retain each complete physical block,
+its conditions and seeds. Their intervals describe the selected benchmark periods.
+Stored-energy valuation at 90/130/170 EUR/MWh changes accounting on fixed trajectories;
+it does not rerun dispatch. Fresh uncached checks cover 114 realised and 114 forecast
+command points, with zero label disagreements and maximum physical-metric difference
+6.25e-8. Full-record arithmetic audits find no battery bound, regime or score errors
+outside rounding tolerance. The independent profile conversion test covers 8,784
+hours against the official SimBench helper. The
+[numerical supplement](../manuscript/EPSR_Numerical_Supplement.pdf) gives the complete tables.

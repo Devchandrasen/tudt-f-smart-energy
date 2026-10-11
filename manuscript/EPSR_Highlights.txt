@@ -1,0 +1,5 @@
+- Causal evidence gating is assessed across 1,959,552 battery-dispatch records.
+- Fourteen controls separate evidence scoring from power restriction.
+- Composite gating reduces violations relative to ungated dispatch.
+- Always-half dispatch has lower observed violations and cost than composite gating.
+- Asset-profile failures reveal battery energy-headroom limits.

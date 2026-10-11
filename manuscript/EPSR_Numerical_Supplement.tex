@@ -1,0 +1,725 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,array,longtable,geometry,pdflscape,needspace,float}
+\usepackage[colorlinks=true,urlcolor=blue!45!black]{hyperref}
+\usepackage{xcolor}
+\geometry{margin=23mm}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{3.5pt}
+\begin{document}
+\begin{center}{\Large\bfseries Numerical Supplement}\par\medskip
+Causal Trust Gating for Battery Dispatch in Distribution Networks under Degraded Measurements\par\smallskip Chandrasen Pandey\end{center}
+This supplement accompanies the executed rolling-origin dispatch assessment. All values are derived from the v3.0.0 archive. The complete per-hour records, source hashes and input profiles are available at \url{https://github.com/Devchandrasen/tudt-f-smart-energy/releases/tag/v3.0.0}. The v2.0.0 archive uses a different design and is retained only as historical material.
+
+\section{Configuration and chronological partitions}
+The same electrical limits, storage equations and tariff settings apply to the principal controllers. Profile-factor values and fitted parameters remain representation specific. Temporal blocks retain all conditions and seeds in paired aggregation.
+\begin{table}[H]
+\centering\small\setlength{\tabcolsep}{3.5pt}
+\caption{Chronological sample counts. Counts refer to valid current-target pairs.}\label{tab:split}
+\begin{tabular}{lrrrr}
+\toprule
+Representation & Origin & Train & Calibration & Development\\\midrule
+IEEE 33 & Summer & 2879 & 743 & 719\\
+IEEE 33 & Winter & 5831 & 719 & 743\\
+MV aggregate & Summer & 2879 & 743 & 719\\
+MV aggregate & Winter & 5831 & 719 & 743\\
+MV asset profiles & Summer & 2879 & 743 & 719\\
+MV asset profiles & Winter & 5831 & 719 & 743\\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]
+\centering\small\setlength{\tabcolsep}{3.5pt}
+\caption{Last next-hour target dates retained inside each partition.}\label{tab:dates}
+\begin{tabular}{lrrrr}
+\toprule
+Representation & Origin & Last train & Last calibration & Last development\\\midrule
+IEEE 33 & Summer & 2016-04-30 & 2016-05-31 & 2016-06-30\\
+IEEE 33 & Winter & 2016-08-31 & 2016-09-30 & 2016-10-31\\
+MV aggregate & Summer & 2016-04-30 & 2016-05-31 & 2016-06-30\\
+MV aggregate & Winter & 2016-08-31 & 2016-09-30 & 2016-10-31\\
+MV asset profiles & Summer & 2016-04-30 & 2016-05-31 & 2016-06-30\\
+MV asset profiles & Winter & 2016-08-31 & 2016-09-30 & 2016-10-31\\
+\bottomrule\end{tabular}
+\end{table}
+The summer test starts are 1, 5, 9, 13, 17, 21, 25 and 28 July. Winter starts use the same dates in November and December. Each block has 72 commands and 24 hours of prehistory. Measurement seeds are 11, 29 and 47. Conditions are Clean, Missing, Delayed, Noisy, Bias, Disturbance, Reference outage, Reference noisy and Common bias. Fourteen configurations provide 46,656 evaluated hours per controller and representation. The complete total is 1,959,552 records.
+
+All study checks use voltage 0.95--1.05 p.u. and thermal utilisation at most one, with tolerance $10^{-7}$. The native SimBench bus bands include 0.90--1.10 and 0.965--1.055 p.u. Reported failures concern the imposed study band. Battery efficiencies are 0.94, state-of-charge limits are 0.15--0.90 and every block starts at 0.55. IEEE storage is 0.8 MW and 3.2 MWh at bus 17; SimBench storage is 2 MW and 8 MWh at bus 15. Buying prices are 70, 240 and 150 EUR/MWh during 00:00--06:59, 17:00--21:59 and other hours, respectively. Export receives 40 EUR/MWh and throughput costs 10 EUR/MWh.
+\section{Development cutoffs and coverage}
+Cutoffs use received-reference development scores only. Lower and upper targets are 85\% authorisation and 50\% full dispatch, respectively. Equality is retained, so ties can increase achieved coverage. Values below are fixed before test dispatch.
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lllrrrr}
+\caption{Fitted score thresholds and conditional development coverage.}\\\toprule
+Representation & Origin & Score & $\tau_L$ & $\tau_H$ & Authorised (\%) & Full (\%)\\\midrule
+\endfirsthead
+\toprule
+Representation & Origin & Score & $\tau_L$ & $\tau_H$ & Authorised (\%) & Full (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Aggregate & Summer & Agreement & 0.573030 & 0.898015 & 85.000 & 50.008\\
+Aggregate & Summer & Composite & 0.729444 & 0.929623 & 85.000 & 50.003\\
+Aggregate & Summer & Without freshness & 0.702175 & 0.900993 & 85.000 & 50.003\\
+Aggregate & Summer & Without completeness & 0.642444 & 0.915425 & 85.000 & 50.003\\
+Aggregate & Summer & Without maturity & 0.820741 & 0.968927 & 85.000 & 50.013\\
+Aggregate & Summer & Without agreement & 0.775079 & 0.937968 & 85.000 & 50.003\\
+Aggregate & Winter & Agreement & 0.570326 & 0.899086 & 84.997 & 50.003\\
+Aggregate & Winter & Composite & 0.698440 & 0.898524 & 84.997 & 50.003\\
+Aggregate & Winter & Without freshness & 0.643358 & 0.857825 & 84.997 & 50.003\\
+Aggregate & Winter & Without completeness & 0.600752 & 0.873443 & 84.997 & 50.003\\
+Aggregate & Winter & Without maturity & 0.818716 & 0.969767 & 84.997 & 50.013\\
+Aggregate & Winter & Without agreement & 0.742742 & 0.896971 & 84.997 & 50.003\\
+Asset profiles & Summer & Agreement & 0.716711 & 0.949516 & 85.000 & 50.018\\
+Asset profiles & Summer & Composite & 0.805339 & 0.915768 & 85.000 & 50.008\\
+Asset profiles & Summer & Without freshness & 0.793226 & 0.882145 & 85.021 & 50.003\\
+Asset profiles & Summer & Without completeness & 0.745745 & 0.894566 & 85.021 & 50.003\\
+Asset profiles & Summer & Without maturity & 0.878440 & 0.984809 & 85.000 & 50.003\\
+Asset profiles & Summer & Without agreement & 0.785659 & 0.923676 & 85.000 & 50.003\\
+Asset profiles & Winter & Agreement & 0.712907 & 0.947974 & 84.997 & 50.003\\
+Asset profiles & Winter & Composite & 0.822501 & 0.920561 & 84.997 & 50.003\\
+Asset profiles & Winter & Without freshness & 0.801141 & 0.889122 & 84.997 & 50.003\\
+Asset profiles & Winter & Without completeness & 0.767625 & 0.904032 & 84.997 & 50.003\\
+Asset profiles & Winter & Without maturity & 0.874418 & 0.984781 & 84.997 & 50.008\\
+Asset profiles & Winter & Without agreement & 0.839615 & 0.926409 & 84.997 & 50.003\\
+\end{longtable}\normalsize
+\section{Complete controller outcomes}
+Every rate includes all issued commands, including holds. Costs and losses are mean values per 72-hour block, while violation counts and bus-hours sum all evaluated epochs. Each representation has the same denominator of 46,656 hours per controller.
+\Needspace{10\baselineskip}\subsection{IEEE 33}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrrrr}
+\caption{Physical, economic and activity summaries for IEEE 33.}\\\toprule
+Controller & Failures & Rate (\%) & Cost (EUR) & Loss (MWh) & Auth. (\%) & Full (\%) & Active (\%)\\\midrule
+\endfirsthead
+\toprule
+Controller & Failures & Rate (\%) & Cost (EUR) & Loss (MWh) & Auth. (\%) & Full (\%) & Active (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 206 & 0.442 & 4835.32 & 0.757 & 100.00 & 100.00 & 39.14\\
+Always half & 0 & 0.000 & 4815.58 & 0.509 & 100.00 & 0.00 & 62.52\\
+Metadata & 203 & 0.435 & 4864.43 & 0.724 & 87.52 & 87.52 & 34.52\\
+Agreement (2) & 154 & 0.330 & 4849.51 & 0.721 & 83.00 & 83.00 & 34.36\\
+Composite (2) & 202 & 0.433 & 4865.47 & 0.713 & 83.08 & 83.08 & 33.32\\
+Agreement (3) & 76 & 0.163 & 4851.87 & 0.630 & 83.00 & 48.54 & 40.70\\
+Composite (3) & 85 & 0.182 & 4861.54 & 0.610 & 83.08 & 43.54 & 41.08\\
+Without freshness & 85 & 0.182 & 4856.52 & 0.609 & 82.33 & 43.28 & 41.28\\
+Without completeness & 80 & 0.171 & 4861.08 & 0.610 & 83.15 & 42.74 & 41.23\\
+Without maturity & 85 & 0.182 & 4866.56 & 0.624 & 83.11 & 48.80 & 39.87\\
+Without agreement & 90 & 0.193 & 4864.88 & 0.611 & 83.19 & 43.20 & 40.81\\
+Reference forecast & 217 & 0.465 & 4834.71 & 0.761 & 100.00 & 100.00 & 38.85\\
+Stress screening & 29 & 0.062 & 4833.11 & 0.725 & 100.00 & 100.00 & 40.76\\
+Fixed composite & 111 & 0.238 & 4848.89 & 0.657 & 90.45 & 60.29 & 42.02\\
+\end{longtable}\normalsize
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrrr}
+\caption{Voltage, thermal and event-extent summaries for IEEE 33.}\\\toprule
+Controller & $V_{\min}$ & $V_{\max}$ & $\rho_{\max}$ & Mean severity & Longest (h) & Bus-hours\\\midrule
+\endfirsthead
+\toprule
+Controller & $V_{\min}$ & $V_{\max}$ & $\rho_{\max}$ & Mean severity & Longest (h) & Bus-hours\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 0.93671 & 1.04847 & 0.2224 & 0.000011 & 4 & 260\\
+Always half & 0.96162 & 1.02811 & 0.2034 & 0.000000 & 0 & 0\\
+Metadata & 0.93671 & 1.04847 & 0.2224 & 0.000011 & 4 & 257\\
+Agreement (2) & 0.93671 & 1.04377 & 0.2224 & 0.000007 & 4 & 192\\
+Composite (2) & 0.93671 & 1.04847 & 0.2224 & 0.000010 & 4 & 254\\
+Agreement (3) & 0.93671 & 1.04786 & 0.2224 & 0.000004 & 4 & 99\\
+Composite (3) & 0.93671 & 1.03874 & 0.2034 & 0.000005 & 4 & 114\\
+Without freshness & 0.93671 & 1.03874 & 0.2034 & 0.000005 & 4 & 114\\
+Without completeness & 0.93671 & 1.03874 & 0.2034 & 0.000005 & 2 & 107\\
+Without maturity & 0.93671 & 1.04786 & 0.2224 & 0.000005 & 4 & 110\\
+Without agreement & 0.93671 & 1.04188 & 0.2034 & 0.000006 & 2 & 121\\
+Reference forecast & 0.93246 & 1.04941 & 0.2224 & 0.000011 & 4 & 274\\
+Stress screening & 0.94597 & 1.04847 & 0.2224 & 0.000001 & 1 & 34\\
+Fixed composite & 0.93671 & 1.04786 & 0.2224 & 0.000006 & 4 & 144\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV aggregate}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrrrr}
+\caption{Physical, economic and activity summaries for MV aggregate.}\\\toprule
+Controller & Failures & Rate (\%) & Cost (EUR) & Loss (MWh) & Auth. (\%) & Full (\%) & Active (\%)\\\midrule
+\endfirsthead
+\toprule
+Controller & Failures & Rate (\%) & Cost (EUR) & Loss (MWh) & Auth. (\%) & Full (\%) & Active (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 136 & 0.291 & 638.35 & 3.833 & 100.00 & 100.00 & 16.75\\
+Always half & 54 & 0.116 & 756.06 & 3.641 & 100.00 & 0.00 & 26.69\\
+Metadata & 130 & 0.279 & 736.82 & 3.806 & 87.52 & 87.52 & 14.96\\
+Agreement (2) & 88 & 0.189 & 671.01 & 3.805 & 83.00 & 83.00 & 15.07\\
+Composite (2) & 116 & 0.249 & 727.27 & 3.804 & 83.08 & 83.08 & 14.95\\
+Agreement (3) & 73 & 0.156 & 733.21 & 3.736 & 83.00 & 48.54 & 18.27\\
+Composite (3) & 63 & 0.135 & 777.18 & 3.730 & 83.08 & 43.54 & 18.10\\
+Without freshness & 62 & 0.133 & 759.55 & 3.729 & 82.33 & 43.28 & 18.09\\
+Without completeness & 60 & 0.129 & 779.28 & 3.730 & 83.15 & 42.74 & 18.11\\
+Without maturity & 74 & 0.159 & 771.29 & 3.732 & 83.11 & 48.80 & 17.79\\
+Without agreement & 62 & 0.133 & 793.18 & 3.732 & 83.19 & 43.20 & 17.59\\
+Reference forecast & 109 & 0.234 & 636.73 & 3.829 & 100.00 & 100.00 & 16.66\\
+Stress screening & 121 & 0.259 & 636.57 & 3.831 & 100.00 & 100.00 & 16.79\\
+Fixed composite & 73 & 0.156 & 705.06 & 3.761 & 90.45 & 60.29 & 18.60\\
+\end{longtable}\normalsize
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrrr}
+\caption{Voltage, thermal and event-extent summaries for MV aggregate.}\\\toprule
+Controller & $V_{\min}$ & $V_{\max}$ & $\rho_{\max}$ & Mean severity & Longest (h) & Bus-hours\\\midrule
+\endfirsthead
+\toprule
+Controller & $V_{\min}$ & $V_{\max}$ & $\rho_{\max}$ & Mean severity & Longest (h) & Bus-hours\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 1.00329 & 1.05425 & 0.4772 & 0.000003 & 2 & 171\\
+Always half & 1.00329 & 1.05037 & 0.4126 & 0.000000 & 1 & 54\\
+Metadata & 1.00329 & 1.05425 & 0.4772 & 0.000003 & 2 & 165\\
+Agreement (2) & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 100\\
+Composite (2) & 1.00329 & 1.05394 & 0.4772 & 0.000003 & 2 & 143\\
+Agreement (3) & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 83\\
+Composite (3) & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 70\\
+Without freshness & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 68\\
+Without completeness & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 64\\
+Without maturity & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 84\\
+Without agreement & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 67\\
+Reference forecast & 1.00329 & 1.05425 & 0.4892 & 0.000002 & 2 & 134\\
+Stress screening & 1.00329 & 1.05425 & 0.4772 & 0.000003 & 2 & 147\\
+Fixed composite & 1.00329 & 1.05329 & 0.4579 & 0.000001 & 2 & 85\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV asset profiles}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrrrr}
+\caption{Physical, economic and activity summaries for MV asset profiles.}\\\toprule
+Controller & Failures & Rate (\%) & Cost (EUR) & Loss (MWh) & Auth. (\%) & Full (\%) & Active (\%)\\\midrule
+\endfirsthead
+\toprule
+Controller & Failures & Rate (\%) & Cost (EUR) & Loss (MWh) & Auth. (\%) & Full (\%) & Active (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 10407 & 22.306 & 1072.65 & 5.493 & 100.00 & 100.00 & 21.65\\
+Always half & 9779 & 20.960 & 1016.02 & 5.309 & 100.00 & 0.00 & 36.72\\
+Metadata & 10407 & 22.306 & 1140.00 & 5.470 & 87.57 & 87.57 & 19.28\\
+Agreement (2) & 10356 & 22.197 & 1065.89 & 5.478 & 83.30 & 83.30 & 19.97\\
+Composite (2) & 10382 & 22.252 & 1132.58 & 5.466 & 82.74 & 82.74 & 18.73\\
+Agreement (3) & 10146 & 21.746 & 1072.14 & 5.405 & 83.30 & 49.69 & 24.18\\
+Composite (3) & 10136 & 21.725 & 1097.73 & 5.405 & 82.74 & 44.09 & 23.47\\
+Without freshness & 10063 & 21.569 & 1064.97 & 5.404 & 80.84 & 44.11 & 24.26\\
+Without completeness & 10125 & 21.701 & 1099.79 & 5.405 & 82.75 & 43.99 & 23.41\\
+Without maturity & 10174 & 21.806 & 1114.67 & 5.405 & 83.22 & 49.30 & 23.32\\
+Without agreement & 10099 & 21.646 & 1101.79 & 5.402 & 82.83 & 41.40 & 23.13\\
+Reference forecast & 10472 & 22.445 & 1064.96 & 5.494 & 100.00 & 100.00 & 21.00\\
+Stress screening & 10235 & 21.937 & 1034.93 & 5.440 & 100.00 & 100.00 & 24.22\\
+Fixed composite & 10264 & 21.999 & 1068.95 & 5.460 & 94.14 & 77.35 & 23.30\\
+\end{longtable}\normalsize
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrrr}
+\caption{Voltage, thermal and event-extent summaries for MV asset profiles.}\\\toprule
+Controller & $V_{\min}$ & $V_{\max}$ & $\rho_{\max}$ & Mean severity & Longest (h) & Bus-hours\\\midrule
+\endfirsthead
+\toprule
+Controller & $V_{\min}$ & $V_{\max}$ & $\rho_{\max}$ & Mean severity & Longest (h) & Bus-hours\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 1.00286 & 1.06222 & 0.5961 & 0.001212 & 55 & 19555\\
+Always half & 1.00469 & 1.06222 & 0.5785 & 0.001159 & 55 & 18474\\
+Metadata & 1.00286 & 1.06222 & 0.5961 & 0.001213 & 55 & 19577\\
+Agreement (2) & 1.00286 & 1.06222 & 0.5961 & 0.001207 & 55 & 19449\\
+Composite (2) & 1.00286 & 1.06222 & 0.5961 & 0.001211 & 55 & 19536\\
+Agreement (3) & 1.00286 & 1.06222 & 0.5961 & 0.001192 & 55 & 19107\\
+Composite (3) & 1.00286 & 1.06222 & 0.5785 & 0.001193 & 55 & 19120\\
+Without freshness & 1.00286 & 1.06222 & 0.5785 & 0.001188 & 55 & 18998\\
+Without completeness & 1.00286 & 1.06222 & 0.5785 & 0.001195 & 55 & 19113\\
+Without maturity & 1.00286 & 1.06222 & 0.5961 & 0.001195 & 55 & 19172\\
+Without agreement & 1.00286 & 1.06222 & 0.5785 & 0.001193 & 55 & 19089\\
+Reference forecast & 1.00286 & 1.06438 & 0.6518 & 0.001211 & 55 & 19632\\
+Stress screening & 1.00286 & 1.06222 & 0.5785 & 0.001210 & 55 & 19347\\
+Fixed composite & 1.00286 & 1.06222 & 0.5961 & 0.001200 & 55 & 19330\\
+\end{longtable}\normalsize
+\section{Origin and condition outcomes}
+Origins and fault conditions are shown separately to expose variation hidden by the overall stress mixture. Seeds are averaged within each physical block. Summer contains eight blocks and winter sixteen; pooled scenario results weight them accordingly.
+\Needspace{10\baselineskip}\subsection{IEEE 33}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{llrrrrrr}
+\caption{Violation rates (\%) by origin and condition. A3 and T3 denote agreement and composite three-regime dispatch.}\\\toprule
+Origin & Condition & Ungated & Half & A3 & T3 & Reference & Stress\\\midrule
+\endfirsthead
+\toprule
+Origin & Condition & Ungated & Half & A3 & T3 & Reference & Stress\\\midrule
+\endhead
+\bottomrule\endfoot
+Summer & Clean & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Summer & Missing & 0.000 & 0.000 & 0.000 & 0.058 & 0.000 & 0.000\\
+Summer & Delayed & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Summer & Noisy & 1.736 & 0.000 & 0.058 & 0.000 & 0.000 & 0.058\\
+Summer & Bias & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Summer & Disturbance & 0.347 & 0.000 & 0.289 & 0.347 & 0.347 & 0.000\\
+Summer & Reference outage & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Summer & Reference noisy & 0.000 & 0.000 & 0.116 & 0.000 & 1.736 & 0.000\\
+Summer & Common bias & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Winter & Clean & 0.260 & 0.000 & 0.174 & 0.260 & 0.347 & 0.000\\
+Winter & Missing & 0.203 & 0.000 & 0.116 & 0.087 & 0.347 & 0.000\\
+Winter & Delayed & 0.087 & 0.000 & 0.029 & 0.000 & 0.347 & 0.000\\
+Winter & Noisy & 1.678 & 0.000 & 0.029 & 0.029 & 0.347 & 0.376\\
+Winter & Bias & 0.174 & 0.000 & 0.087 & 0.174 & 0.347 & 0.000\\
+Winter & Disturbance & 1.823 & 0.000 & 1.360 & 1.447 & 1.389 & 0.434\\
+Winter & Reference outage & 0.260 & 0.000 & 0.087 & 0.174 & 0.260 & 0.000\\
+Winter & Reference noisy & 0.260 & 0.000 & 0.000 & 0.000 & 1.678 & 0.000\\
+Winter & Common bias & 0.174 & 0.000 & 0.087 & 0.087 & 0.174 & 0.000\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV aggregate}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{llrrrrrr}
+\caption{Violation rates (\%) by origin and condition. A3 and T3 denote agreement and composite three-regime dispatch.}\\\toprule
+Origin & Condition & Ungated & Half & A3 & T3 & Reference & Stress\\\midrule
+\endfirsthead
+\toprule
+Origin & Condition & Ungated & Half & A3 & T3 & Reference & Stress\\\midrule
+\endhead
+\bottomrule\endfoot
+Summer & Clean & 0.347 & 0.347 & 0.347 & 0.347 & 0.347 & 0.347\\
+Summer & Missing & 0.347 & 0.347 & 0.347 & 0.347 & 0.347 & 0.347\\
+Summer & Delayed & 0.694 & 0.347 & 0.347 & 0.347 & 0.347 & 0.521\\
+Summer & Noisy & 1.042 & 0.347 & 0.347 & 0.347 & 0.347 & 0.694\\
+Summer & Bias & 0.868 & 0.347 & 0.347 & 0.347 & 0.347 & 0.694\\
+Summer & Disturbance & 0.347 & 0.347 & 0.347 & 0.347 & 0.347 & 0.347\\
+Summer & Reference outage & 0.347 & 0.347 & 0.347 & 0.347 & 0.347 & 0.347\\
+Summer & Reference noisy & 0.347 & 0.347 & 0.347 & 0.347 & 1.042 & 0.347\\
+Summer & Common bias & 0.868 & 0.347 & 0.810 & 0.637 & 0.868 & 0.694\\
+Winter & Clean & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Winter & Missing & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Winter & Delayed & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Winter & Noisy & 0.463 & 0.000 & 0.000 & 0.000 & 0.000 & 0.463\\
+Winter & Bias & 0.434 & 0.000 & 0.000 & 0.000 & 0.000 & 0.434\\
+Winter & Disturbance & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Winter & Reference outage & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000\\
+Winter & Reference noisy & 0.000 & 0.000 & 0.000 & 0.000 & 0.463 & 0.000\\
+Winter & Common bias & 0.434 & 0.000 & 0.318 & 0.116 & 0.521 & 0.434\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV asset profiles}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{llrrrrrr}
+\caption{Violation rates (\%) by origin and condition. A3 and T3 denote agreement and composite three-regime dispatch.}\\\toprule
+Origin & Condition & Ungated & Half & A3 & T3 & Reference & Stress\\\midrule
+\endfirsthead
+\toprule
+Origin & Condition & Ungated & Half & A3 & T3 & Reference & Stress\\\midrule
+\endhead
+\bottomrule\endfoot
+Summer & Clean & 16.319 & 15.104 & 16.146 & 15.914 & 16.493 & 15.799\\
+Summer & Missing & 16.377 & 15.220 & 16.204 & 15.741 & 16.493 & 15.799\\
+Summer & Delayed & 17.014 & 15.278 & 15.509 & 15.972 & 16.493 & 15.799\\
+Summer & Noisy & 16.435 & 15.278 & 15.220 & 15.509 & 16.493 & 15.799\\
+Summer & Bias & 16.840 & 15.104 & 16.146 & 15.914 & 16.493 & 15.625\\
+Summer & Disturbance & 11.632 & 10.764 & 11.516 & 11.458 & 11.748 & 11.285\\
+Summer & Reference outage & 16.319 & 15.104 & 16.146 & 16.146 & 16.551 & 15.799\\
+Summer & Reference noisy & 16.319 & 15.104 & 15.336 & 15.336 & 16.435 & 15.799\\
+Summer & Common bias & 16.840 & 15.104 & 16.551 & 16.377 & 16.898 & 15.625\\
+Winter & Clean & 26.215 & 25.174 & 26.128 & 26.186 & 26.562 & 26.128\\
+Winter & Missing & 26.273 & 25.174 & 26.100 & 25.579 & 26.562 & 26.215\\
+Winter & Delayed & 26.389 & 25.260 & 25.347 & 26.997 & 26.562 & 26.215\\
+Winter & Noisy & 27.025 & 25.347 & 25.289 & 25.723 & 26.562 & 26.360\\
+Winter & Bias & 26.562 & 24.740 & 25.926 & 25.608 & 26.562 & 26.389\\
+Winter & Disturbance & 17.622 & 16.146 & 17.564 & 17.072 & 17.911 & 17.535\\
+Winter & Reference outage & 26.215 & 25.174 & 25.926 & 26.042 & 26.534 & 26.128\\
+Winter & Reference noisy & 26.215 & 25.174 & 25.521 & 25.579 & 27.025 & 26.128\\
+Winter & Common bias & 26.562 & 24.740 & 26.389 & 25.318 & 26.678 & 26.389\\
+\end{longtable}\normalsize
+\section{Paired block uncertainty}
+Differences are left controller minus right controller. The stratified bootstrap draws eight summer and sixteen winter physical blocks, retaining all conditions and seeds within each selected block, for 10,000 replicates. The percentile intervals are conditional on the sampled benchmark periods. Multiple reported contrasts are descriptive.
+\Needspace{10\baselineskip}\subsection{IEEE 33}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{llrrr}
+\caption{Paired differences and 95\% intervals for IEEE 33.}\\\toprule
+Comparison & Outcome & Estimate & Lower & Upper\\\midrule
+\endfirsthead
+\toprule
+Comparison & Outcome & Estimate & Lower & Upper\\\midrule
+\endhead
+\bottomrule\endfoot
+T3 minus Ungated & Violation (pp) & -0.2593 & -0.3687 & -0.1650\\
+T3 minus Ungated & Cost (EUR) & +26.2206 & +15.2411 & +37.0727\\
+T3 minus Ungated & Loss (MWh) & -0.1475 & -0.1578 & -0.1370\\
+T3 minus Ungated & Activity (pp) & +1.9397 & +1.1703 & +2.7285\\
+T3 minus A3 & Violation (pp) & +0.0193 & -0.0279 & +0.0664\\
+T3 minus A3 & Cost (EUR) & +9.6746 & +4.4834 & +14.9238\\
+T3 minus A3 & Loss (MWh) & -0.0206 & -0.0296 & -0.0116\\
+T3 minus A3 & Activity (pp) & +0.3879 & -0.6623 & +1.4339\\
+T2 minus A2 & Violation (pp) & +0.1029 & +0.0557 & +0.1543\\
+T2 minus A2 & Cost (EUR) & +15.9577 & +9.1012 & +23.4712\\
+T2 minus A2 & Loss (MWh) & -0.0080 & -0.0116 & -0.0041\\
+T2 minus A2 & Activity (pp) & -1.0395 & -1.3804 & -0.7073\\
+T3 minus Half & Violation (pp) & +0.1822 & +0.1071 & +0.2679\\
+T3 minus Half & Cost (EUR) & +45.9662 & +29.1661 & +63.5060\\
+T3 minus Half & Loss (MWh) & +0.1014 & +0.0876 & +0.1149\\
+T3 minus Half & Activity (pp) & -21.4378 & -22.9252 & -19.9567\\
+Half minus Ungated & Violation (pp) & -0.4415 & -0.6023 & -0.2979\\
+Half minus Ungated & Cost (EUR) & -19.7456 & -45.6062 & +3.7905\\
+Half minus Ungated & Loss (MWh) & -0.2489 & -0.2627 & -0.2325\\
+Half minus Ungated & Activity (pp) & +23.3775 & +21.6456 & +25.1029\\
+Stress minus Half & Violation (pp) & +0.0622 & +0.0343 & +0.0922\\
+Stress minus Half & Cost (EUR) & +17.5323 & -5.3344 & +41.5053\\
+Stress minus Half & Loss (MWh) & +0.2163 & +0.1988 & +0.2323\\
+Stress minus Half & Activity (pp) & -21.7635 & -23.2960 & -20.1624\\
+Reference minus Ungated & Violation (pp) & +0.0236 & -0.0343 & +0.0900\\
+Reference minus Ungated & Cost (EUR) & -0.6138 & -4.1448 & +3.0101\\
+Reference minus Ungated & Loss (MWh) & +0.0037 & +0.0002 & +0.0069\\
+Reference minus Ungated & Activity (pp) & -0.2915 & -0.6687 & +0.0922\\
+Stress minus Ungated & Violation (pp) & -0.3794 & -0.5316 & -0.2486\\
+Stress minus Ungated & Cost (EUR) & -2.2133 & -4.3117 & -0.3347\\
+Stress minus Ungated & Loss (MWh) & -0.0326 & -0.0396 & -0.0262\\
+Stress minus Ungated & Activity (pp) & +1.6139 & +1.1788 & +2.1305\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV aggregate}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{llrrr}
+\caption{Paired differences and 95\% intervals for MV aggregate.}\\\toprule
+Comparison & Outcome & Estimate & Lower & Upper\\\midrule
+\endfirsthead
+\toprule
+Comparison & Outcome & Estimate & Lower & Upper\\\midrule
+\endhead
+\bottomrule\endfoot
+T3 minus Ungated & Violation (pp) & -0.1565 & -0.2615 & -0.0643\\
+T3 minus Ungated & Cost (EUR) & +138.8311 & +92.5076 & +185.4938\\
+T3 minus Ungated & Loss (MWh) & -0.1030 & -0.1299 & -0.0768\\
+T3 minus Ungated & Activity (pp) & +1.3525 & +0.7866 & +1.9440\\
+T3 minus A3 & Violation (pp) & -0.0214 & -0.0493 & +0.0000\\
+T3 minus A3 & Cost (EUR) & +43.9674 & +30.9286 & +57.5506\\
+T3 minus A3 & Loss (MWh) & -0.0052 & -0.0101 & -0.0003\\
+T3 minus A3 & Activity (pp) & -0.1672 & -0.6131 & +0.2701\\
+T2 minus A2 & Violation (pp) & +0.0600 & +0.0107 & +0.1179\\
+T2 minus A2 & Cost (EUR) & +56.2572 & +39.1964 & +73.7368\\
+T2 minus A2 & Loss (MWh) & -0.0012 & -0.0074 & +0.0048\\
+T2 minus A2 & Activity (pp) & -0.1265 & -0.4330 & +0.1629\\
+T3 minus Half & Violation (pp) & +0.0193 & +0.0000 & +0.0493\\
+T3 minus Half & Cost (EUR) & +21.1234 & +2.9667 & +40.6915\\
+T3 minus Half & Loss (MWh) & +0.0889 & +0.0659 & +0.1125\\
+T3 minus Half & Activity (pp) & -8.5905 & -10.7339 & -6.4986\\
+Half minus Ungated & Violation (pp) & -0.1758 & -0.3044 & -0.0664\\
+Half minus Ungated & Cost (EUR) & +117.7077 & +70.2958 & +166.2922\\
+Half minus Ungated & Loss (MWh) & -0.1919 & -0.2393 & -0.1432\\
+Half minus Ungated & Activity (pp) & +9.9430 & +7.4673 & +12.4593\\
+Stress minus Half & Violation (pp) & +0.1436 & +0.0514 & +0.2551\\
+Stress minus Half & Cost (EUR) & -119.4816 & -167.9522 & -71.1591\\
+Stress minus Half & Loss (MWh) & +0.1894 & +0.1422 & +0.2370\\
+Stress minus Half & Activity (pp) & -9.9001 & -12.3651 & -7.4867\\
+Reference minus Ungated & Violation (pp) & -0.0579 & -0.1115 & -0.0129\\
+Reference minus Ungated & Cost (EUR) & -1.6175 & -13.6123 & +10.9990\\
+Reference minus Ungated & Loss (MWh) & -0.0041 & -0.0098 & +0.0017\\
+Reference minus Ungated & Activity (pp) & -0.0900 & -0.3108 & +0.1222\\
+Stress minus Ungated & Violation (pp) & -0.0322 & -0.0707 & +0.0000\\
+Stress minus Ungated & Cost (EUR) & -1.7738 & -3.4889 & -0.0799\\
+Stress minus Ungated & Loss (MWh) & -0.0025 & -0.0039 & -0.0014\\
+Stress minus Ungated & Activity (pp) & +0.0429 & -0.0257 & +0.1372\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV asset profiles}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{llrrr}
+\caption{Paired differences and 95\% intervals for MV asset profiles.}\\\toprule
+Comparison & Outcome & Estimate & Lower & Upper\\\midrule
+\endfirsthead
+\toprule
+Comparison & Outcome & Estimate & Lower & Upper\\\midrule
+\endhead
+\bottomrule\endfoot
+T3 minus Ungated & Violation (pp) & -0.5808 & -0.8916 & -0.3022\\
+T3 minus Ungated & Cost (EUR) & +25.0790 & -16.9155 & +65.0431\\
+T3 minus Ungated & Loss (MWh) & -0.0875 & -0.1143 & -0.0615\\
+T3 minus Ungated & Activity (pp) & +1.8176 & +1.0460 & +2.6642\\
+T3 minus A3 & Violation (pp) & -0.0214 & -0.2229 & +0.1758\\
+T3 minus A3 & Cost (EUR) & +25.5831 & -3.3045 & +51.0156\\
+T3 minus A3 & Loss (MWh) & +0.0004 & -0.0086 & +0.0081\\
+T3 minus A3 & Activity (pp) & -0.7116 & -1.3996 & -0.0214\\
+T2 minus A2 & Violation (pp) & +0.0557 & -0.0386 & +0.1543\\
+T2 minus A2 & Cost (EUR) & +66.6888 & +45.8449 & +89.5811\\
+T2 minus A2 & Loss (MWh) & -0.0127 & -0.0220 & -0.0039\\
+T2 minus A2 & Activity (pp) & -1.2367 & -1.6182 & -0.8723\\
+T3 minus Half & Violation (pp) & +0.7652 & +0.4072 & +1.1725\\
+T3 minus Half & Cost (EUR) & +81.7122 & +42.3034 & +118.6886\\
+T3 minus Half & Loss (MWh) & +0.0964 & +0.0753 & +0.1179\\
+T3 minus Half & Activity (pp) & -13.2523 & -16.4138 & -10.1316\\
+Half minus Ungated & Violation (pp) & -1.3460 & -1.9612 & -0.7973\\
+Half minus Ungated & Cost (EUR) & -56.6333 & -116.6334 & +6.5314\\
+Half minus Ungated & Loss (MWh) & -0.1839 & -0.2283 & -0.1384\\
+Half minus Ungated & Activity (pp) & +15.0699 & +11.2483 & +19.0525\\
+Stress minus Half & Violation (pp) & +0.9774 & +0.4823 & +1.5046\\
+Stress minus Half & Cost (EUR) & +18.9101 & -24.3268 & +65.6336\\
+Stress minus Half & Loss (MWh) & +0.1311 & +0.1008 & +0.1621\\
+Stress minus Half & Activity (pp) & -12.4936 & -15.6229 & -9.5120\\
+Reference minus Ungated & Violation (pp) & +0.1393 & -0.0965 & +0.4459\\
+Reference minus Ungated & Cost (EUR) & -7.6895 & -21.9753 & +6.2297\\
+Reference minus Ungated & Loss (MWh) & +0.0008 & -0.0027 & +0.0045\\
+Reference minus Ungated & Activity (pp) & -0.6494 & -1.1167 & -0.2379\\
+Stress minus Ungated & Violation (pp) & -0.3687 & -0.7416 & -0.0193\\
+Stress minus Ungated & Cost (EUR) & -37.7232 & -71.0968 & -0.4821\\
+Stress minus Ungated & Loss (MWh) & -0.0529 & -0.0682 & -0.0364\\
+Stress minus Ungated & Activity (pp) & +2.5763 & +1.5603 & +3.5987\\
+\end{longtable}\normalsize
+\section{Common-proposal selection}
+Selection uses the same ungated proposals and battery state for every score. Only degraded-condition epochs with a current reference are eligible, giving 40,608 proposals per representation. Ties use seed 1729 and a random ordering independent of realised outcomes. This retrospective selection comparison does not change the deployed development thresholds.
+\Needspace{10\baselineskip}\subsection{IEEE 33}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrr}
+\caption{Common-proposal risk and coverage for IEEE 33.}\\\toprule
+Score & Coverage (\%) & Selected & Failures & Risk (\%)\\\midrule
+\endfirsthead
+\toprule
+Score & Coverage (\%) & Selected & Failures & Risk (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Agreement & 50.000 & 20304 & 74 & 0.364\\
+Agreement & 75.000 & 30456 & 106 & 0.348\\
+Agreement & 90.000 & 36547 & 149 & 0.408\\
+Composite & 50.000 & 20304 & 90 & 0.443\\
+Composite & 75.000 & 30456 & 156 & 0.512\\
+Composite & 90.000 & 36547 & 194 & 0.531\\
+Without freshness & 50.000 & 20304 & 88 & 0.433\\
+Without freshness & 75.000 & 30456 & 127 & 0.417\\
+Without freshness & 90.000 & 36547 & 165 & 0.451\\
+Without completeness & 50.000 & 20304 & 86 & 0.424\\
+Without completeness & 75.000 & 30456 & 155 & 0.509\\
+Without completeness & 90.000 & 36547 & 194 & 0.531\\
+Without maturity & 50.000 & 20304 & 86 & 0.424\\
+Without maturity & 75.000 & 30456 & 140 & 0.460\\
+Without maturity & 90.000 & 36547 & 191 & 0.523\\
+Without agreement & 50.000 & 20304 & 105 & 0.517\\
+Without agreement & 75.000 & 30456 & 173 & 0.568\\
+Without agreement & 90.000 & 36547 & 194 & 0.531\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV aggregate}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrr}
+\caption{Common-proposal risk and coverage for MV aggregate.}\\\toprule
+Score & Coverage (\%) & Selected & Failures & Risk (\%)\\\midrule
+\endfirsthead
+\toprule
+Score & Coverage (\%) & Selected & Failures & Risk (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Agreement & 50.000 & 20304 & 42 & 0.207\\
+Agreement & 75.000 & 30456 & 62 & 0.204\\
+Agreement & 90.000 & 36547 & 76 & 0.208\\
+Composite & 50.000 & 20304 & 34 & 0.167\\
+Composite & 75.000 & 30456 & 78 & 0.256\\
+Composite & 90.000 & 36547 & 117 & 0.320\\
+Without freshness & 50.000 & 20304 & 32 & 0.158\\
+Without freshness & 75.000 & 30456 & 66 & 0.217\\
+Without freshness & 90.000 & 36547 & 94 & 0.257\\
+Without completeness & 50.000 & 20304 & 31 & 0.153\\
+Without completeness & 75.000 & 30456 & 80 & 0.263\\
+Without completeness & 90.000 & 36547 & 117 & 0.320\\
+Without maturity & 50.000 & 20304 & 43 & 0.212\\
+Without maturity & 75.000 & 30456 & 59 & 0.194\\
+Without maturity & 90.000 & 36547 & 117 & 0.320\\
+Without agreement & 50.000 & 20304 & 44 & 0.217\\
+Without agreement & 75.000 & 30456 & 101 & 0.332\\
+Without agreement & 90.000 & 36547 & 118 & 0.323\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV asset profiles}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrr}
+\caption{Common-proposal risk and coverage for MV asset profiles.}\\\toprule
+Score & Coverage (\%) & Selected & Failures & Risk (\%)\\\midrule
+\endfirsthead
+\toprule
+Score & Coverage (\%) & Selected & Failures & Risk (\%)\\\midrule
+\endhead
+\bottomrule\endfoot
+Agreement & 50.000 & 20304 & 4308 & 21.217\\
+Agreement & 75.000 & 30456 & 6489 & 21.306\\
+Agreement & 90.000 & 36547 & 7876 & 21.550\\
+Composite & 50.000 & 20304 & 3596 & 17.711\\
+Composite & 75.000 & 30456 & 6172 & 20.265\\
+Composite & 90.000 & 36547 & 7921 & 21.673\\
+Without freshness & 50.000 & 20304 & 3463 & 17.056\\
+Without freshness & 75.000 & 30456 & 5933 & 19.481\\
+Without freshness & 90.000 & 36547 & 7605 & 20.809\\
+Without completeness & 50.000 & 20304 & 3565 & 17.558\\
+Without completeness & 75.000 & 30456 & 6163 & 20.236\\
+Without completeness & 90.000 & 36547 & 7926 & 21.687\\
+Without maturity & 50.000 & 20304 & 4266 & 21.011\\
+Without maturity & 75.000 & 30456 & 6545 & 21.490\\
+Without maturity & 90.000 & 36547 & 8005 & 21.903\\
+Without agreement & 50.000 & 20304 & 3383 & 16.662\\
+Without agreement & 75.000 & 30456 & 6171 & 20.262\\
+Without agreement & 90.000 & 36547 & 7869 & 21.531\\
+\end{longtable}\normalsize
+\section{Recorded-trajectory stored-energy valuation}
+The values 90, 130 and 170 EUR/MWh are applied to the recorded terminal-energy difference. Dispatch is not re-optimised. Costs below are mean energy-adjusted values per 72-hour block.
+\Needspace{10\baselineskip}\subsection{IEEE 33}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrr}
+\caption{Mean costs (EUR) under terminal-energy valuations for IEEE 33.}\\\toprule
+Controller & 90 EUR/MWh & 130 EUR/MWh & 170 EUR/MWh\\\midrule
+\endfirsthead
+\toprule
+Controller & 90 EUR/MWh & 130 EUR/MWh & 170 EUR/MWh\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 4815.69 & 4835.32 & 4854.95\\
+Always half & 4789.12 & 4815.58 & 4842.04\\
+Metadata & 4847.04 & 4864.43 & 4881.81\\
+Agreement (2) & 4827.78 & 4849.51 & 4871.24\\
+Composite (2) & 4848.13 & 4865.47 & 4882.80\\
+Agreement (3) & 4827.52 & 4851.87 & 4876.22\\
+Composite (3) & 4841.59 & 4861.54 & 4881.50\\
+Without freshness & 4833.44 & 4856.52 & 4879.59\\
+Without completeness & 4841.06 & 4861.08 & 4881.09\\
+Without maturity & 4845.76 & 4866.56 & 4887.36\\
+Without agreement & 4844.76 & 4864.88 & 4885.00\\
+Reference forecast & 4814.68 & 4834.71 & 4854.74\\
+Stress screening & 4811.02 & 4833.11 & 4855.20\\
+Fixed composite & 4828.42 & 4848.89 & 4869.35\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV aggregate}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrr}
+\caption{Mean costs (EUR) under terminal-energy valuations for MV aggregate.}\\\toprule
+Controller & 90 EUR/MWh & 130 EUR/MWh & 170 EUR/MWh\\\midrule
+\endfirsthead
+\toprule
+Controller & 90 EUR/MWh & 130 EUR/MWh & 170 EUR/MWh\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 676.93 & 638.35 & 599.76\\
+Always half & 792.81 & 756.06 & 719.30\\
+Metadata & 771.16 & 736.82 & 702.49\\
+Agreement (2) & 706.65 & 671.01 & 635.38\\
+Composite (2) & 766.05 & 727.27 & 688.49\\
+Agreement (3) & 772.65 & 733.21 & 693.77\\
+Composite (3) & 817.55 & 777.18 & 736.81\\
+Without freshness & 802.37 & 759.55 & 716.74\\
+Without completeness & 818.90 & 779.28 & 739.66\\
+Without maturity & 804.92 & 771.29 & 737.66\\
+Without agreement & 827.66 & 793.18 & 758.70\\
+Reference forecast & 675.85 & 636.73 & 597.61\\
+Stress screening & 675.29 & 636.57 & 597.86\\
+Fixed composite & 745.61 & 705.06 & 664.51\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV asset profiles}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrr}
+\caption{Mean costs (EUR) under terminal-energy valuations for MV asset profiles.}\\\toprule
+Controller & 90 EUR/MWh & 130 EUR/MWh & 170 EUR/MWh\\\midrule
+\endfirsthead
+\toprule
+Controller & 90 EUR/MWh & 130 EUR/MWh & 170 EUR/MWh\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 1099.74 & 1072.65 & 1045.56\\
+Always half & 1033.70 & 1016.02 & 998.34\\
+Metadata & 1164.40 & 1140.00 & 1115.60\\
+Agreement (2) & 1089.37 & 1065.89 & 1042.42\\
+Composite (2) & 1156.80 & 1132.58 & 1108.37\\
+Agreement (3) & 1095.56 & 1072.14 & 1048.73\\
+Composite (3) & 1119.81 & 1097.73 & 1075.64\\
+Without freshness & 1091.36 & 1064.97 & 1038.58\\
+Without completeness & 1121.10 & 1099.79 & 1078.47\\
+Without maturity & 1133.91 & 1114.67 & 1095.43\\
+Without agreement & 1123.25 & 1101.79 & 1080.34\\
+Reference forecast & 1091.37 & 1064.96 & 1038.55\\
+Stress screening & 1068.76 & 1034.93 & 1001.09\\
+Fixed composite & 1094.91 & 1068.95 & 1042.99\\
+\end{longtable}\normalsize
+\section{Retrospective action feasibility}
+Thirteen tested power fractions are -1, -0.75, -0.5, -0.375, -0.25, -0.125, 0, 0.125, 0.25, 0.375, 0.5, 0.75 and 1. AC feasibility is evaluated at realised inputs; energy eligibility uses the controller's recorded starting state of charge. Each of 6,912 unique realised states admits at least one tested power before energy screening. Energy-limited and alternative-available counts partition all observed failures because the no-feasible-power category is zero. No feasible issued command is missed by the diagnostic. Alternative availability is a same-hour comparison with a fixed prior trajectory.
+\Needspace{10\baselineskip}\subsection{IEEE 33}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrr}
+\caption{Failure partition and forecast-infeasible holds for IEEE 33.}\\\toprule
+Controller & Failures & Energy-limited & Alternative & Model hold & Hold failure\\\midrule
+\endfirsthead
+\toprule
+Controller & Failures & Energy-limited & Alternative & Model hold & Hold failure\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 206 & 0 & 206 & 0 & 0\\
+Always half & 0 & 0 & 0 & 0 & 0\\
+Metadata & 203 & 0 & 203 & 0 & 0\\
+Agreement (2) & 154 & 0 & 154 & 0 & 0\\
+Composite (2) & 202 & 0 & 202 & 0 & 0\\
+Agreement (3) & 76 & 0 & 76 & 0 & 0\\
+Composite (3) & 85 & 0 & 85 & 0 & 0\\
+Without freshness & 85 & 0 & 85 & 0 & 0\\
+Without completeness & 80 & 0 & 80 & 0 & 0\\
+Without maturity & 85 & 0 & 85 & 0 & 0\\
+Without agreement & 90 & 0 & 90 & 0 & 0\\
+Reference forecast & 217 & 0 & 217 & 0 & 0\\
+Stress screening & 29 & 0 & 29 & 0 & 0\\
+Fixed composite & 111 & 0 & 111 & 0 & 0\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV aggregate}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrr}
+\caption{Failure partition and forecast-infeasible holds for MV aggregate.}\\\toprule
+Controller & Failures & Energy-limited & Alternative & Model hold & Hold failure\\\midrule
+\endfirsthead
+\toprule
+Controller & Failures & Energy-limited & Alternative & Model hold & Hold failure\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 136 & 0 & 136 & 0 & 0\\
+Always half & 54 & 0 & 54 & 0 & 0\\
+Metadata & 130 & 0 & 130 & 0 & 0\\
+Agreement (2) & 88 & 0 & 88 & 0 & 0\\
+Composite (2) & 116 & 0 & 116 & 0 & 0\\
+Agreement (3) & 73 & 14 & 59 & 0 & 0\\
+Composite (3) & 63 & 0 & 63 & 0 & 0\\
+Without freshness & 62 & 4 & 58 & 0 & 0\\
+Without completeness & 60 & 2 & 58 & 0 & 0\\
+Without maturity & 74 & 10 & 64 & 0 & 0\\
+Without agreement & 62 & 0 & 62 & 0 & 0\\
+Reference forecast & 109 & 0 & 109 & 0 & 0\\
+Stress screening & 121 & 0 & 121 & 0 & 0\\
+Fixed composite & 73 & 0 & 73 & 0 & 0\\
+\end{longtable}\normalsize
+\Needspace{10\baselineskip}\subsection{MV asset profiles}
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lrrrrr}
+\caption{Failure partition and forecast-infeasible holds for MV asset profiles.}\\\toprule
+Controller & Failures & Energy-limited & Alternative & Model hold & Hold failure\\\midrule
+\endfirsthead
+\toprule
+Controller & Failures & Energy-limited & Alternative & Model hold & Hold failure\\\midrule
+\endhead
+\bottomrule\endfoot
+Ungated & 10407 & 8186 & 2221 & 8313 & 7423\\
+Always half & 9779 & 6943 & 2836 & 7901 & 7118\\
+Metadata & 10407 & 7245 & 3162 & 8348 & 7455\\
+Agreement (2) & 10356 & 8031 & 2325 & 8301 & 7423\\
+Composite (2) & 10382 & 7132 & 3250 & 8343 & 7452\\
+Agreement (3) & 10146 & 7763 & 2383 & 8193 & 7355\\
+Composite (3) & 10136 & 6610 & 3526 & 8209 & 7364\\
+Without freshness & 10063 & 7287 & 2776 & 8150 & 7305\\
+Without completeness & 10125 & 6555 & 3570 & 8215 & 7367\\
+Without maturity & 10174 & 6955 & 3219 & 8244 & 7387\\
+Without agreement & 10099 & 6517 & 3582 & 8196 & 7353\\
+Reference forecast & 10472 & 8244 & 2228 & 8490 & 7758\\
+Stress screening & 10235 & 7694 & 2541 & 8482 & 7565\\
+Fixed composite & 10264 & 7898 & 2366 & 8246 & 7375\\
+\end{longtable}\normalsize
+\section{Numerical audit and archive structure}
+Arithmetic checks cover every record. Fresh uncached AC checks cover sampled and failed operating points in each origin and representation. Profile mapping is independently checked against official SimBench absolute-value conversion over all 8,784 benchmark hours.
+
+\Needspace{7\baselineskip}\small\begin{longtable}{lr}
+\caption{Saved-record and fresh-solve audit.}\\\toprule
+Check & Value\\\midrule
+\endfirsthead
+\toprule
+Check & Value\\\midrule
+\endhead
+\bottomrule\endfoot
+Decision count & 1959552\\
+Maximum soc error & 1.1102e-16\\
+Soc bounds errors & 0\\
+Nonzero model infeasible & 0\\
+Nonfinite outcomes & 0\\
+Proposal battery bounds errors & 0\\
+Maximum command rule error & 5.5511e-17\\
+Maximum score error & 3.3307e-16\\
+Physical label disagreements & 0\\
+Regime disagreements & 0\\
+Reference fallback disagreements & 0\\
+Fresh ac samples & 114\\
+Fresh model ac samples & 114\\
+Maximum fresh ac difference & 6.2493e-08\\
+Fresh ac label disagreements & 0\\
+Fresh model label disagreements & 0\\
+\end{longtable}\normalsize
+File checksums and the study and diagnostic source hashes accompany the archive in its manifests and metadata.
+\end{document}

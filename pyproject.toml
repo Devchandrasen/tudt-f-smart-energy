@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tudtf-dispatch"
-version = "2.0.0"
+version = "3.0.0"
 description = "Causal trust-gated battery dispatch with AC network checks and reproducible benchmark results"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"

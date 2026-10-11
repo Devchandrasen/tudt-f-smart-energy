@@ -1,0 +1,127 @@
+network,controller,value_eur_mwh,cost_eur
+IEEE 33,Agreement binary,90.0,4827.781703416494
+IEEE 33,Agreement binary,130.0,4849.508527687574
+IEEE 33,Agreement binary,170.0,4871.235351958653
+IEEE 33,Agreement ternary,90.0,4827.516735917633
+IEEE 33,Agreement ternary,130.0,4851.8695964377275
+IEEE 33,Agreement ternary,170.0,4876.222456957822
+IEEE 33,Always half,90.0,4789.118171863444
+IEEE 33,Always half,130.0,4815.577985364889
+IEEE 33,Always half,170.0,4842.037798866334
+IEEE 33,Composite binary,90.0,4848.132414493709
+IEEE 33,Composite binary,130.0,4865.466199626359
+IEEE 33,Composite binary,170.0,4882.799984759009
+IEEE 33,Composite ternary,90.0,4841.590984523568
+IEEE 33,Composite ternary,130.0,4861.544207533813
+IEEE 33,Composite ternary,170.0,4881.497430544057
+IEEE 33,Fixed composite,90.0,4828.424561634886
+IEEE 33,Fixed composite,130.0,4848.886993996325
+IEEE 33,Fixed composite,170.0,4869.349426357765
+IEEE 33,Metadata,90.0,4847.044397968521
+IEEE 33,Metadata,130.0,4864.42743448021
+IEEE 33,Metadata,170.0,4881.810470991898
+IEEE 33,Reference forecast,90.0,4814.680694677626
+IEEE 33,Reference forecast,130.0,4834.709798959213
+IEEE 33,Reference forecast,170.0,4854.738903240799
+IEEE 33,Stress screen,90.0,4811.020064676683
+IEEE 33,Stress screen,130.0,4833.1102616822
+IEEE 33,Stress screen,170.0,4855.200458687716
+IEEE 33,Ungated,90.0,4815.693626004154
+IEEE 33,Ungated,130.0,4835.32357609609
+IEEE 33,Ungated,170.0,4854.9535261880255
+IEEE 33,Without agreement,90.0,4844.757288554091
+IEEE 33,Without agreement,130.0,4864.876873529137
+IEEE 33,Without agreement,170.0,4884.996458504183
+IEEE 33,Without completeness,90.0,4841.061613425685
+IEEE 33,Without completeness,130.0,4861.075779435666
+IEEE 33,Without completeness,170.0,4881.089945445648
+IEEE 33,Without freshness,90.0,4833.444296045601
+IEEE 33,Without freshness,130.0,4856.519381414659
+IEEE 33,Without freshness,170.0,4879.594466783715
+IEEE 33,Without maturity,90.0,4845.760708059137
+IEEE 33,Without maturity,130.0,4866.558477956693
+IEEE 33,Without maturity,170.0,4887.356247854251
+SimBench MV,Agreement binary,90.0,706.6485969756453
+SimBench MV,Agreement binary,130.0,671.0121903562602
+SimBench MV,Agreement binary,170.0,635.3757837368751
+SimBench MV,Agreement ternary,90.0,772.6529536871979
+SimBench MV,Agreement ternary,130.0,733.211845202827
+SimBench MV,Agreement ternary,170.0,693.770736718456
+SimBench MV,Always half,90.0,792.8127287579207
+SimBench MV,Always half,130.0,756.0558335648552
+SimBench MV,Always half,170.0,719.2989383717897
+SimBench MV,Composite binary,90.0,766.0533314931614
+SimBench MV,Composite binary,130.0,727.2693546084755
+SimBench MV,Composite binary,170.0,688.4853777237896
+SimBench MV,Composite ternary,90.0,817.5455826585276
+SimBench MV,Composite ternary,130.0,777.1792312006868
+SimBench MV,Composite ternary,170.0,736.8128797428461
+SimBench MV,Fixed composite,90.0,745.6062855138214
+SimBench MV,Fixed composite,130.0,705.0600548860305
+SimBench MV,Fixed composite,170.0,664.5138242582397
+SimBench MV,Metadata,90.0,771.1562372213523
+SimBench MV,Metadata,130.0,736.8206974262381
+SimBench MV,Metadata,170.0,702.4851576311241
+SimBench MV,Reference forecast,90.0,675.8474093035193
+SimBench MV,Reference forecast,130.0,636.7306638346463
+SimBench MV,Reference forecast,170.0,597.6139183657734
+SimBench MV,Stress screen,90.0,675.2858987865992
+SimBench MV,Stress screen,130.0,636.5742754611464
+SimBench MV,Stress screen,170.0,597.8626521356935
+SimBench MV,Ungated,90.0,676.9313588040544
+SimBench MV,Ungated,130.0,638.3481174066288
+SimBench MV,Ungated,170.0,599.7648760092032
+SimBench MV,Without agreement,90.0,827.6559677048991
+SimBench MV,Without agreement,130.0,793.1792143558054
+SimBench MV,Without agreement,170.0,758.7024610067117
+SimBench MV,Without completeness,90.0,818.9012505615613
+SimBench MV,Without completeness,130.0,779.2822723635051
+SimBench MV,Without completeness,170.0,739.6632941654489
+SimBench MV,Without freshness,90.0,802.3684780239632
+SimBench MV,Without freshness,130.0,759.5546679372809
+SimBench MV,Without freshness,170.0,716.7408578505986
+SimBench MV,Without maturity,90.0,804.917714337817
+SimBench MV,Without maturity,130.0,771.2900350627973
+SimBench MV,Without maturity,170.0,737.6623557877776
+SimBench assets,Agreement binary,90.0,1089.3683254821472
+SimBench assets,Agreement binary,130.0,1065.89347651971
+SimBench assets,Agreement binary,170.0,1042.4186275572724
+SimBench assets,Agreement ternary,90.0,1095.5642875647943
+SimBench assets,Agreement ternary,130.0,1072.1449547568088
+SimBench assets,Agreement ternary,170.0,1048.7256219488236
+SimBench assets,Always half,90.0,1033.6953225020172
+SimBench assets,Always half,130.0,1016.0158504768008
+SimBench assets,Always half,170.0,998.3363784515842
+SimBench assets,Composite binary,90.0,1156.7959049034787
+SimBench assets,Composite binary,130.0,1132.58225898806
+SimBench assets,Composite binary,170.0,1108.368613072641
+SimBench assets,Composite ternary,90.0,1119.8116913792032
+SimBench assets,Composite ternary,130.0,1097.728088804998
+SimBench assets,Composite ternary,170.0,1075.6444862307926
+SimBench assets,Fixed composite,90.0,1094.9079777242312
+SimBench assets,Fixed composite,130.0,1068.9496969257023
+SimBench assets,Fixed composite,170.0,1042.9914161271736
+SimBench assets,Metadata,90.0,1164.3984450607245
+SimBench assets,Metadata,130.0,1139.9990623446754
+SimBench assets,Metadata,170.0,1115.5996796286263
+SimBench assets,Reference forecast,90.0,1091.3661797607951
+SimBench assets,Reference forecast,130.0,1064.959639177659
+SimBench assets,Reference forecast,170.0,1038.553098594523
+SimBench assets,Stress screen,90.0,1068.7606336117692
+SimBench assets,Stress screen,130.0,1034.925934373524
+SimBench assets,Stress screen,170.0,1001.091235135279
+SimBench assets,Ungated,90.0,1099.737555485927
+SimBench assets,Ungated,130.0,1072.649126276576
+SimBench assets,Ungated,170.0,1045.5606970672252
+SimBench assets,Without agreement,90.0,1123.2459355421147
+SimBench assets,Without agreement,130.0,1101.7948848460287
+SimBench assets,Without agreement,170.0,1080.3438341499427
+SimBench assets,Without completeness,90.0,1121.0979322643861
+SimBench assets,Without completeness,130.0,1099.7853304782027
+SimBench assets,Without completeness,170.0,1078.4727286920195
+SimBench assets,Without freshness,90.0,1091.3565972094782
+SimBench assets,Without freshness,130.0,1064.9700264188293
+SimBench assets,Without freshness,170.0,1038.5834556281807
+SimBench assets,Without maturity,90.0,1133.9072247246418
+SimBench assets,Without maturity,130.0,1114.670299324064
+SimBench assets,Without maturity,170.0,1095.4333739234862

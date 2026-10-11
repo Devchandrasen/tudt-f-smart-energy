@@ -1,0 +1,757 @@
+network,origin,scenario,controller,hours,violations,no_feasible_power_level,energy_limited,avoidable_violations,forecast_hold_infeasible,forecast_hold_and_plant_infeasible
+IEEE 33,summer,Bias,Agreement binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Agreement ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Composite binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Without agreement,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Bias,Without maturity,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Agreement binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Agreement ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Composite binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Without agreement,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Clean,Without maturity,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Agreement binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Agreement ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Composite binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Without agreement,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Common bias,Without maturity,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Agreement binary,1728,1,0,0,1,0,0
+IEEE 33,summer,Delayed,Agreement ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Composite binary,1728,1,0,0,1,0,0
+IEEE 33,summer,Delayed,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Without agreement,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Delayed,Without maturity,1728,0,0,0,0,0,0
+IEEE 33,summer,Disturbance,Agreement binary,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Agreement ternary,1728,5,0,0,5,0,0
+IEEE 33,summer,Disturbance,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Disturbance,Composite binary,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Composite ternary,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Fixed composite,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Metadata,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Reference forecast,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Disturbance,Ungated,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Without agreement,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Without completeness,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Without freshness,1728,6,0,0,6,0,0
+IEEE 33,summer,Disturbance,Without maturity,1728,6,0,0,6,0,0
+IEEE 33,summer,Missing,Agreement binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Agreement ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Composite binary,1728,1,0,0,1,0,0
+IEEE 33,summer,Missing,Composite ternary,1728,1,0,0,1,0,0
+IEEE 33,summer,Missing,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Without agreement,1728,1,0,0,1,0,0
+IEEE 33,summer,Missing,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Missing,Without freshness,1728,1,0,0,1,0,0
+IEEE 33,summer,Missing,Without maturity,1728,1,0,0,1,0,0
+IEEE 33,summer,Noisy,Agreement binary,1728,5,0,0,5,0,0
+IEEE 33,summer,Noisy,Agreement ternary,1728,1,0,0,1,0,0
+IEEE 33,summer,Noisy,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Noisy,Composite binary,1728,28,0,0,28,0,0
+IEEE 33,summer,Noisy,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Noisy,Fixed composite,1728,4,0,0,4,0,0
+IEEE 33,summer,Noisy,Metadata,1728,30,0,0,30,0,0
+IEEE 33,summer,Noisy,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Noisy,Stress screen,1728,1,0,0,1,0,0
+IEEE 33,summer,Noisy,Ungated,1728,30,0,0,30,0,0
+IEEE 33,summer,Noisy,Without agreement,1728,3,0,0,3,0,0
+IEEE 33,summer,Noisy,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Noisy,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Noisy,Without maturity,1728,1,0,0,1,0,0
+IEEE 33,summer,Reference noisy,Agreement binary,1728,3,0,0,3,0,0
+IEEE 33,summer,Reference noisy,Agreement ternary,1728,2,0,0,2,0,0
+IEEE 33,summer,Reference noisy,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Composite binary,1728,1,0,0,1,0,0
+IEEE 33,summer,Reference noisy,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Reference forecast,1728,30,0,0,30,0,0
+IEEE 33,summer,Reference noisy,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Without agreement,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference noisy,Without maturity,1728,1,0,0,1,0,0
+IEEE 33,summer,Reference outage,Agreement binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Agreement ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Always half,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Composite binary,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Composite ternary,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Fixed composite,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Metadata,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Reference forecast,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Stress screen,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Ungated,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Without agreement,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Without completeness,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Without freshness,1728,0,0,0,0,0,0
+IEEE 33,summer,Reference outage,Without maturity,1728,0,0,0,0,0,0
+IEEE 33,winter,Bias,Agreement binary,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Agreement ternary,3456,3,0,0,3,0,0
+IEEE 33,winter,Bias,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Bias,Composite binary,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Composite ternary,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Fixed composite,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Metadata,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Reference forecast,3456,12,0,0,12,0,0
+IEEE 33,winter,Bias,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Bias,Ungated,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Without agreement,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Without completeness,3456,5,0,0,5,0,0
+IEEE 33,winter,Bias,Without freshness,3456,6,0,0,6,0,0
+IEEE 33,winter,Bias,Without maturity,3456,4,0,0,4,0,0
+IEEE 33,winter,Clean,Agreement binary,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Agreement ternary,3456,6,0,0,6,0,0
+IEEE 33,winter,Clean,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Clean,Composite binary,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Composite ternary,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Fixed composite,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Metadata,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Reference forecast,3456,12,0,0,12,0,0
+IEEE 33,winter,Clean,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Clean,Ungated,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Without agreement,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Without completeness,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Without freshness,3456,9,0,0,9,0,0
+IEEE 33,winter,Clean,Without maturity,3456,7,0,0,7,0,0
+IEEE 33,winter,Common bias,Agreement binary,3456,6,0,0,6,0,0
+IEEE 33,winter,Common bias,Agreement ternary,3456,3,0,0,3,0,0
+IEEE 33,winter,Common bias,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Common bias,Composite binary,3456,6,0,0,6,0,0
+IEEE 33,winter,Common bias,Composite ternary,3456,3,0,0,3,0,0
+IEEE 33,winter,Common bias,Fixed composite,3456,6,0,0,6,0,0
+IEEE 33,winter,Common bias,Metadata,3456,6,0,0,6,0,0
+IEEE 33,winter,Common bias,Reference forecast,3456,6,0,0,6,0,0
+IEEE 33,winter,Common bias,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Common bias,Ungated,3456,6,0,0,6,0,0
+IEEE 33,winter,Common bias,Without agreement,3456,3,0,0,3,0,0
+IEEE 33,winter,Common bias,Without completeness,3456,3,0,0,3,0,0
+IEEE 33,winter,Common bias,Without freshness,3456,3,0,0,3,0,0
+IEEE 33,winter,Common bias,Without maturity,3456,4,0,0,4,0,0
+IEEE 33,winter,Delayed,Agreement binary,3456,3,0,0,3,0,0
+IEEE 33,winter,Delayed,Agreement ternary,3456,1,0,0,1,0,0
+IEEE 33,winter,Delayed,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Composite binary,3456,4,0,0,4,0,0
+IEEE 33,winter,Delayed,Composite ternary,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Fixed composite,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Metadata,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Reference forecast,3456,12,0,0,12,0,0
+IEEE 33,winter,Delayed,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Ungated,3456,3,0,0,3,0,0
+IEEE 33,winter,Delayed,Without agreement,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Without completeness,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Without freshness,3456,0,0,0,0,0,0
+IEEE 33,winter,Delayed,Without maturity,3456,0,0,0,0,0,0
+IEEE 33,winter,Disturbance,Agreement binary,3456,63,0,0,63,0,0
+IEEE 33,winter,Disturbance,Agreement ternary,3456,47,0,0,47,0,0
+IEEE 33,winter,Disturbance,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Disturbance,Composite binary,3456,63,0,0,63,0,0
+IEEE 33,winter,Disturbance,Composite ternary,3456,50,0,0,50,0,0
+IEEE 33,winter,Disturbance,Fixed composite,3456,60,0,0,60,0,0
+IEEE 33,winter,Disturbance,Metadata,3456,63,0,0,63,0,0
+IEEE 33,winter,Disturbance,Reference forecast,3456,48,0,0,48,0,0
+IEEE 33,winter,Disturbance,Stress screen,3456,15,0,0,15,0,0
+IEEE 33,winter,Disturbance,Ungated,3456,63,0,0,63,0,0
+IEEE 33,winter,Disturbance,Without agreement,3456,44,0,0,44,0,0
+IEEE 33,winter,Disturbance,Without completeness,3456,45,0,0,45,0,0
+IEEE 33,winter,Disturbance,Without freshness,3456,50,0,0,50,0,0
+IEEE 33,winter,Disturbance,Without maturity,3456,54,0,0,54,0,0
+IEEE 33,winter,Missing,Agreement binary,3456,7,0,0,7,0,0
+IEEE 33,winter,Missing,Agreement ternary,3456,4,0,0,4,0,0
+IEEE 33,winter,Missing,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Missing,Composite binary,3456,7,0,0,7,0,0
+IEEE 33,winter,Missing,Composite ternary,3456,3,0,0,3,0,0
+IEEE 33,winter,Missing,Fixed composite,3456,8,0,0,8,0,0
+IEEE 33,winter,Missing,Metadata,3456,7,0,0,7,0,0
+IEEE 33,winter,Missing,Reference forecast,3456,12,0,0,12,0,0
+IEEE 33,winter,Missing,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Missing,Ungated,3456,7,0,0,7,0,0
+IEEE 33,winter,Missing,Without agreement,3456,4,0,0,4,0,0
+IEEE 33,winter,Missing,Without completeness,3456,5,0,0,5,0,0
+IEEE 33,winter,Missing,Without freshness,3456,3,0,0,3,0,0
+IEEE 33,winter,Missing,Without maturity,3456,2,0,0,2,0,0
+IEEE 33,winter,Noisy,Agreement binary,3456,29,0,0,29,0,0
+IEEE 33,winter,Noisy,Agreement ternary,3456,1,0,0,1,0,0
+IEEE 33,winter,Noisy,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Noisy,Composite binary,3456,53,0,0,53,0,0
+IEEE 33,winter,Noisy,Composite ternary,3456,1,0,0,1,0,0
+IEEE 33,winter,Noisy,Fixed composite,3456,6,0,0,6,0,0
+IEEE 33,winter,Noisy,Metadata,3456,58,0,0,58,0,0
+IEEE 33,winter,Noisy,Reference forecast,3456,12,0,0,12,0,0
+IEEE 33,winter,Noisy,Stress screen,3456,13,0,0,13,0,0
+IEEE 33,winter,Noisy,Ungated,3456,58,0,0,58,0,0
+IEEE 33,winter,Noisy,Without agreement,3456,8,0,0,8,0,0
+IEEE 33,winter,Noisy,Without completeness,3456,1,0,0,1,0,0
+IEEE 33,winter,Noisy,Without freshness,3456,1,0,0,1,0,0
+IEEE 33,winter,Noisy,Without maturity,3456,1,0,0,1,0,0
+IEEE 33,winter,Reference noisy,Agreement binary,3456,10,0,0,10,0,0
+IEEE 33,winter,Reference noisy,Agreement ternary,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Composite binary,3456,11,0,0,11,0,0
+IEEE 33,winter,Reference noisy,Composite ternary,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Fixed composite,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Metadata,3456,9,0,0,9,0,0
+IEEE 33,winter,Reference noisy,Reference forecast,3456,58,0,0,58,0,0
+IEEE 33,winter,Reference noisy,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Ungated,3456,9,0,0,9,0,0
+IEEE 33,winter,Reference noisy,Without agreement,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Without completeness,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Without freshness,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference noisy,Without maturity,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference outage,Agreement binary,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Agreement ternary,3456,3,0,0,3,0,0
+IEEE 33,winter,Reference outage,Always half,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference outage,Composite binary,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Composite ternary,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Fixed composite,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Metadata,3456,9,0,0,9,0,0
+IEEE 33,winter,Reference outage,Reference forecast,3456,9,0,0,9,0,0
+IEEE 33,winter,Reference outage,Stress screen,3456,0,0,0,0,0,0
+IEEE 33,winter,Reference outage,Ungated,3456,9,0,0,9,0,0
+IEEE 33,winter,Reference outage,Without agreement,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Without completeness,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Without freshness,3456,6,0,0,6,0,0
+IEEE 33,winter,Reference outage,Without maturity,3456,4,0,0,4,0,0
+SimBench MV,summer,Bias,Agreement binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Agreement ternary,1728,6,0,2,4,0,0
+SimBench MV,summer,Bias,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Composite binary,1728,12,0,0,12,0,0
+SimBench MV,summer,Bias,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Metadata,1728,15,0,0,15,0,0
+SimBench MV,summer,Bias,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Stress screen,1728,12,0,0,12,0,0
+SimBench MV,summer,Bias,Ungated,1728,15,0,0,15,0,0
+SimBench MV,summer,Bias,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Bias,Without maturity,1728,6,0,2,4,0,0
+SimBench MV,summer,Clean,Agreement binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Agreement ternary,1728,6,0,2,4,0,0
+SimBench MV,summer,Clean,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Composite binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Metadata,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Stress screen,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Ungated,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Clean,Without maturity,1728,6,0,2,4,0,0
+SimBench MV,summer,Common bias,Agreement binary,1728,15,0,0,15,0,0
+SimBench MV,summer,Common bias,Agreement ternary,1728,14,0,2,12,0,0
+SimBench MV,summer,Common bias,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Common bias,Composite binary,1728,15,0,0,15,0,0
+SimBench MV,summer,Common bias,Composite ternary,1728,11,0,0,11,0,0
+SimBench MV,summer,Common bias,Fixed composite,1728,15,0,0,15,0,0
+SimBench MV,summer,Common bias,Metadata,1728,15,0,0,15,0,0
+SimBench MV,summer,Common bias,Reference forecast,1728,15,0,0,15,0,0
+SimBench MV,summer,Common bias,Stress screen,1728,12,0,0,12,0,0
+SimBench MV,summer,Common bias,Ungated,1728,15,0,0,15,0,0
+SimBench MV,summer,Common bias,Without agreement,1728,8,0,0,8,0,0
+SimBench MV,summer,Common bias,Without completeness,1728,8,0,0,8,0,0
+SimBench MV,summer,Common bias,Without freshness,1728,10,0,0,10,0,0
+SimBench MV,summer,Common bias,Without maturity,1728,14,0,2,12,0,0
+SimBench MV,summer,Delayed,Agreement binary,1728,11,0,0,11,0,0
+SimBench MV,summer,Delayed,Agreement ternary,1728,6,0,2,4,0,0
+SimBench MV,summer,Delayed,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Composite binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Metadata,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Stress screen,1728,9,0,0,9,0,0
+SimBench MV,summer,Delayed,Ungated,1728,12,0,0,12,0,0
+SimBench MV,summer,Delayed,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Delayed,Without freshness,1728,6,0,4,2,0,0
+SimBench MV,summer,Delayed,Without maturity,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Agreement binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Agreement ternary,1728,6,0,2,4,0,0
+SimBench MV,summer,Disturbance,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Composite binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Metadata,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Stress screen,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Ungated,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Disturbance,Without maturity,1728,6,0,2,4,0,0
+SimBench MV,summer,Missing,Agreement binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Agreement ternary,1728,6,0,2,4,0,0
+SimBench MV,summer,Missing,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Composite binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Metadata,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Stress screen,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Ungated,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Without completeness,1728,6,0,2,4,0,0
+SimBench MV,summer,Missing,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Missing,Without maturity,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Agreement binary,1728,10,0,0,10,0,0
+SimBench MV,summer,Noisy,Agreement ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Composite binary,1728,16,0,0,16,0,0
+SimBench MV,summer,Noisy,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Metadata,1728,18,0,0,18,0,0
+SimBench MV,summer,Noisy,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Stress screen,1728,12,0,0,12,0,0
+SimBench MV,summer,Noisy,Ungated,1728,18,0,0,18,0,0
+SimBench MV,summer,Noisy,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Noisy,Without maturity,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Agreement binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Agreement ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Composite binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Metadata,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Reference forecast,1728,18,0,0,18,0,0
+SimBench MV,summer,Reference noisy,Stress screen,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Ungated,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference noisy,Without maturity,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Agreement binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Agreement ternary,1728,6,0,2,4,0,0
+SimBench MV,summer,Reference outage,Always half,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Composite binary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Composite ternary,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Fixed composite,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Metadata,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Reference forecast,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Stress screen,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Ungated,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Without agreement,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Without completeness,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Without freshness,1728,6,0,0,6,0,0
+SimBench MV,summer,Reference outage,Without maturity,1728,6,0,2,4,0,0
+SimBench MV,winter,Bias,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Composite binary,3456,15,0,0,15,0,0
+SimBench MV,winter,Bias,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Metadata,3456,15,0,0,15,0,0
+SimBench MV,winter,Bias,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Stress screen,3456,15,0,0,15,0,0
+SimBench MV,winter,Bias,Ungated,3456,15,0,0,15,0,0
+SimBench MV,winter,Bias,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Bias,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Composite binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Metadata,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Stress screen,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Ungated,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Clean,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Common bias,Agreement binary,3456,15,0,0,15,0,0
+SimBench MV,winter,Common bias,Agreement ternary,3456,11,0,0,11,0,0
+SimBench MV,winter,Common bias,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Common bias,Composite binary,3456,15,0,0,15,0,0
+SimBench MV,winter,Common bias,Composite ternary,3456,4,0,0,4,0,0
+SimBench MV,winter,Common bias,Fixed composite,3456,10,0,0,10,0,0
+SimBench MV,winter,Common bias,Metadata,3456,15,0,0,15,0,0
+SimBench MV,winter,Common bias,Reference forecast,3456,18,0,0,18,0,0
+SimBench MV,winter,Common bias,Stress screen,3456,15,0,0,15,0,0
+SimBench MV,winter,Common bias,Ungated,3456,15,0,0,15,0,0
+SimBench MV,winter,Common bias,Without agreement,3456,6,0,0,6,0,0
+SimBench MV,winter,Common bias,Without completeness,3456,4,0,0,4,0,0
+SimBench MV,winter,Common bias,Without freshness,3456,4,0,0,4,0,0
+SimBench MV,winter,Common bias,Without maturity,3456,12,0,0,12,0,0
+SimBench MV,winter,Delayed,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Composite binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Metadata,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Stress screen,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Ungated,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Delayed,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Composite binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Metadata,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Stress screen,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Ungated,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Disturbance,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Composite binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Metadata,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Stress screen,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Ungated,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Missing,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Agreement binary,3456,1,0,0,1,0,0
+SimBench MV,winter,Noisy,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Composite binary,3456,7,0,0,7,0,0
+SimBench MV,winter,Noisy,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Metadata,3456,16,0,0,16,0,0
+SimBench MV,winter,Noisy,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Stress screen,3456,16,0,0,16,0,0
+SimBench MV,winter,Noisy,Ungated,3456,16,0,0,16,0,0
+SimBench MV,winter,Noisy,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Noisy,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Composite binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Metadata,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Reference forecast,3456,16,0,0,16,0,0
+SimBench MV,winter,Reference noisy,Stress screen,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Ungated,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference noisy,Without maturity,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Agreement binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Agreement ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Always half,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Composite binary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Composite ternary,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Fixed composite,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Metadata,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Reference forecast,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Stress screen,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Ungated,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Without agreement,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Without completeness,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Without freshness,3456,0,0,0,0,0,0
+SimBench MV,winter,Reference outage,Without maturity,3456,0,0,0,0,0,0
+SimBench assets,summer,Bias,Agreement binary,1728,282,0,192,90,195,168
+SimBench assets,summer,Bias,Agreement ternary,1728,279,0,199,80,195,168
+SimBench assets,summer,Bias,Always half,1728,261,0,189,72,195,168
+SimBench assets,summer,Bias,Composite binary,1728,288,0,186,102,193,166
+SimBench assets,summer,Bias,Composite ternary,1728,275,0,170,105,190,166
+SimBench assets,summer,Bias,Fixed composite,1728,280,0,204,76,195,168
+SimBench assets,summer,Bias,Metadata,1728,291,0,204,87,195,168
+SimBench assets,summer,Bias,Reference forecast,1728,285,0,192,93,241,213
+SimBench assets,summer,Bias,Stress screen,1728,270,0,216,54,195,168
+SimBench assets,summer,Bias,Ungated,1728,291,0,204,87,195,168
+SimBench assets,summer,Bias,Without agreement,1728,272,0,189,83,195,168
+SimBench assets,summer,Bias,Without completeness,1728,271,0,168,103,189,165
+SimBench assets,summer,Bias,Without freshness,1728,270,0,184,86,189,165
+SimBench assets,summer,Bias,Without maturity,1728,278,0,192,86,195,168
+SimBench assets,summer,Clean,Agreement binary,1728,282,0,192,90,240,213
+SimBench assets,summer,Clean,Agreement ternary,1728,279,0,199,80,240,213
+SimBench assets,summer,Clean,Always half,1728,261,0,171,90,237,210
+SimBench assets,summer,Clean,Composite binary,1728,282,0,186,96,238,211
+SimBench assets,summer,Clean,Composite ternary,1728,275,0,175,100,237,210
+SimBench assets,summer,Clean,Fixed composite,1728,283,0,219,64,240,213
+SimBench assets,summer,Clean,Metadata,1728,282,0,192,90,240,213
+SimBench assets,summer,Clean,Reference forecast,1728,285,0,192,93,241,213
+SimBench assets,summer,Clean,Stress screen,1728,273,0,141,132,240,213
+SimBench assets,summer,Clean,Ungated,1728,282,0,192,90,240,213
+SimBench assets,summer,Clean,Without agreement,1728,268,0,168,100,234,210
+SimBench assets,summer,Clean,Without completeness,1728,274,0,168,106,237,210
+SimBench assets,summer,Clean,Without freshness,1728,272,0,184,88,237,210
+SimBench assets,summer,Clean,Without maturity,1728,278,0,192,86,240,213
+SimBench assets,summer,Common bias,Agreement binary,1728,291,0,204,87,195,168
+SimBench assets,summer,Common bias,Agreement ternary,1728,286,0,211,75,195,168
+SimBench assets,summer,Common bias,Always half,1728,261,0,189,72,195,168
+SimBench assets,summer,Common bias,Composite binary,1728,293,0,202,91,195,168
+SimBench assets,summer,Common bias,Composite ternary,1728,283,0,190,93,195,168
+SimBench assets,summer,Common bias,Fixed composite,1728,292,0,204,88,195,168
+SimBench assets,summer,Common bias,Metadata,1728,291,0,204,87,195,168
+SimBench assets,summer,Common bias,Reference forecast,1728,292,0,204,88,196,168
+SimBench assets,summer,Common bias,Stress screen,1728,270,0,216,54,195,168
+SimBench assets,summer,Common bias,Ungated,1728,291,0,204,87,195,168
+SimBench assets,summer,Common bias,Without agreement,1728,267,0,189,78,195,168
+SimBench assets,summer,Common bias,Without completeness,1728,278,0,194,84,195,168
+SimBench assets,summer,Common bias,Without freshness,1728,276,0,175,101,190,166
+SimBench assets,summer,Common bias,Without maturity,1728,286,0,204,82,195,168
+SimBench assets,summer,Delayed,Agreement binary,1728,289,0,188,101,234,198
+SimBench assets,summer,Delayed,Agreement ternary,1728,268,0,164,104,231,196
+SimBench assets,summer,Delayed,Always half,1728,264,0,189,75,237,198
+SimBench assets,summer,Delayed,Composite binary,1728,276,0,0,276,237,198
+SimBench assets,summer,Delayed,Composite ternary,1728,276,0,0,276,237,198
+SimBench assets,summer,Delayed,Fixed composite,1728,265,0,33,232,232,195
+SimBench assets,summer,Delayed,Metadata,1728,276,0,0,276,237,198
+SimBench assets,summer,Delayed,Reference forecast,1728,285,0,192,93,241,213
+SimBench assets,summer,Delayed,Stress screen,1728,273,0,141,132,237,198
+SimBench assets,summer,Delayed,Ungated,1728,294,0,192,102,237,198
+SimBench assets,summer,Delayed,Without agreement,1728,276,0,0,276,237,198
+SimBench assets,summer,Delayed,Without completeness,1728,276,0,0,276,237,198
+SimBench assets,summer,Delayed,Without freshness,1728,273,0,28,245,231,195
+SimBench assets,summer,Delayed,Without maturity,1728,276,0,0,276,237,198
+SimBench assets,summer,Disturbance,Agreement binary,1728,201,0,150,51,150,144
+SimBench assets,summer,Disturbance,Agreement ternary,1728,199,0,151,48,150,144
+SimBench assets,summer,Disturbance,Always half,1728,186,0,147,39,150,144
+SimBench assets,summer,Disturbance,Composite binary,1728,203,0,148,55,150,144
+SimBench assets,summer,Disturbance,Composite ternary,1728,198,0,148,50,150,144
+SimBench assets,summer,Disturbance,Fixed composite,1728,201,0,174,27,150,144
+SimBench assets,summer,Disturbance,Metadata,1728,201,0,150,51,150,144
+SimBench assets,summer,Disturbance,Reference forecast,1728,203,0,150,53,153,145
+SimBench assets,summer,Disturbance,Stress screen,1728,195,0,147,48,150,144
+SimBench assets,summer,Disturbance,Ungated,1728,201,0,150,51,150,144
+SimBench assets,summer,Disturbance,Without agreement,1728,195,0,147,48,150,144
+SimBench assets,summer,Disturbance,Without completeness,1728,197,0,147,50,150,144
+SimBench assets,summer,Disturbance,Without freshness,1728,195,0,161,34,150,144
+SimBench assets,summer,Disturbance,Without maturity,1728,198,0,150,48,150,144
+SimBench assets,summer,Missing,Agreement binary,1728,283,0,192,91,237,209
+SimBench assets,summer,Missing,Agreement ternary,1728,280,0,199,81,237,209
+SimBench assets,summer,Missing,Always half,1728,263,0,183,80,236,208
+SimBench assets,summer,Missing,Composite binary,1728,278,0,183,95,234,206
+SimBench assets,summer,Missing,Composite ternary,1728,272,0,152,120,230,204
+SimBench assets,summer,Missing,Fixed composite,1728,277,0,218,59,237,209
+SimBench assets,summer,Missing,Metadata,1728,282,0,191,91,237,209
+SimBench assets,summer,Missing,Reference forecast,1728,285,0,192,93,241,213
+SimBench assets,summer,Missing,Stress screen,1728,273,0,141,132,237,209
+SimBench assets,summer,Missing,Ungated,1728,283,0,192,91,237,209
+SimBench assets,summer,Missing,Without agreement,1728,264,0,108,156,228,200
+SimBench assets,summer,Missing,Without completeness,1728,274,0,173,101,234,206
+SimBench assets,summer,Missing,Without freshness,1728,269,0,155,114,228,201
+SimBench assets,summer,Missing,Without maturity,1728,272,0,194,78,233,205
+SimBench assets,summer,Noisy,Agreement binary,1728,281,0,186,95,238,210
+SimBench assets,summer,Noisy,Agreement ternary,1728,263,0,184,79,233,206
+SimBench assets,summer,Noisy,Always half,1728,264,0,189,75,234,207
+SimBench assets,summer,Noisy,Composite binary,1728,285,0,194,91,239,212
+SimBench assets,summer,Noisy,Composite ternary,1728,268,0,138,130,232,206
+SimBench assets,summer,Noisy,Fixed composite,1728,285,0,210,75,238,211
+SimBench assets,summer,Noisy,Metadata,1728,284,0,197,87,239,212
+SimBench assets,summer,Noisy,Reference forecast,1728,285,0,192,93,241,213
+SimBench assets,summer,Noisy,Stress screen,1728,273,0,164,109,240,213
+SimBench assets,summer,Noisy,Ungated,1728,284,0,197,87,239,212
+SimBench assets,summer,Noisy,Without agreement,1728,275,0,182,93,237,210
+SimBench assets,summer,Noisy,Without completeness,1728,269,0,133,136,232,206
+SimBench assets,summer,Noisy,Without freshness,1728,267,0,128,139,232,206
+SimBench assets,summer,Noisy,Without maturity,1728,266,0,197,69,234,207
+SimBench assets,summer,Reference noisy,Agreement binary,1728,281,0,187,94,238,211
+SimBench assets,summer,Reference noisy,Agreement ternary,1728,265,0,187,78,236,209
+SimBench assets,summer,Reference noisy,Always half,1728,261,0,171,90,237,210
+SimBench assets,summer,Reference noisy,Composite binary,1728,281,0,188,93,239,212
+SimBench assets,summer,Reference noisy,Composite ternary,1728,265,0,178,87,235,209
+SimBench assets,summer,Reference noisy,Fixed composite,1728,279,0,210,69,240,213
+SimBench assets,summer,Reference noisy,Metadata,1728,282,0,192,90,240,213
+SimBench assets,summer,Reference noisy,Reference forecast,1728,284,0,197,87,239,212
+SimBench assets,summer,Reference noisy,Stress screen,1728,273,0,141,132,240,213
+SimBench assets,summer,Reference noisy,Ungated,1728,282,0,192,90,240,213
+SimBench assets,summer,Reference noisy,Without agreement,1728,270,0,177,93,237,211
+SimBench assets,summer,Reference noisy,Without completeness,1728,263,0,158,105,234,207
+SimBench assets,summer,Reference noisy,Without freshness,1728,267,0,160,107,235,210
+SimBench assets,summer,Reference noisy,Without maturity,1728,261,0,188,73,237,210
+SimBench assets,summer,Reference outage,Agreement binary,1728,282,0,192,90,240,213
+SimBench assets,summer,Reference outage,Agreement ternary,1728,279,0,199,80,240,213
+SimBench assets,summer,Reference outage,Always half,1728,261,0,171,90,237,210
+SimBench assets,summer,Reference outage,Composite binary,1728,282,0,186,96,238,211
+SimBench assets,summer,Reference outage,Composite ternary,1728,279,0,170,109,235,210
+SimBench assets,summer,Reference outage,Fixed composite,1728,283,0,219,64,240,213
+SimBench assets,summer,Reference outage,Metadata,1728,282,0,192,90,240,213
+SimBench assets,summer,Reference outage,Reference forecast,1728,286,0,192,94,241,213
+SimBench assets,summer,Reference outage,Stress screen,1728,273,0,141,132,240,213
+SimBench assets,summer,Reference outage,Ungated,1728,282,0,192,90,240,213
+SimBench assets,summer,Reference outage,Without agreement,1728,269,0,168,101,234,210
+SimBench assets,summer,Reference outage,Without completeness,1728,278,0,168,110,234,210
+SimBench assets,summer,Reference outage,Without freshness,1728,276,0,184,92,234,210
+SimBench assets,summer,Reference outage,Without maturity,1728,278,0,192,86,240,213
+SimBench assets,winter,Bias,Agreement binary,3456,900,0,723,177,639,579
+SimBench assets,winter,Bias,Agreement ternary,3456,896,0,715,181,635,577
+SimBench assets,winter,Bias,Always half,3456,855,0,570,285,576,531
+SimBench assets,winter,Bias,Composite binary,3456,901,0,708,193,639,579
+SimBench assets,winter,Bias,Composite ternary,3456,885,0,690,195,627,567
+SimBench assets,winter,Bias,Fixed composite,3456,894,0,729,165,633,573
+SimBench assets,winter,Bias,Metadata,3456,918,0,732,186,636,576
+SimBench assets,winter,Bias,Reference forecast,3456,918,0,762,156,765,708
+SimBench assets,winter,Bias,Stress screen,3456,912,0,675,237,657,594
+SimBench assets,winter,Bias,Ungated,3456,918,0,732,186,636,576
+SimBench assets,winter,Bias,Without agreement,3456,873,0,628,245,600,549
+SimBench assets,winter,Bias,Without completeness,3456,885,0,672,213,627,567
+SimBench assets,winter,Bias,Without freshness,3456,885,0,695,190,627,567
+SimBench assets,winter,Bias,Without maturity,3456,897,0,712,185,636,577
+SimBench assets,winter,Clean,Agreement binary,3456,906,0,762,144,768,702
+SimBench assets,winter,Clean,Agreement ternary,3456,903,0,754,149,762,701
+SimBench assets,winter,Clean,Always half,3456,870,0,636,234,729,675
+SimBench assets,winter,Clean,Composite binary,3456,906,0,762,144,768,702
+SimBench assets,winter,Clean,Composite ternary,3456,905,0,762,143,768,702
+SimBench assets,winter,Clean,Fixed composite,3456,906,0,762,144,768,702
+SimBench assets,winter,Clean,Metadata,3456,906,0,762,144,768,702
+SimBench assets,winter,Clean,Reference forecast,3456,918,0,762,156,765,708
+SimBench assets,winter,Clean,Stress screen,3456,903,0,744,159,786,717
+SimBench assets,winter,Clean,Ungated,3456,906,0,762,144,768,702
+SimBench assets,winter,Clean,Without agreement,3456,897,0,743,154,764,698
+SimBench assets,winter,Clean,Without completeness,3456,903,0,752,151,767,701
+SimBench assets,winter,Clean,Without freshness,3456,905,0,757,148,768,702
+SimBench assets,winter,Clean,Without maturity,3456,904,0,763,141,765,701
+SimBench assets,winter,Common bias,Agreement binary,3456,918,0,732,186,636,576
+SimBench assets,winter,Common bias,Agreement ternary,3456,912,0,737,175,633,578
+SimBench assets,winter,Common bias,Always half,3456,855,0,570,285,576,531
+SimBench assets,winter,Common bias,Composite binary,3456,918,0,732,186,636,576
+SimBench assets,winter,Common bias,Composite ternary,3456,875,0,631,244,595,548
+SimBench assets,winter,Common bias,Fixed composite,3456,918,0,732,186,636,576
+SimBench assets,winter,Common bias,Metadata,3456,918,0,732,186,636,576
+SimBench assets,winter,Common bias,Reference forecast,3456,922,0,735,187,629,577
+SimBench assets,winter,Common bias,Stress screen,3456,912,0,675,237,657,594
+SimBench assets,winter,Common bias,Ungated,3456,918,0,732,186,636,576
+SimBench assets,winter,Common bias,Without agreement,3456,871,0,627,244,591,546
+SimBench assets,winter,Common bias,Without completeness,3456,870,0,615,255,591,546
+SimBench assets,winter,Common bias,Without freshness,3456,875,0,633,242,595,548
+SimBench assets,winter,Common bias,Without maturity,3456,914,0,743,171,635,577
+SimBench assets,winter,Delayed,Agreement binary,3456,913,0,689,224,749,601
+SimBench assets,winter,Delayed,Agreement ternary,3456,876,0,638,238,719,577
+SimBench assets,winter,Delayed,Always half,3456,873,0,627,246,711,573
+SimBench assets,winter,Delayed,Composite binary,3456,933,0,0,933,792,636
+SimBench assets,winter,Delayed,Composite ternary,3456,933,0,0,933,792,636
+SimBench assets,winter,Delayed,Fixed composite,3456,868,0,589,279,720,573
+SimBench assets,winter,Delayed,Metadata,3456,933,0,0,933,792,636
+SimBench assets,winter,Delayed,Reference forecast,3456,918,0,762,156,765,708
+SimBench assets,winter,Delayed,Stress screen,3456,906,0,735,171,774,621
+SimBench assets,winter,Delayed,Ungated,3456,912,0,741,171,753,603
+SimBench assets,winter,Delayed,Without agreement,3456,933,0,0,933,792,636
+SimBench assets,winter,Delayed,Without completeness,3456,933,0,0,933,792,636
+SimBench assets,winter,Delayed,Without freshness,3456,882,0,657,225,736,585
+SimBench assets,winter,Delayed,Without maturity,3456,933,0,0,933,792,636
+SimBench assets,winter,Disturbance,Agreement binary,3456,609,0,486,123,486,441
+SimBench assets,winter,Disturbance,Agreement ternary,3456,607,0,486,121,481,440
+SimBench assets,winter,Disturbance,Always half,3456,558,0,390,168,441,405
+SimBench assets,winter,Disturbance,Composite binary,3456,610,0,478,132,488,443
+SimBench assets,winter,Disturbance,Composite ternary,3456,590,0,443,147,475,439
+SimBench assets,winter,Disturbance,Fixed composite,3456,600,0,464,136,477,435
+SimBench assets,winter,Disturbance,Metadata,3456,609,0,486,123,486,441
+SimBench assets,winter,Disturbance,Reference forecast,3456,619,0,494,125,488,449
+SimBench assets,winter,Disturbance,Stress screen,3456,606,0,465,141,504,456
+SimBench assets,winter,Disturbance,Ungated,3456,609,0,486,123,486,441
+SimBench assets,winter,Disturbance,Without agreement,3456,594,0,419,175,481,439
+SimBench assets,winter,Disturbance,Without completeness,3456,593,0,439,154,477,440
+SimBench assets,winter,Disturbance,Without freshness,3456,591,0,425,166,478,436
+SimBench assets,winter,Disturbance,Without maturity,3456,608,0,484,124,481,440
+SimBench assets,winter,Missing,Agreement binary,3456,907,0,753,154,771,699
+SimBench assets,winter,Missing,Agreement ternary,3456,902,0,743,159,764,697
+SimBench assets,winter,Missing,Always half,3456,870,0,634,236,726,667
+SimBench assets,winter,Missing,Composite binary,3456,906,0,752,154,770,699
+SimBench assets,winter,Missing,Composite ternary,3456,884,0,711,173,751,684
+SimBench assets,winter,Missing,Fixed composite,3456,903,0,739,164,766,696
+SimBench assets,winter,Missing,Metadata,3456,906,0,747,159,769,698
+SimBench assets,winter,Missing,Reference forecast,3456,918,0,762,156,765,708
+SimBench assets,winter,Missing,Stress screen,3456,906,0,734,172,791,714
+SimBench assets,winter,Missing,Ungated,3456,908,0,754,154,773,699
+SimBench assets,winter,Missing,Without agreement,3456,880,0,711,169,752,685
+SimBench assets,winter,Missing,Without completeness,3456,896,0,729,167,763,693
+SimBench assets,winter,Missing,Without freshness,3456,880,0,718,162,753,683
+SimBench assets,winter,Missing,Without maturity,3456,881,0,716,165,749,683
+SimBench assets,winter,Noisy,Agreement binary,3456,927,0,729,198,754,686
+SimBench assets,winter,Noisy,Agreement ternary,3456,874,0,647,227,737,671
+SimBench assets,winter,Noisy,Always half,3456,876,0,645,231,726,663
+SimBench assets,winter,Noisy,Composite binary,3456,935,0,743,192,756,687
+SimBench assets,winter,Noisy,Composite ternary,3456,889,0,670,219,745,680
+SimBench assets,winter,Noisy,Fixed composite,3456,931,0,745,186,752,685
+SimBench assets,winter,Noisy,Metadata,3456,934,0,740,194,752,684
+SimBench assets,winter,Noisy,Reference forecast,3456,918,0,762,156,765,708
+SimBench assets,winter,Noisy,Stress screen,3456,911,0,730,181,767,696
+SimBench assets,winter,Noisy,Ungated,3456,934,0,740,194,752,684
+SimBench assets,winter,Noisy,Without agreement,3456,905,0,683,222,750,685
+SimBench assets,winter,Noisy,Without completeness,3456,884,0,676,208,745,679
+SimBench assets,winter,Noisy,Without freshness,3456,890,0,683,207,748,681
+SimBench assets,winter,Noisy,Without maturity,3456,874,0,668,206,728,666
+SimBench assets,winter,Reference noisy,Agreement binary,3456,904,0,751,153,766,706
+SimBench assets,winter,Reference noisy,Agreement ternary,3456,882,0,635,247,744,691
+SimBench assets,winter,Reference noisy,Always half,3456,870,0,636,234,729,675
+SimBench assets,winter,Reference noisy,Composite binary,3456,905,0,761,144,766,703
+SimBench assets,winter,Reference noisy,Composite ternary,3456,884,0,659,225,750,694
+SimBench assets,winter,Reference noisy,Fixed composite,3456,899,0,724,175,762,702
+SimBench assets,winter,Reference noisy,Metadata,3456,906,0,762,144,768,702
+SimBench assets,winter,Reference noisy,Reference forecast,3456,934,0,740,194,752,684
+SimBench assets,winter,Reference noisy,Stress screen,3456,903,0,744,159,786,717
+SimBench assets,winter,Reference noisy,Ungated,3456,906,0,762,144,768,702
+SimBench assets,winter,Reference noisy,Without agreement,3456,890,0,671,219,754,697
+SimBench assets,winter,Reference noisy,Without completeness,3456,881,0,647,234,746,692
+SimBench assets,winter,Reference noisy,Without freshness,3456,890,0,637,253,754,697
+SimBench assets,winter,Reference noisy,Without maturity,3456,873,0,648,225,735,684
+SimBench assets,winter,Reference outage,Agreement binary,3456,900,0,723,177,765,699
+SimBench assets,winter,Reference outage,Agreement ternary,3456,896,0,715,181,761,697
+SimBench assets,winter,Reference outage,Always half,3456,870,0,636,234,729,675
+SimBench assets,winter,Reference outage,Composite binary,3456,900,0,723,177,765,699
+SimBench assets,winter,Reference outage,Composite ternary,3456,900,0,723,177,765,699
+SimBench assets,winter,Reference outage,Fixed composite,3456,900,0,723,177,765,699
+SimBench assets,winter,Reference outage,Metadata,3456,906,0,762,144,768,702
+SimBench assets,winter,Reference outage,Reference forecast,3456,917,0,762,155,762,705
+SimBench assets,winter,Reference outage,Stress screen,3456,903,0,744,159,786,717
+SimBench assets,winter,Reference outage,Ungated,3456,906,0,762,144,768,702
+SimBench assets,winter,Reference outage,Without agreement,3456,900,0,707,193,765,699
+SimBench assets,winter,Reference outage,Without completeness,3456,900,0,716,184,765,699
+SimBench assets,winter,Reference outage,Without freshness,3456,900,0,723,177,765,699
+SimBench assets,winter,Reference outage,Without maturity,3456,897,0,712,185,762,697

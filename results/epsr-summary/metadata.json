@@ -1,0 +1,1058 @@
+{
+  "created_utc": "2026-10-11T12:02:37.029608+00:00",
+  "runtime_seconds": 2259.649094100001,
+  "python": "3.12.14",
+  "pandapower": "3.4.0",
+  "simbench": "1.6.3",
+  "sklearn": "1.7.2",
+  "decision_count": 1959552,
+  "modes": [
+    "Ungated",
+    "Always half",
+    "Metadata",
+    "Agreement binary",
+    "Composite binary",
+    "Agreement ternary",
+    "Composite ternary",
+    "Without freshness",
+    "Without completeness",
+    "Without maturity",
+    "Without agreement",
+    "Reference forecast",
+    "Stress screen",
+    "Fixed composite"
+  ],
+  "scenarios": [
+    "Clean",
+    "Missing",
+    "Delayed",
+    "Noisy",
+    "Bias",
+    "Disturbance",
+    "Reference outage",
+    "Reference noisy",
+    "Common bias"
+  ],
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "profiles": [
+    "P:G3-A",
+    "P:lv_rural1",
+    "P:lv_rural2",
+    "P:lv_rural3",
+    "P:lv_semiurb4",
+    "P:L2-M",
+    "P:G0-M",
+    "P:G3-M",
+    "P:G0-A",
+    "P:L0-A",
+    "Q:G3-A",
+    "Q:lv_rural1",
+    "Q:lv_rural2",
+    "Q:lv_rural3",
+    "Q:lv_semiurb4",
+    "Q:L2-M",
+    "Q:G0-M",
+    "Q:G3-M",
+    "Q:G0-A",
+    "Q:L0-A",
+    "G:WP4",
+    "G:lv_rural1",
+    "G:lv_rural2",
+    "G:lv_rural3",
+    "G:lv_semiurb4",
+    "G:WP7",
+    "G:BM3",
+    "G:BM1",
+    "G:PV3",
+    "G:PV7",
+    "G:Hydro2",
+    "G:BM2"
+  ],
+  "asset_mapping": {
+    "load_p": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      2,
+      2,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      2,
+      1,
+      1,
+      4,
+      4,
+      2,
+      1,
+      2,
+      4,
+      4,
+      2,
+      1,
+      1,
+      2,
+      3,
+      4,
+      3,
+      1,
+      1,
+      1,
+      2,
+      2,
+      3,
+      2,
+      3,
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "load_q": [
+      10,
+      11,
+      11,
+      11,
+      11,
+      12,
+      12,
+      12,
+      12,
+      13,
+      12,
+      12,
+      13,
+      12,
+      11,
+      11,
+      11,
+      11,
+      12,
+      12,
+      11,
+      12,
+      11,
+      11,
+      11,
+      11,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      12,
+      11,
+      11,
+      12,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12,
+      12,
+      12,
+      14,
+      14,
+      14,
+      14,
+      14,
+      12,
+      11,
+      11,
+      14,
+      14,
+      12,
+      11,
+      12,
+      14,
+      14,
+      12,
+      11,
+      11,
+      12,
+      13,
+      14,
+      13,
+      11,
+      11,
+      11,
+      12,
+      12,
+      13,
+      12,
+      13,
+      13,
+      12,
+      12,
+      12,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12,
+      12,
+      12,
+      11,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "sgen_p": [
+      20,
+      21,
+      21,
+      21,
+      21,
+      22,
+      22,
+      22,
+      22,
+      23,
+      22,
+      22,
+      23,
+      22,
+      21,
+      21,
+      21,
+      21,
+      22,
+      22,
+      21,
+      22,
+      21,
+      21,
+      21,
+      21,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      22,
+      21,
+      21,
+      22,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      22,
+      22,
+      22,
+      24,
+      24,
+      24,
+      24,
+      24,
+      22,
+      21,
+      21,
+      24,
+      24,
+      22,
+      21,
+      22,
+      24,
+      24,
+      22,
+      21,
+      21,
+      22,
+      23,
+      24,
+      23,
+      21,
+      21,
+      21,
+      22,
+      22,
+      23,
+      22,
+      23,
+      23,
+      22,
+      22,
+      22,
+      21,
+      21,
+      21,
+      21,
+      21,
+      21,
+      22,
+      22,
+      22,
+      21,
+      25,
+      20,
+      25,
+      26,
+      27,
+      20,
+      25,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "studies": [
+    {
+      "network": "IEEE 33",
+      "origin": "summer",
+      "boundaries": [
+        "2016-05-01",
+        "2016-06-01",
+        "2016-07-01"
+      ],
+      "forecast": {
+        "training_hours": 2879,
+        "calibration_hours": 743,
+        "development_hours": 719,
+        "train_target_last": "2016-04-30 23:00:00",
+        "cal_target_last": "2016-05-31 23:00:00",
+        "dev_target_last": "2016-06-30 23:00:00",
+        "joint_halfwidth": [
+          0.05304554890077818,
+          0.06584750560476829
+        ],
+        "stress_halfwidth": [
+          0.03320152299832763,
+          0.06287414267990776
+        ],
+        "calibration_mae": 0.02196214916723583,
+        "calibration_coverage": 0.901749663526245
+      },
+      "cutoffs": {
+        "Agreement": [
+          0.5730300504468105,
+          0.8980151153145541
+        ],
+        "Composite": [
+          0.7294441535043751,
+          0.9296230525562634
+        ],
+        "Without freshness": [
+          0.702175028302231,
+          0.9009925267272838
+        ],
+        "Without completeness": [
+          0.642444309507725,
+          0.9154248863750652
+        ],
+        "Without maturity": [
+          0.8207413355018733,
+          0.9689270242607837
+        ],
+        "Without agreement": [
+          0.7750788474652132,
+          0.9379682722592982
+        ]
+      },
+      "development_coverage": {
+        "Agreement": {
+          "authorised": 0.849997375741353,
+          "full": 0.500078727759408,
+          "available_reference_samples": 19053
+        },
+        "Composite": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without freshness": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without completeness": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without maturity": {
+          "authorised": 0.849997375741353,
+          "full": 0.5001312129323466,
+          "available_reference_samples": 19053
+        },
+        "Without agreement": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        }
+      },
+      "centre": [
+        0.2211060781032685,
+        0.16019435685732447
+      ],
+      "battery_bus": 17,
+      "capacity_mwh": 3.2,
+      "pmax_mw": 0.8
+    },
+    {
+      "network": "IEEE 33",
+      "origin": "winter",
+      "boundaries": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01"
+      ],
+      "forecast": {
+        "training_hours": 5831,
+        "calibration_hours": 719,
+        "development_hours": 743,
+        "train_target_last": "2016-08-31 23:00:00",
+        "cal_target_last": "2016-09-30 23:00:00",
+        "dev_target_last": "2016-10-31 23:00:00",
+        "joint_halfwidth": [
+          0.03822410941356662,
+          0.050703298068935386
+        ],
+        "stress_halfwidth": [
+          0.027495281233167513,
+          0.043045851508678235
+        ],
+        "calibration_mae": 0.01583627113355961,
+        "calibration_coverage": 0.9012517385257302
+      },
+      "cutoffs": {
+        "Agreement": [
+          0.5703258435658173,
+          0.8990863613098761
+        ],
+        "Composite": [
+          0.6984398985603493,
+          0.8985241412868503
+        ],
+        "Without freshness": [
+          0.643357792723446,
+          0.8578245054475806
+        ],
+        "Without completeness": [
+          0.6007521774571905,
+          0.8734431705505857
+        ],
+        "Without maturity": [
+          0.8187155981425006,
+          0.9697669873622305
+        ],
+        "Without agreement": [
+          0.7427420888830554,
+          0.8969713568983172
+        ]
+      },
+      "development_coverage": {
+        "Agreement": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Composite": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without freshness": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without completeness": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without maturity": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5001270131585632,
+          "available_reference_samples": 19683
+        },
+        "Without agreement": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        }
+      },
+      "centre": [
+        0.2093264230340171,
+        0.15449145987644242
+      ],
+      "battery_bus": 17,
+      "capacity_mwh": 3.2,
+      "pmax_mw": 0.8
+    },
+    {
+      "network": "SimBench MV",
+      "origin": "summer",
+      "boundaries": [
+        "2016-05-01",
+        "2016-06-01",
+        "2016-07-01"
+      ],
+      "forecast": {
+        "training_hours": 2879,
+        "calibration_hours": 743,
+        "development_hours": 719,
+        "train_target_last": "2016-04-30 23:00:00",
+        "cal_target_last": "2016-05-31 23:00:00",
+        "dev_target_last": "2016-06-30 23:00:00",
+        "joint_halfwidth": [
+          0.05304554890077815,
+          0.06584750560476826
+        ],
+        "stress_halfwidth": [
+          0.03320152299832763,
+          0.06287414267990776
+        ],
+        "calibration_mae": 0.021962149167235826,
+        "calibration_coverage": 0.901749663526245
+      },
+      "cutoffs": {
+        "Agreement": [
+          0.5730300504468105,
+          0.8980151153145541
+        ],
+        "Composite": [
+          0.7294441535043751,
+          0.9296230525562634
+        ],
+        "Without freshness": [
+          0.702175028302231,
+          0.9009925267272838
+        ],
+        "Without completeness": [
+          0.642444309507725,
+          0.9154248863750652
+        ],
+        "Without maturity": [
+          0.8207413355018733,
+          0.9689270242607837
+        ],
+        "Without agreement": [
+          0.7750788474652132,
+          0.9379682722592982
+        ]
+      },
+      "development_coverage": {
+        "Agreement": {
+          "authorised": 0.849997375741353,
+          "full": 0.500078727759408,
+          "available_reference_samples": 19053
+        },
+        "Composite": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without freshness": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without completeness": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without maturity": {
+          "authorised": 0.849997375741353,
+          "full": 0.5001312129323466,
+          "available_reference_samples": 19053
+        },
+        "Without agreement": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        }
+      },
+      "centre": [
+        0.2211060781032685,
+        0.16019435685732447
+      ],
+      "battery_bus": 15,
+      "capacity_mwh": 8.0,
+      "pmax_mw": 2.0
+    },
+    {
+      "network": "SimBench MV",
+      "origin": "winter",
+      "boundaries": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01"
+      ],
+      "forecast": {
+        "training_hours": 5831,
+        "calibration_hours": 719,
+        "development_hours": 743,
+        "train_target_last": "2016-08-31 23:00:00",
+        "cal_target_last": "2016-09-30 23:00:00",
+        "dev_target_last": "2016-10-31 23:00:00",
+        "joint_halfwidth": [
+          0.03822410941356662,
+          0.0507032980689353
+        ],
+        "stress_halfwidth": [
+          0.027495281233167513,
+          0.043045851508678235
+        ],
+        "calibration_mae": 0.01583627113355961,
+        "calibration_coverage": 0.9012517385257302
+      },
+      "cutoffs": {
+        "Agreement": [
+          0.5703258435658173,
+          0.8990863613098761
+        ],
+        "Composite": [
+          0.6984398985603493,
+          0.8985241412868502
+        ],
+        "Without freshness": [
+          0.643357792723446,
+          0.8578245054475806
+        ],
+        "Without completeness": [
+          0.6007521774571905,
+          0.8734431705505857
+        ],
+        "Without maturity": [
+          0.8187155981425006,
+          0.9697669873622305
+        ],
+        "Without agreement": [
+          0.7427420888830554,
+          0.8969713568983172
+        ]
+      },
+      "development_coverage": {
+        "Agreement": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Composite": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without freshness": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without completeness": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without maturity": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5001270131585632,
+          "available_reference_samples": 19683
+        },
+        "Without agreement": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        }
+      },
+      "centre": [
+        0.2093264230340171,
+        0.15449145987644242
+      ],
+      "battery_bus": 15,
+      "capacity_mwh": 8.0,
+      "pmax_mw": 2.0
+    },
+    {
+      "network": "SimBench assets",
+      "origin": "summer",
+      "boundaries": [
+        "2016-05-01",
+        "2016-06-01",
+        "2016-07-01"
+      ],
+      "forecast": {
+        "training_hours": 2879,
+        "calibration_hours": 743,
+        "development_hours": 719,
+        "train_target_last": "2016-04-30 23:00:00",
+        "cal_target_last": "2016-05-31 23:00:00",
+        "dev_target_last": "2016-06-30 23:00:00",
+        "joint_halfwidth": [
+          0.07882501631042949,
+          0.09854534186606857
+        ],
+        "stress_halfwidth": [
+          0.0990526898388911,
+          0.11007457230442662,
+          0.0564367532238647,
+          0.0657147919902136,
+          0.0635126089093738,
+          0.14063123015291157,
+          0.10291789562853826,
+          0.10728398717376618,
+          0.11811584525356067,
+          0.13850181902379624,
+          0.18991091946786906,
+          0.08270575459496379,
+          0.04268652401903627,
+          0.03783222238745705,
+          0.039537761313405584,
+          0.2795437538180923,
+          0.21739968213455454,
+          0.11232106502117493,
+          0.15806888448534878,
+          0.2908663398553913,
+          0.15171195305876436,
+          0.1334415662254491,
+          0.10776266037511946,
+          0.11737549622606828,
+          0.1502074370441054,
+          0.1714062420906588,
+          0.1711377281425101,
+          0.17397851217043572,
+          0.1272361589354571,
+          0.113074605529407,
+          0.15387091777836542,
+          0.17343660716331166
+        ],
+        "calibration_mae": 0.03274562724774268,
+        "calibration_coverage": 0.901749663526245
+      },
+      "cutoffs": {
+        "Agreement": [
+          0.7167113117320378,
+          0.9495162040417325
+        ],
+        "Composite": [
+          0.8053390256317655,
+          0.915768242526942
+        ],
+        "Without freshness": [
+          0.7932264623409082,
+          0.8821448845887925
+        ],
+        "Without completeness": [
+          0.7457450598816958,
+          0.8945655009602477
+        ],
+        "Without maturity": [
+          0.8784401787871898,
+          0.98480855607326
+        ],
+        "Without agreement": [
+          0.7856593589399178,
+          0.9236758116753618
+        ]
+      },
+      "development_coverage": {
+        "Agreement": {
+          "authorised": 0.849997375741353,
+          "full": 0.5001836981052853,
+          "available_reference_samples": 19053
+        },
+        "Composite": {
+          "authorised": 0.849997375741353,
+          "full": 0.500078727759408,
+          "available_reference_samples": 19053
+        },
+        "Without freshness": {
+          "authorised": 0.8502073164331077,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without completeness": {
+          "authorised": 0.8502073164331077,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without maturity": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        },
+        "Without agreement": {
+          "authorised": 0.849997375741353,
+          "full": 0.5000262425864693,
+          "available_reference_samples": 19053
+        }
+      },
+      "centre": [
+        0.38795975,
+        0.294276125,
+        0.159726125,
+        0.13325975,
+        0.18978937499999998,
+        0.29321525,
+        0.27788475,
+        0.44961225000000005,
+        0.21152525,
+        0.3219605,
+        0.280353125,
+        0.325889125,
+        0.08492799999999999,
+        0.055517750000000005,
+        0.106493625,
+        0.291946375,
+        0.253831125,
+        0.24125175,
+        0.346841,
+        0.5383742499999999,
+        0.19353709687499998,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2316684055,
+        0.450284962125,
+        0.42107599625000003,
+        0.0,
+        0.0,
+        0.18135095437499998,
+        0.418201924625
+      ],
+      "battery_bus": 15,
+      "capacity_mwh": 8.0,
+      "pmax_mw": 2.0
+    },
+    {
+      "network": "SimBench assets",
+      "origin": "winter",
+      "boundaries": [
+        "2016-09-01",
+        "2016-10-01",
+        "2016-11-01"
+      ],
+      "forecast": {
+        "training_hours": 5831,
+        "calibration_hours": 719,
+        "development_hours": 743,
+        "train_target_last": "2016-08-31 23:00:00",
+        "cal_target_last": "2016-09-30 23:00:00",
+        "dev_target_last": "2016-10-31 23:00:00",
+        "joint_halfwidth": [
+          0.05224689869836119,
+          0.07592114756001722
+        ],
+        "stress_halfwidth": [
+          0.09561654094932188,
+          0.10813279609081126,
+          0.04172349914159753,
+          0.04195759622599891,
+          0.04625056986964006,
+          0.13614036430550064,
+          0.10500756682719434,
+          0.13938097218945245,
+          0.1160895105288898,
+          0.09411786079415277,
+          0.15534281295665303,
+          0.07551598478368352,
+          0.035965099118250125,
+          0.027522775755585233,
+          0.035967833645018106,
+          0.18933633019728457,
+          0.1848557526464792,
+          0.11489703254864535,
+          0.12883379170729445,
+          0.23065971324408663,
+          0.11695583886142874,
+          0.07332910705268213,
+          0.07009493448688232,
+          0.07572236511443112,
+          0.08460004002979142,
+          0.16398753367334154,
+          0.10193705197170291,
+          0.09092369704335032,
+          0.08125755532851135,
+          0.08342229948955808,
+          0.1538497482154634,
+          0.06186910600018796
+        ],
+        "calibration_mae": 0.025372125924190154,
+        "calibration_coverage": 0.9012517385257302
+      },
+      "cutoffs": {
+        "Agreement": [
+          0.7129067999334909,
+          0.9479735443282372
+        ],
+        "Composite": [
+          0.8225006148822355,
+          0.9205607081924738
+        ],
+        "Without freshness": [
+          0.8011409605040576,
+          0.8891223659637744
+        ],
+        "Without completeness": [
+          0.7676254904430199,
+          0.9040322685056309
+        ],
+        "Without maturity": [
+          0.8744181708476562,
+          0.9847806058275557
+        ],
+        "Without agreement": [
+          0.8396147283529592,
+          0.9264086295114575
+        ]
+      },
+      "development_coverage": {
+        "Agreement": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Composite": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without freshness": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without completeness": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        },
+        "Without maturity": {
+          "authorised": 0.8499720571051161,
+          "full": 0.500076207895138,
+          "available_reference_samples": 19683
+        },
+        "Without agreement": {
+          "authorised": 0.8499720571051161,
+          "full": 0.5000254026317127,
+          "available_reference_samples": 19683
+        }
+      },
+      "centre": [
+        0.40387975,
+        0.28903049999999997,
+        0.14313025000000001,
+        0.106231375,
+        0.18018225,
+        0.326545,
+        0.2846155,
+        0.4639535,
+        0.270743125,
+        0.337469,
+        0.31741775,
+        0.32873787500000007,
+        0.08386012500000001,
+        0.04863387500000001,
+        0.10543249999999998,
+        0.33185675000000003,
+        0.28545875,
+        0.2451745,
+        0.4109695,
+        0.605867375,
+        0.174843048125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.212468688375,
+        0.266925093125,
+        0.21895356100000002,
+        0.0,
+        0.0,
+        0.1672173275,
+        0.21750302775
+      ],
+      "battery_bus": 15,
+      "capacity_mwh": 8.0,
+      "pmax_mw": 2.0
+    }
+  ],
+  "quick": false,
+  "development_targets": {
+    "authorised": 0.85,
+    "full": 0.5
+  },
+  "reference_outage_action": "reference-dependent gates hold; reference predictor falls back to primary",
+  "source_sha256": "1dddd2e18bf20a025ec6b60f4e0ca5a6538a39cf1dacefa376ac8e548f9ede07"
+}

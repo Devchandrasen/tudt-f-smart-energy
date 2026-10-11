@@ -1,14 +1,8 @@
-# Project documentation
+# Study documentation
 
-The documentation connects the executable study to its archived evidence and manuscript.
-
-| Guide | Purpose |
-| :--- | :--- |
-| [Reproduction](reproduction.md) | Installation, commands, output paths and checking a rerun |
-| [Methodology](methodology.md) | Timing, data partitions, evidence channels and dispatch constraints |
-| [Results](results.md) | Main findings, uncertainty and limits of interpretation |
-| [Data provenance](data-provenance.md) | Input derivation, source attribution and reuse terms |
-| [File dictionary](files.md) | Decision fields, summaries and manuscript assets |
-
-The [manuscript](../manuscript/SEGAN_Manuscript.pdf) provides the mathematical details.
-The [reference archive](../results/reference/) supplies every reported decision.
+The current v3.0.0 manuscript targets Electric Power Systems Research. Start with
+the [result interpretation](results.md), then follow the [method](methodology.md)
+and [reproduction commands](reproduction.md). [Data provenance](data-provenance.md)
+records original sources and reuse terms; the [file guide](files.md) maps code,
+paper and numerical files. The historical v2 archive is explicitly identified in
+each guide and remains available for integrity checks.

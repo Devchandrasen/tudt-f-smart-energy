@@ -16,6 +16,9 @@ results/full/
 results/quick/
 results/audit/
 results/ci-quick/
+results/extended-quick/
+results/epsr-2026/
+results/ci-extended/
 *.aux
 *.log
 *.out

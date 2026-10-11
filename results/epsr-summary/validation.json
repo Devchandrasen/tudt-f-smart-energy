@@ -1,0 +1,18 @@
+{
+  "decision_count": 1959552,
+  "maximum_soc_error": 1.1102230246251565e-16,
+  "soc_bounds_errors": 0,
+  "nonzero_model_infeasible": 0,
+  "nonfinite_outcomes": 0,
+  "proposal_battery_bounds_errors": 0,
+  "maximum_command_rule_error": 5.551115123125783e-17,
+  "maximum_score_error": 3.3306690738754696e-16,
+  "physical_label_disagreements": 0,
+  "regime_disagreements": 0,
+  "reference_fallback_disagreements": 0,
+  "fresh_ac_samples": 114,
+  "fresh_model_ac_samples": 114,
+  "maximum_fresh_ac_difference": 6.249308637240603e-08,
+  "fresh_ac_label_disagreements": 0,
+  "fresh_model_label_disagreements": 0
+}
