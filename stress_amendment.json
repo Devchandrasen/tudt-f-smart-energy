@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-05",
+  "timing": "after original stress results; before executing any amended operating regime",
+  "reason": "The original nameplate-load 33-bus stress design has approximately 93% violating hours and zero PV curtailment. It does not adequately test availability of corrective actions.",
+  "retention": "All original stress configurations and results remain in the package and paper.",
+  "new_design": "Complete 2x2 operating-regime grid: load multiplier 1.0 or 0.6; installed renewable capacity 1.8 or 3.6 MW. The original (1.0,1.8) cell is retained; all other cells are run. Every cell retains the original 3x3 thermal-rating/renewable-volatility grid, nine 28-day windows, five paired seeds and four corruption conditions.",
+  "analysis_status": "exploratory amendment; no gate parameters, forecast models, thresholds or primary hypotheses are retuned",
+  "task_interpretation": "PV command amounts use actual installed renewable capacity. Deferral remains zero additional curtailment. Scaling is not assumed safe."
+}

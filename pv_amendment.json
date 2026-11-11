@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-05",
+  "reason": "mixed solar/wind profiles are insufficient to label the second task specifically as PV curtailment",
+  "design": "actual OPSD solar only; fixed 0.6 load multiplier; all 3.6/7.2-MW installed-PV capacity cells; 3x3 rating/volatility grid; nine 28-day windows; original four stress conditions; five paired seed labels",
+  "gate": "unchanged; no outcome-based tuning",
+  "status": "exploratory; earlier mixed-renewable curtailment results retained as pilot diagnostics"
+}

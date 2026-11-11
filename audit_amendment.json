@@ -1,0 +1,24 @@
+{
+  "id": "ISJ-audit-amendment-v2",
+  "date": "2026-11-05",
+  "parent_code_revision": "8a570c7",
+  "analysis_status": "Exploratory post-audit amendment, defined after inspection of original reconstructed test results; no claim of pristine holdout confirmation",
+  "preserve": "All original v1 outputs, original frozen gate, complete stress grids, and adverse task results remain archived",
+  "score_policy_factorial": {
+    "scores": ["composite", "interval", "learned"],
+    "policies": ["binary", "three_regime"],
+    "development_authorization_targets": [0.5, 0.75, 0.9],
+    "full_fraction_of_authorized": 0.6666666666666666,
+    "calibration_population": "common ungated nonzero candidate opportunities, fitted development only",
+    "test": "all original nine monthly windows in DE-LU and DK_1; all eight conditions; five original seeds",
+    "outcomes": ["forecast-error exposure", "selective error", "good active-candidate deferral", "zero-candidate review flags", "activity", "adjusted cost", "terminal energy", "eligible one-step regret", "avoidable violations", "mode transitions"]
+  },
+  "learned_frontier": "All three scores, both policies, eleven development target coverages 0.10 to 1.00 inclusive; use development only, retain every point and nondominance flags",
+  "objective_sensitivity": "Re-evaluate the same 200 development configurations with good active-candidate deferral per all hours, separately preserving original zero-inclusive review objective and frozen original gate",
+  "physical": "Recompute all four battery operating cells and both solar capacity cells, every original rating/volatility/month/scenario. All four stress scenarios are deterministic: execute seed 11 once and document identical seed-label multiplicity, never count repeats as independent units",
+  "constrained": "Log shared rule proposal and optimizer pre-filter candidate separately; compare original nine-level and full seventeen-level feasible command sets",
+  "pv_fallback": "Keep generic zero/half as original. Add forecast-only correction-preserving fallback: if the gate's scaled/deferred command is infeasible, use the minimum forecast-feasible curtailment, or maximal tested curtailment if none exists. Preserve review mode and log fallback override separately. Evaluator truth never chooses the command",
+  "sensitivity": "Development-only one-factor changes: width scale 375/750/1500 kW; primary channel component mixture 0.25/0.5/0.75; change smoothing 3/6/12 observations; cautious multiplier 0.25/0.5/0.75; candidate price multipliers (1.05,0.90)/(1.10,0.85)/(1.15,0.80); jump quantile .95/.99/.995; rough quantile .90/.95/.99; mismatch quantile .90/.95/.99. Clean/delayed/slow-ramp, two development windows, seed 11. Retain defaults, no test-based selection",
+  "inference": "Paired nine monthly clusters, scenarios and seeds retained together; 10000 bootstrap resamples, exploratory Wilcoxon with Holm within declared same-policy score comparisons; no claim of independent seed hours",
+  "reporting": "Main paper bounded integration/benchmark contribution and explicit negative evidence; numeric supplementary tables with exact locators; all 48 response items distinguish completed evidence and remaining limitations"
+}

@@ -1,0 +1,12 @@
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.18.0
+scikit-learn==1.8.0
+numba==0.65.1
+pandapower==3.4.0
+matplotlib==3.11.0
+joblib==1.5.3
+requests==2.34.2
+pytest==9.1.1
+PyMuPDF==1.27.2.3
+Pillow==12.3.0

@@ -1,0 +1,10 @@
+{
+  "id": "ISJ-audit-PV-followup-v2.1",
+  "date": "2026-11-05",
+  "reason": "After the v2 diagnostic, the maximum-curtailment fallback in forecast-infeasible states was observed to increase violations. Preserve it as an adverse result; add an explicit feasible-only recovery variant",
+  "status": "post-outcome exploratory mechanistic follow-up, not independent confirmation",
+  "rule": "When the proposed scaled/deferred command fails the forecast check, restore the minimum forecast-feasible curtailment if one exists. If no forecast-feasible action exists, retain zero additional curtailment. Use no evaluator truth",
+  "comparators": ["composite_feasible_recovery", "ungated_feasible_recovery"],
+  "grid": "both 3.6/7.2-MW solar capacities, all three ratings and three volatilities, all four deterministic conditions, all nine 672-hour windows",
+  "gate": "original frozen weights and thresholds unchanged; review flags and autonomous fallback commands remain separate"
+}
