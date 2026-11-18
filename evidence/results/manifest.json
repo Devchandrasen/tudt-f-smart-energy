@@ -1,0 +1,43 @@
+{
+  "reproduced_split_max_abs_difference": {
+    "load_coverage": 0.0,
+    "renewable_coverage": 1.1102230246251565e-16,
+    "width_kw": 1.4210854715202004e-14,
+    "load_daily_simultaneous_coverage": 8.326672684688674e-17,
+    "renewable_daily_simultaneous_coverage": 1.1102230246251565e-16,
+    "full_rate": 1.1102230246251565e-16,
+    "cautious_rate": 1.249000902703301e-16,
+    "abstention": 1.1102230246251565e-16,
+    "activity": 1.249000902703301e-16,
+    "high_error_automation": 1.0408340855860843e-16
+  },
+  "age_reference": {
+    "tp": 1512,
+    "fp": 0,
+    "fn": 0,
+    "tn": 1512,
+    "episodes": 9,
+    "median_delay_h": 0.0
+  },
+  "input_hashes": {
+    "data/DE_LU_causal.csv": "e7347e5193a1fc90524b4fdb3c209d0e1c183568a80dc69321f6a73c84644991",
+    "protocol.json": "3b90fc4814b2fd09cf9491fcee709d36252428f43d3372cb7dc0e2b31439697d",
+    "results/frozen_parameters.json": "73d02db3fb59f6f92fac9fe4a70c8863f02036037ec5da381301424938b87af7",
+    "data_pipeline.py": "ee401dbce71da8fbbbf40d40ba6e8b9600e83461f163e1bdec1bd7812d7d5ee5",
+    "run_study.py": "7b2675de9912c78625f8461a4713a4154dac3dab0c28a1e1c2d70280ce8f67de",
+    "control.py": "390cf8e5c2ec7ebd2f6d944f26606f38ac6f0326f7e479d99c1af75b53e097e9",
+    "physics.py": "4930aa660474913abe9dde484704fb433e13bf5fe56ff19ce107630855817136",
+    "results/audit_v2/interval_authorization.csv": "6486f8a5de947b5cac872c869986b86d43729364116f7d735fdd0f471ca1a1d5"
+  },
+  "design_sha256": "35647bf11746a26328abfb531554b2d682686903500121ba8fc26a0e7a697ab3",
+  "code_sha256": "08b702c7ea5bd5f8b2be9450f55c819ca554c995f5ca04e5c2327a1a4d9aadf5",
+  "output_sha256": {
+    "calibration.csv": "062df40620f4182c82c2f091d76f1c6906219de673d9121d45cb5840b8432889",
+    "interval_runs.csv": "4f55372257d1b3a0729267d1926a570e819be85d6ebdf6237a046ddb9905a7f7",
+    "interval_summary.csv": "e9d659815e65426fcfa863cf0dfd0000b4fe12b7ce6950edce361a9aeeeaa205",
+    "stale_months.csv": "9e5d6cab9135c62eff6cd366d199618f9d6a608a757ce8e22968d0bf57fe1377",
+    "stale_scores.csv": "c534cb245c892cec776614c07853db7ee5b6f20d3c2c4b41d5302db07454f397",
+    "stale_summary.csv": "6e2515ad351fde4da9c893f44c6779c881708c32ec2c1ff299cc7faafe19ed75",
+    "subtle_months.csv": "b8b8d3e1fef161ac66dc9d4754b4d1ad2d084cd8bdec7802ef49edc70ffdca81"
+  }
+}

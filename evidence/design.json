@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-18",
+  "status": "Exploratory reviewer follow-up after inspection of the original and reconstructed results. Choices fixed before running these comparisons.",
+  "region": "DE_LU",
+  "weight_half_life_hours": 168,
+  "miscoverage": 0.1,
+  "weights": "For each target, use the previously stored nonnegative calibration excess scores, in time order. At each monthly origin give a calibration target k hours before the origin mass 2^(-k/168), with unit mass at infinity for a new target. Use the smallest value reaching 90 percent of total mass. Freeze both corrections for the seven-day window.",
+  "weighted_comparison": "Same eight conditions, nine weeks, five paired seeds, two-bus dispatch, original frozen gate. Recompute the split arm against Table S8. Retain scenario-level pointwise/daily coverage, summed width, all authorization modes, activity and high-error exposure. Weeks, not seeds, are the temporal units.",
+  "stale_grid": {"decay_hours":[1,2,4],"completed_pairs":[6,24,72],"development_fpr_target":0.05},
+  "stale_detection": "Pair the original clean and fixed two-hour replay streams by window and clock hour. Use mutually available rows with a current clean source and a received replay packet from two hours earlier. Use the replay assignment as evaluation label. Calibrate separate lower-tail alarm cutoffs on clean current development rows (strictly below the empirical 5th percentile); freeze for testing. Test recall, achieved FPR, AUC, detected episodes and first-alarm delay from replay onset. Report a raw source-age >1 h comparator. Identical deterministic seeds counted once.",
+  "subtle_corruption": "Retrospective defensive audit of the existing two unchanged bias/ramp streams. Evaluate annotated corruption hours with neither the existing roughness nor jump alarm. Report size of this subset, full authorizations, and actual nonzero commands. Count one copy of deterministic traces. No traces are selected, altered or optimized in response to the gate; this is an empirical joint miss criterion.",
+  "statistics": "Descriptive comparisons only; no claims of confirmatory significance or field generalization."
+}

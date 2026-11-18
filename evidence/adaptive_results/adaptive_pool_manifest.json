@@ -1,0 +1,38 @@
+{
+  "region": "DE_LU",
+  "windows": [
+    "2020-01-01",
+    "2020-02-01",
+    "2020-03-01",
+    "2020-04-01",
+    "2020-05-01",
+    "2020-06-01",
+    "2020-07-01",
+    "2020-08-01",
+    "2020-09-01"
+  ],
+  "seeds": [
+    11,
+    29,
+    47,
+    71,
+    97
+  ],
+  "scope": "Exploratory initialization sensitivity with identical forecasts, feedback rule and frozen gate.",
+  "matched_reference_values": 80,
+  "input_sha256": {
+    "data_pipeline.py": "ee401dbce71da8fbbbf40d40ba6e8b9600e83461f163e1bdec1bd7812d7d5ee5",
+    "run_study.py": "7b2675de9912c78625f8461a4713a4154dac3dab0c28a1e1c2d70280ce8f67de",
+    "physics.py": "4930aa660474913abe9dde484704fb433e13bf5fe56ff19ce107630855817136",
+    "control.py": "390cf8e5c2ec7ebd2f6d944f26606f38ac6f0326f7e479d99c1af75b53e097e9",
+    "protocol.json": "3b90fc4814b2fd09cf9491fcee709d36252428f43d3372cb7dc0e2b31439697d",
+    "data/DE_LU_causal.csv": "e7347e5193a1fc90524b4fdb3c209d0e1c183568a80dc69321f6a73c84644991",
+    "results/frozen_parameters.json": "73d02db3fb59f6f92fac9fe4a70c8863f02036037ec5da381301424938b87af7",
+    "results/audit_v2/interval_authorization.csv": "6486f8a5de947b5cac872c869986b86d43729364116f7d735fdd0f471ca1a1d5"
+  },
+  "script_sha256": "1bab05b5822701e0a2a99002e153901fe1b531cc82055e9e00d669d4648600a8",
+  "result_sha256": {
+    "adaptive_pool_runs.csv": "bc913b21d040c9da7c00f699552e7b99923d07b12abcb38b6f2f90c18cbf30bd",
+    "adaptive_pool_summary.csv": "612aa6c95194bef1ac29eca449d61b6935a730786df751db44bf13b4c1658cf5"
+  }
+}

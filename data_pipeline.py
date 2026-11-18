@@ -139,6 +139,9 @@ def evidence(obs,forecast,method='split',decay=2.,lookback=24,width_scale=750.,m
     n=len(pred); scores=np.zeros((n,4));det=np.zeros((n,4),bool)
     widths=np.zeros((n,2)); intervals_lo=np.zeros((n,2));intervals_hi=np.zeros((n,2))
     q=forecast.q.copy();alphas=np.array([.1,.1]);completed=[];last_source=-1
+    adaptive = method in ('adaptive', 'adaptive_distinct')
+    calibration_end = pd.Timestamp(forecast.calibration_end) if method == 'adaptive_distinct' else None
+    adaptive_recent = []
     jumps=np.r_[0,np.abs(np.diff(obs['received'],axis=0)).sum(axis=1)]
     for i in range(n):
         s=int(obs['source'][i])
@@ -149,9 +152,13 @@ def evidence(obs,forecast,method='split',decay=2.,lookback=24,width_scale=750.,m
             hit=(value>=intervals_lo[s-1])&(value<=intervals_hi[s-1])
             excess=np.maximum(np.maximum(value-hi[s-1],lo[s-1]-value),0)
             completed.append((err,float(hit.mean()),excess));last_source=s
-            if method=='adaptive':
+            if adaptive:
                 alphas=np.clip(alphas+.01*(.1-(~hit).astype(float)),.01,.5)
-                pool=np.r_[forecast.residuals[-672:],np.array([z[2] for z in completed[-168:]])]
+                # Source times increase strictly here. Eligible post-calibration
+                # scores form one consecutive suffix of the completion history.
+                if calibration_end is None or obs['times'][s] > calibration_end:
+                    adaptive_recent.append(excess)
+                pool=np.r_[forecast.residuals[-672:],np.asarray(adaptive_recent[-168:]).reshape(-1,2)]
                 q=np.array([conformal_q(pool[:,j],alphas[j]) for j in range(2)])
         if method=='block_max':q=forecast.qb
         low=np.maximum(0,lo[i]-q);high=hi[i]+q

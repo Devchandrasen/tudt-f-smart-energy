@@ -14,6 +14,17 @@ python verify_release.py
 python -m pytest tests -q
 ```
 
+## Interval calibration and stale-state detection
+
+The [18 November numerical release](https://github.com/Devchandrasen/tudt-f-smart-energy/releases/tag/isj-revision-2026-11-18) includes the original numerical archive and three follow-up analyses. These compare weighted intervals with the frozen split gate, measure synchronization-score alarms against timestamped replay, and count joint detector misses in the existing corruption traces. A further sensitivity analysis changes how calibration timestamps are counted during adaptive initialization.
+
+```powershell
+python evidence/experiments.py . --output rerun/followup --workers 4
+python evidence/adaptive_pool.py . --output rerun/adaptive --workers 4
+```
+
+The reference outputs are in `evidence/results/` and `evidence/adaptive_results/`. The latter contains scenario means and window-level runs for both adaptive initializations, including the number of overlapping timestamps. The delayed-input comparison uses nine 168-hour windows with the original frozen controller.
+
 ## Recompute the extended evaluation
 
 Use a separate extracted copy to preserve the supplied reference results.

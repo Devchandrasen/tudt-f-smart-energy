@@ -2,4 +2,5 @@ __pycache__/
 .pytest_cache/
 data/
 results/
+!evidence/results/
 *.pyc

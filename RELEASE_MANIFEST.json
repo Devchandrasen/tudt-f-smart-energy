@@ -1,8 +1,19 @@
 {
-  "release": "isj-revision-2026-11",
-  "date": "2026-11-11",
-  "scientific_base": "f1464d8a2724a2b799a90a66bb36866da54077bc",
-  "scope": "Scientific source, protocols, input extracts and results. Editorial and correspondence material omitted.",
-  "unchanged_scientific_files": 909,
-  "altered_empirical_values": false
+  "release": "isj-revision-2026-11-18",
+  "base_release_tag": "isj-revision-2026-11",
+  "base_public_commit": "ca123395c5af24bdd43c671409377035db47ac74",
+  "scope": "Scientific source, input extracts, protocols, trace summaries and numerical results.",
+  "added_comparisons": [
+    "recency-weighted calibration",
+    "stale-state detection",
+    "joint detector misses",
+    "adaptive initialization sensitivity"
+  ],
+  "reference_checks": {
+    "prior_followup_csv_files_identical": 7,
+    "split_scenario_metrics": 80,
+    "adaptive_scenario_metrics": 80,
+    "adaptive_pool_scenarios": 8,
+    "paired_months": 9
+  }
 }
