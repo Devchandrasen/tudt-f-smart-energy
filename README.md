@@ -13,6 +13,8 @@
 
 [Read the paper](manuscript/EPSR_Manuscript.pdf) · [Explore the results](docs/results.md) · [Reproduce](docs/reproduction.md) · [Download the archive](https://github.com/Devchandrasen/tudt-f-smart-energy/releases/tag/v3.0.0)
 
+Related study · [IEEE Systems Journal implementation, replay data and results](https://github.com/Devchandrasen/tudt-f-smart-energy/tree/isj-revision-2026-11#readme)
+
 </div>
 
 A reproducible simulation study of battery dispatch when primary or reference
