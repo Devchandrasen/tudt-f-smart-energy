@@ -6,6 +6,22 @@ How should a controller operate a battery when its latest meter reading is two h
 
 ![Hourly load interval coverage and dispatch abstention for eight simulated conditions. With clean input the rates are 91.6% and 0.1%. With a two-hour delay they are 41.6% and 90.3%.](docs/assets/dispatch-conditions.png)
 
+<details>
+<summary>Read the chart as a table</summary>
+
+| Condition | Load coverage | Abstention |
+| --- | ---: | ---: |
+| Clean input | 91.6% | 0.1% |
+| Two-hour delay | 41.6% | 90.3% |
+| Missing readings | 86.9% | 0.3% |
+| Noisy readings | 87.3% | 0.6% |
+| Grid disturbance | 84.9% | 5.3% |
+| Injected spikes | 86.9% | 19.4% |
+| Fixed bias | 73.9% | 0.1% |
+| Slow ramp | 84.5% | 0.1% |
+
+</details>
+
 Coverage is the share of hours when measured next-hour load fell inside its forecast interval. Abstention counts decisions that deferred dispatch, including feasibility rejections. A scheduled zero-power command alone does not count as an abstention. The chart uses the frozen battery controller with split-conformal intervals and gives each of the nine German–Luxembourg windows equal weight. [Source values for all eight conditions](evidence/results/interval_summary.csv) · [Chart code](docs/plot_dispatch_conditions.py)
 
 ## Run the replay
