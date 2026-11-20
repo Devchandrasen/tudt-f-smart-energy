@@ -1,0 +1,50 @@
+{
+  "complete_live_test": false,
+  "counts": {
+    "bias": {
+      "records": 9,
+      "hours": 1512,
+      "observed_hours": 405,
+      "unresolved_hours": 1107,
+      "no_alarm": 1,
+      "first_alarm_corrupt": 3,
+      "first_alarm_uncorrupted": 5,
+      "corrupt": 146,
+      "detected": 3,
+      "granted_full": 146,
+      "issued_nonzero": 6,
+      "gated_high": 3,
+      "ungated_high": 3
+    },
+    "slow_ramp": {
+      "records": 9,
+      "hours": 1512,
+      "observed_hours": 405,
+      "unresolved_hours": 1107,
+      "no_alarm": 1,
+      "first_alarm_corrupt": 3,
+      "first_alarm_uncorrupted": 5,
+      "corrupt": 142,
+      "detected": 3,
+      "granted_full": 142,
+      "issued_nonzero": 6,
+      "gated_high": 1,
+      "ungated_high": 1
+    },
+    "Combined": {
+      "records": 18,
+      "hours": 3024,
+      "observed_hours": 810,
+      "unresolved_hours": 2214,
+      "no_alarm": 2,
+      "first_alarm_corrupt": 6,
+      "first_alarm_uncorrupted": 10,
+      "corrupt": 288,
+      "detected": 6,
+      "granted_full": 288,
+      "issued_nonzero": 12,
+      "gated_high": 4,
+      "ungated_high": 4
+    }
+  }
+}

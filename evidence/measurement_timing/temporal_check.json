@@ -1,0 +1,160 @@
+{
+  "archive_doi": "10.5281/zenodo.21476677",
+  "clock_tolerance_ms": 10,
+  "absolute_change_threshold": 1e-09,
+  "profile_runs": 6,
+  "runs_with_postflag_signal_and_factor_changes": 6,
+  "maximum_matched_clock_difference_ms": 1.9989999999999999,
+  "sums": {
+    "samples": 1349,
+    "measurements_matched": 1349,
+    "source_flagged": 1349,
+    "valid_transitions": 1343,
+    "prior_flagged": 1343,
+    "next_factor_changed": 1343,
+    "next_value_changed": 1343,
+    "same_channel_both_changed": 1340,
+    "unaligned_adjacent_steps": 0,
+    "no_common_finite_fields": 0
+  },
+  "records": [
+    {
+      "source_files": [
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF09C/Unitary_test_HEDNO_15_20_CHIL_FDD.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF09C/Unitary_test_HEDNO_15_20_CHIL_Factor_smart.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF09C/Tabla_DB_MEAS/DB_INPUT_56.csv"
+      ],
+      "source_sha256": [
+        "65cf91e99db9fe0095c83c31e3e16351c85d41bd780cfc3fd81c3681fa0410da",
+        "8d8f0bf86410963b7d4d4eb6bdde3900a815bc9595d9d5f1038b24d07b2f5b95",
+        "50b1da93e30c53119a5087baf7916575e57dc9c3a32bc67e25c345c520c3becf"
+      ],
+      "samples": 213,
+      "measurements_matched": 213,
+      "source_flagged": 213,
+      "valid_transitions": 212,
+      "prior_flagged": 212,
+      "next_factor_changed": 212,
+      "next_value_changed": 212,
+      "same_channel_both_changed": 212,
+      "unaligned_adjacent_steps": 0,
+      "no_common_finite_fields": 0,
+      "max_clock_error_ms": 1.9929999999999999
+    },
+    {
+      "source_files": [
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF09I/Unitary_test_HEDNO_15_20_CHIL_FDD.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF09I/Unitary_test_HEDNO_15_20_CHIL_Factor_smart.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF09I/Tabla_DB_MEAS/DB_INPUT_56.csv"
+      ],
+      "source_sha256": [
+        "15137fba8ca3bac42bb2d396575c8d869e9d04a44e83c1f7a24dbf7aff98f436",
+        "381f3d96817b626d699f9988b0715615b12421e904afcb1ecee6f151700309bd",
+        "c7033fb6c7b60fd0695cbae3a7c5b634f7bd9235649095ec8734a556cdf0e7c3"
+      ],
+      "samples": 219,
+      "measurements_matched": 219,
+      "source_flagged": 219,
+      "valid_transitions": 218,
+      "prior_flagged": 218,
+      "next_factor_changed": 218,
+      "next_value_changed": 218,
+      "same_channel_both_changed": 217,
+      "unaligned_adjacent_steps": 0,
+      "no_common_finite_fields": 0,
+      "max_clock_error_ms": 1.997
+    },
+    {
+      "source_files": [
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF1/Unitary_test_HEDNO_15_20_CHIL_FDD.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF1/Unitary_test_HEDNO_15_20_CHIL_Factor_smart.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/15_20/PF1/Tabla_DB_MEAS/DB_INPUT_56.csv"
+      ],
+      "source_sha256": [
+        "6f589dd1dfa2ca0abafe17968d29c029a89eb3f9fa086eeb17dfdd94ba0a2b2e",
+        "0b689fea2419a98347de55b5071e58434c82f5d102bc11535dec8ee3ff30ed06",
+        "9eb41ff0318c63aae2b7332a5d6b6f51999115fd38e332fa034bc92dcbf87a44"
+      ],
+      "samples": 202,
+      "measurements_matched": 202,
+      "source_flagged": 202,
+      "valid_transitions": 201,
+      "prior_flagged": 201,
+      "next_factor_changed": 201,
+      "next_value_changed": 201,
+      "same_channel_both_changed": 201,
+      "unaligned_adjacent_steps": 0,
+      "no_common_finite_fields": 0,
+      "max_clock_error_ms": 1.9989999999999999
+    },
+    {
+      "source_files": [
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF09C/Unitary_test_HEDNO_30_40_CHIL_FDD.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF09C/Unitary_test_HEDNO_30_40_CHIL_Factor_smart.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF09C/Tabla_DB_MEAS/DB_INPUT_56.csv"
+      ],
+      "source_sha256": [
+        "78b3e2028ed219d9de02dcb4103a3b0dffacb792a2d6e01c1560abc39cfafc27",
+        "1d5ba86cca83d37de6b55b76247f0a7c958418f3d8e59bdbc0d44b8453251a7b",
+        "92b2255224b5c939e7c01095f16f7d4af26248561d229e273f4862e229733533"
+      ],
+      "samples": 222,
+      "measurements_matched": 222,
+      "source_flagged": 222,
+      "valid_transitions": 221,
+      "prior_flagged": 221,
+      "next_factor_changed": 221,
+      "next_value_changed": 221,
+      "same_channel_both_changed": 221,
+      "unaligned_adjacent_steps": 0,
+      "no_common_finite_fields": 0,
+      "max_clock_error_ms": 1.9980000000000002
+    },
+    {
+      "source_files": [
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF09I/Unitary_test_HEDNO_30_40_CHIL_FDD.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF09I/Unitary_test_HEDNO_30_40_CHIL_Factor_smart.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF09I/Tabla_DB_MEAS/DB_INPUT_56.csv"
+      ],
+      "source_sha256": [
+        "058b9bc42ad6410bfd849557593c7b9f70e1cdc30293cb7a15eca8b2d7b015a6",
+        "dc6e099739536263321a35074810f19f317f6140a2d242d7958c53d49bbca637",
+        "8e7eccfb47435c055d9a8e09ea758ee28c6742f5e90bb8c601067bb5fcca6e6b"
+      ],
+      "samples": 241,
+      "measurements_matched": 241,
+      "source_flagged": 241,
+      "valid_transitions": 240,
+      "prior_flagged": 240,
+      "next_factor_changed": 240,
+      "next_value_changed": 240,
+      "same_channel_both_changed": 239,
+      "unaligned_adjacent_steps": 0,
+      "no_common_finite_fields": 0,
+      "max_clock_error_ms": 1.996
+    },
+    {
+      "source_files": [
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF1/Unitary_test_HEDNO_30_40_CHIL_FDD.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF1/Unitary_test_HEDNO_30_40_CHIL_Factor_smart.json",
+        "Energy_Community/PHIL/Profile_Test/Smart/30_40/PF1/Tabla_DB_MEAS/DB_INPUT_56.csv"
+      ],
+      "source_sha256": [
+        "32fa80c4371597ca4379085afce609c2660c768c637d019b3b117ae79f7321b9",
+        "9118b7c8af127146a879ad4c76289d9f52d1b454d41cafd3a0f13fd50ff6bce7",
+        "825a2e95a294bc630861fb0d2d1fb9dda09c61a2fcd589fea61802051e90df34"
+      ],
+      "samples": 252,
+      "measurements_matched": 252,
+      "source_flagged": 252,
+      "valid_transitions": 251,
+      "prior_flagged": 251,
+      "next_factor_changed": 251,
+      "next_value_changed": 251,
+      "same_channel_both_changed": 250,
+      "unaligned_adjacent_steps": 0,
+      "no_common_finite_fields": 0,
+      "max_clock_error_ms": 1.9689999999999999
+    }
+  ]
+}
